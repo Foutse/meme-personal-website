@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prof. Firstname Lastname</title>
+  <meta name="description" content="Professor of [Department] at [University]. Research in [field].">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top">Firstname Lastname</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+      <nav id="nav" class="nav">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#group">Group</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ABOUT -->
+    <section id="about" class="hero wrap">
+      <img class="portrait" src="assets/img/portrait.svg" alt="Portrait of Firstname Lastname" width="220" height="220">
+      <div>
+        <h1>Prof. Firstname Lastname</h1>
+        <p class="role">Professor of [Department]<br>[University], [City, Country]</p>
+        <p>
+          [Short bio, 3–5 sentences. Who you are, what you work on, and what questions drive your research.
+          Mention your PhD institution, current appointment, and any major affiliations.]
+        </p>
+        <ul class="links">
+          <li><a href="mailto:name@university.edu">Email</a></li>
+          <li><a href="assets/cv.pdf">CV (PDF)</a></li>
+          <li><a href="https://scholar.google.com/">Google Scholar</a></li>
+          <li><a href="https://orcid.org/">ORCID</a></li>
+          <li><a href="https://github.com/">GitHub</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section id="research" class="wrap">
+      <h2>Research</h2>
+      <p class="lead">[One-paragraph overview of the research programme.]</p>
+      <div class="cards">
+        <article class="card">
+          <h3>[Research area 1]</h3>
+          <p>[Two or three sentences describing the problem, approach and why it matters.]</p>
+        </article>
+        <article class="card">
+          <h3>[Research area 2]</h3>
+          <p>[Two or three sentences describing the problem, approach and why it matters.]</p>
+        </article>
+        <article class="card">
+          <h3>[Research area 3]</h3>
+          <p>[Two or three sentences describing the problem, approach and why it matters.]</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section id="publications" class="wrap">
+      <h2>Selected publications</h2>
+      <p class="muted">Full list on <a href="https://scholar.google.com/">Google Scholar</a>.</p>
+      <ol class="pubs" reversed>
+        <li>
+          <span class="authors"><strong>Lastname, F.</strong>, Coauthor, A., &amp; Coauthor, B.</span>
+          (2026). <span class="title">Title of the paper.</span>
+          <em>Journal or Conference Name</em>, 12(3), 45–67.
+          <a href="#">[PDF]</a> <a href="#">[DOI]</a> <a href="#">[Code]</a>
+        </li>
+        <li>
+          <span class="authors">Student, C., &amp; <strong>Lastname, F.</strong></span>
+          (2025). <span class="title">Title of the paper.</span>
+          <em>Journal or Conference Name</em>.
+          <a href="#">[PDF]</a> <a href="#">[DOI]</a>
+        </li>
+        <li>
+          <span class="authors"><strong>Lastname, F.</strong></span>
+          (2024). <span class="title">Title of the book or paper.</span>
+          <em>Publisher</em>.
+          <a href="#">[Link]</a>
+        </li>
+      </ol>
+    </section>
+
+    <!-- TEACHING -->
+    <section id="teaching" class="wrap">
+      <h2>Teaching</h2>
+      <table class="teaching">
+        <thead><tr><th>Course</th><th>Level</th><th>Term</th></tr></thead>
+        <tbody>
+          <tr><td>[CODE 101] Course title</td><td>Undergraduate</td><td>Fall 2026</td></tr>
+          <tr><td>[CODE 501] Course title</td><td>Graduate</td><td>Spring 2027</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- GROUP -->
+    <section id="group" class="wrap">
+      <h2>Research group</h2>
+      <p>[A sentence on the group, plus whether you are recruiting students or postdocs.]</p>
+      <ul class="people">
+        <li><strong>[Name]</strong> — PhD student, [topic]</li>
+        <li><strong>[Name]</strong> — MSc student, [topic]</li>
+        <li><strong>[Name]</strong> — Postdoctoral researcher, [topic]</li>
+      </ul>
+    </section>
+
+    <!-- NEWS -->
+    <section id="news" class="wrap">
+      <h2>News</h2>
+      <ul class="news">
+        <li><time datetime="2026-11">Nov 2026</time> [News item, e.g. paper accepted at …]</li>
+        <li><time datetime="2026-09">Sep 2026</time> [News item, e.g. invited talk at …]</li>
+        <li><time datetime="2026-06">Jun 2026</time> [News item, e.g. new grant awarded …]</li>
+      </ul>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="wrap">
+      <h2>Contact</h2>
+      <address>
+        Department of [Department]<br>
+        [University]<br>
+        [Office, Building, Street]<br>
+        [City, Postcode, Country]<br>
+        <a href="mailto:name@university.edu">name@university.edu</a>
+      </address>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">© <span id="year">2026</span> Firstname Lastname</div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const t = document.querySelector('.nav-toggle'), n = document.getElementById('nav');
+    t.addEventListener('click', () => {
+      const open = n.classList.toggle('open');
+      t.setAttribute('aria-expanded', open);
+    });
+    n.addEventListener('click', e => { if (e.target.tagName === 'A') { n.classList.remove('open'); t.setAttribute('aria-expanded', false); } });
+  </script>
+</body>
+</html>
