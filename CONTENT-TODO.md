@@ -13,7 +13,7 @@ Not published as a page (excluded in `_config.yml`). Remove items as they are re
 
 ## Content to send
 - [ ] **Device photos**: incubators, dental unit, phonocardiograph, bioimpedance system, digital microscope, egg incubator. Landscape, ~1200 px wide → `assets/img/projects/`, then add `image:` in `_data/projects.yml`.
-- [ ] **Portrait**: a photo against a plain background (current one is a selfie).
+- [ ] **Portrait**: the site now uses the beige-wall photo, but the only copy is small (246 px). Ask for the original file or a higher-resolution version.
 - [ ] **ORCID iD** (create one at orcid.org if none) and ResearchGate URL → `profile.yml`.
 - [ ] **Recent news** (2026): talks, defences, new roles, papers → `_data/news.yml`.
 - [ ] Anything from LinkedIn missing from the CV (awards, projects, collaborations).

@@ -460,3 +460,52 @@ td:nth-child(2) { white-space: nowrap; }
 .memberships li { padding: .45rem 0; }
 .memberships .muted { font-size: .88rem; }
 .memberships .muted a { color: inherit; }
+
+/* ==========================================================================
+   Hero v3: CV-style identity block + spotlight card
+   ========================================================================== */
+.identity { display: flex; align-items: center; gap: 1.75rem; padding-bottom: 2rem; border-bottom: 2px solid var(--navy); }
+.id-photo {
+  flex: none; width: 168px; height: 168px; border-radius: 50%; object-fit: cover;
+  border: 5px solid var(--surface); box-shadow: var(--shadow);
+}
+.id-name { font: 600 clamp(2.1rem, 4.6vw, 3.2rem)/1.08 var(--serif); margin: 0 0 .45rem; }
+.id-name .phd { font-size: .55em; color: var(--muted); font-weight: 600; }
+.id-title { margin: 0 0 .3rem; text-transform: uppercase; letter-spacing: .12em; font-size: .85rem; font-weight: 700; color: var(--copper); }
+.id-affil { margin: 0; color: var(--muted); font-size: 1.02rem; }
+.hero { padding-top: 3.25rem; }
+.hero .hero-inner { grid-template-columns: 1.2fr 1fr; gap: 3rem; align-items: start; margin-top: 2.25rem; }
+.tagline { font: 600 clamp(1.55rem, 3vw, 2.15rem)/1.2 var(--serif); color: var(--navy); margin: 0 0 1rem; max-width: 22ch; }
+.hero .lead { margin-top: 0; }
+
+/* Spotlight as a card in the right column */
+.spotlight { margin: 0; max-width: none; }
+.spot-list { height: 15.5rem; }
+.spot a { flex-direction: row; align-items: stretch; padding: 0; overflow: hidden; border-radius: var(--radius); }
+.spot-art { width: 38%; height: auto; border-radius: 0; }
+.spot-art .icon { width: 84px; height: 84px; }
+.spot-text { padding: 1.2rem 1.25rem; justify-content: center; }
+.spot-text strong { font-size: 1.15rem; margin-bottom: .4rem; }
+.spot-desc { color: var(--muted); font-size: .92rem; line-height: 1.45; }
+.spot-go { margin: .8rem 0 0; font-size: .9rem; }
+.identity > *, .hero-text > *, .spotlight { animation: rise .7s cubic-bezier(.2, .7, .2, 1) both; }
+.identity > :nth-child(2) { animation-delay: .06s; }
+.spotlight { animation-delay: .3s; }
+
+@media (max-width: 980px) {
+  .hero .hero-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .spot-list { height: 13rem; }
+}
+@media (max-width: 720px) {
+  .hero { padding-top: 2rem; }
+  .identity { gap: 1rem; padding-bottom: 1.5rem; }
+  .id-photo { width: 96px; height: 96px; border-width: 3px; }
+  .id-name { font-size: 1.7rem; }
+  .id-title { font-size: .72rem; }
+  .id-affil { font-size: .9rem; }
+  .hero .hero-inner { margin-top: 1.5rem; }
+  .spot-list { height: 15rem; }
+  .spot-art { width: 32%; }
+  .spot-art .icon { width: 60px; height: 60px; }
+  .spot-text { padding: 1rem; }
+}

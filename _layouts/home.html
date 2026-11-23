@@ -7,24 +7,37 @@ layout: base
 {%- assign peer = site.data.publications | where_exp: "x", "x.kind != 'proceedings'" -%}
 
 <section class="hero">
-  <div class="wrap hero-inner">
-    <div class="hero-text">
-      <p class="eyebrow">{{ p.title[L] }} · Université des Montagnes</p>
-      <h1>{{ t.tagline }}</h1>
-      <p class="lead">{{ t.lead }}</p>
-      <ul class="links">
-        <li><a class="button primary" href="{{ t.urls.research }}">{{ t.nav.research }}</a></li>
-        <li><a class="button" href="{{ t.urls.publications }}">{{ t.nav.publications }}</a></li>
-        <li><a class="button" href="/assets/cv/foutse-momo-cv-{{ L }}.pdf">{{ t.cv }}</a></li>
-      </ul>
+  <div class="wrap">
+    <header class="identity">
+      <img class="id-photo" src="{{ p.photo }}" alt="{{ p.name }}" width="480" height="480">
+      <div>
+        <h1 class="id-name">{{ p.name }}, <span class="phd">Ph.D.</span></h1>
+        <p class="id-title">{{ p.title[L] }}</p>
+        <p class="id-affil">{{ p.affiliation[L] }}</p>
+      </div>
+    </header>
+    <div class="hero-inner">
+      <div class="hero-text">
+        <p class="tagline">{{ t.tagline }}</p>
+        <p class="lead">{{ t.lead }}</p>
+        <ul class="links">
+          <li><a class="button primary" href="{{ t.urls.research }}">{{ t.nav.research }}</a></li>
+          <li><a class="button" href="{{ t.urls.publications }}">{{ t.nav.publications }}</a></li>
+          <li><a class="button" href="/assets/cv/foutse-momo-cv-{{ L }}.pdf">{{ t.cv }}</a></li>
+        </ul>
+      </div>
       <div class="spotlight" aria-label="{{ t.projects }}">
         <ul class="plain spot-list">
           {% for pr in site.data.projects %}
           <li class="spot{% if forloop.first %} on{% endif %}">
             <a href="{{ t.urls.research }}{{ pr.slug[L] }}/">
               <span class="spot-art strand-{{ pr.strand }}">{% include icon.html name=pr.icon %}</span>
-              <span class="spot-text"><span class="tag">{{ pr.tag[L] }}</span><strong>{{ pr.title[L] }}</strong></span>
-              <span class="spot-go" aria-hidden="true">→</span>
+              <span class="spot-text">
+                <span class="tag">{{ pr.tag[L] }}</span>
+                <strong>{{ pr.title[L] }}</strong>
+                <span class="spot-desc">{{ pr.text[L] }}</span>
+                <span class="spot-go">{{ t.read_more }} →</span>
+              </span>
             </a>
           </li>
           {% endfor %}
@@ -32,10 +45,6 @@ layout: base
         <div class="spot-dots" aria-hidden="true">{% for pr in site.data.projects %}<span{% if forloop.first %} class="on"{% endif %}></span>{% endfor %}</div>
       </div>
     </div>
-    <figure class="hero-photo">
-      <img src="{{ p.photo }}" alt="{{ p.name }}" width="480" height="480">
-      <figcaption><strong>{{ p.name }}, Ph.D.</strong><br>{{ p.title[L] }}</figcaption>
-    </figure>
   </div>
   <div class="wrap">
     <div class="trace" aria-hidden="true">
