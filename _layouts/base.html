@@ -92,7 +92,7 @@
   </header>
 
   <main id="main">
-{{ content }}
+{{ content | replace: ' href="https://', ' target="_blank" rel="noopener" href="https://' | replace: ' href="http://', ' target="_blank" rel="noopener" href="http://' | replace: ' href="/assets/cv/', ' target="_blank" rel="noopener" href="/assets/cv/' }}
   </main>
 
   <footer class="site-footer" id="contact">
@@ -106,10 +106,10 @@
         <h2 class="footer-h">{{ t.contact }}</h2>
         <ul class="plain">
           <li><a href="mailto:{{ p.email }}">{{ p.email }}</a></li>
-          <li><a href="{{ p.scholar }}">Google Scholar</a></li>
-          {% if p.orcid != "" %}<li><a href="{{ p.orcid }}">ORCID</a></li>{% endif %}
-          {% if p.researchgate != "" %}<li><a href="{{ p.researchgate }}">ResearchGate</a></li>{% endif %}
-          <li><a href="{{ p.linkedin }}">LinkedIn</a></li>
+          <li><a href="{{ p.scholar }}" target="_blank" rel="noopener">Google Scholar</a></li>
+          {% if p.orcid != "" %}<li><a href="{{ p.orcid }}" target="_blank" rel="noopener">ORCID</a></li>{% endif %}
+          {% if p.researchgate != "" %}<li><a href="{{ p.researchgate }}" target="_blank" rel="noopener">ResearchGate</a></li>{% endif %}
+          <li><a href="{{ p.linkedin }}" target="_blank" rel="noopener">LinkedIn</a></li>
         </ul>
       </div>
       <div>
@@ -118,7 +118,7 @@
           <li><a href="{{ t.urls.research }}">{{ t.nav.research }}</a></li>
           <li><a href="{{ t.urls.publications }}">{{ t.nav.publications }}</a></li>
           <li><a href="{{ t.urls.teaching }}">{{ t.nav.teaching }}</a></li>
-          <li><a href="/assets/cv/foutse-momo-cv-{{ L }}.pdf">{{ t.cv }}</a></li>
+          <li><a href="/assets/cv/foutse-momo-cv-{{ L }}.pdf" target="_blank" rel="noopener">{{ t.cv }}</a></li>
         </ul>
       </div>
     </div>
