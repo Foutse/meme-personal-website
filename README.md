@@ -26,5 +26,5 @@ remembers the choice. Direct links: `…/?lang=fr` or `…/?lang=en`.
 
 ## Publish
 Settings → Pages → Deploy from a branch → `main` / root.
-URL: https://foutse.github.io/meme-personal-website/
+URL: https://foutsemomo.com (custom domain, DNS at Porkbun; see `CNAME`)
 (GitHub Pages on a private repo needs a paid plan; otherwise make the repo public.)
