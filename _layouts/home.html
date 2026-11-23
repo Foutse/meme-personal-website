@@ -9,7 +9,7 @@ layout: base
 <section class="hero">
   <div class="wrap">
     <header class="identity">
-      <img class="id-photo" src="{{ p.photo }}" alt="{{ p.name }}" width="480" height="480">
+      <img class="id-photo" src="{{ p.photo }}?v={{ site.time | date: '%s' }}" alt="{{ p.name }}" width="480" height="480">
       <div>
         <h1 class="id-name">{{ p.name }}, <span class="phd">Ph.D.</span></h1>
         <p class="id-title">{{ p.title[L] }}</p>

@@ -40,7 +40,7 @@
 </head>
 <body>
   <header>
-    <img src="{{ p.photo }}" alt="">
+    <img src="{{ p.photo }}?v={{ site.time | date: '%s' }}" alt="">
     <div>
       <h1>{{ p.name }}, Ph.D.</h1>
       <p class="sub">{{ p.title[L] }}</p>
