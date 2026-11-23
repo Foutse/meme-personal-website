@@ -31,7 +31,7 @@ All text is in `_data/` (YAML). Each entry has an `en:` and an `fr:` version whe
 | `_data/i18n.yml` | interface labels in both languages |
 
 Layouts: `_layouts/base.html` (header, footer, meta tags) wraps `home`, `research`, `project`,
-`publications`, `teaching` and `cvpage`. `_layouts/cv.html` is the printable CV used for the PDFs.
+`publications`, `teaching` and `cvpage`.
 Device drawings: `_includes/icon.html`. Fonts are self-hosted in `assets/fonts/`.
 Open questions for Prof. Momo: `CONTENT-TODO.md`.
 
@@ -48,10 +48,13 @@ Open questions for Prof. Momo: `CONTENT-TODO.md`.
 Small text edits can be made directly on github.com (pencil icon); the site rebuilds in about a minute.
 
 ## CV PDFs
-`assets/cv/*.pdf` are generated from the data. After changing content, regenerate them:
+`assets/cv/foutse-momo-cv-en.pdf` and `foutse-momo-cv-fr.pdf` are Prof. Momo's own CVs. To update
+them, replace the two files (keep the names). When the CV changes, update the matching data files
+too (`career.yml`, `teaching.yml`, `profile.yml`) so the site and the PDFs agree.
 
+## Building locally
 ```sh
-sh tools/build.sh   # needs Docker and Google Chrome
+sh tools/build.sh   # needs Docker
 ```
 
 The first time, build the Docker image used by the script:

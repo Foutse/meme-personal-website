@@ -10,8 +10,8 @@ orcid: ""          # e.g. https://orcid.org/0000-0000-0000-0000  (leave empty to
 researchgate: ""   # leave empty to hide
 
 title:
-  en: Associate Professor of Physics
-  fr: Maître de Conférences en Physique
+  en: Associate Professor, Physics & Biomedical Engineering
+  fr: Maître de conférences, physique et ingénierie biomédicale
 affiliation:
   en: Faculty of Science and Technology, Université des Montagnes, Bangangté, Cameroon
   fr: Faculté des Sciences et Technologies, Université des Montagnes, Bangangté, Cameroun
@@ -19,25 +19,35 @@ address:
   en: [Faculty of Science and Technology, Université des Montagnes, "P.O. Box 208, Bangangté, Cameroon"]
   fr: [Faculté des Sciences et Technologies, Université des Montagnes, "B.P. 208, Bangangté, Cameroun"]
 
-# Bio (Markdown allowed). TO CONFIRM WITH PROF. MOMO.
+# Bio (Markdown allowed). Follows the profile paragraph of his CV.
 bio:
   en: >-
-    I am an Associate Professor (Maître de Conférences) of Physics at the Université des Montagnes in
-    Bangangté, Cameroon, where I have taught physics and biomedical engineering since 2005.
-    My research focuses on **low-cost medical devices** for hospitals in low-income settings (neonatal
-    incubators, a mobile dental unit, a phonocardiograph, bioimpedance systems) and on **radiation
-    protection** in hospitals. I also work on the **nonlinear dynamics** of semiconductor lasers and
-    electronic circuits, the subject of my Ph.D. at the University of Dschang. I have supervised
-    24 Master's theses and coordinated several of the university's biomedical engineering programmes.
+    I am a physicist and biomedical engineer, Associate Professor (Maître de Conférences) at the
+    Université des Montagnes in Bangangté, Cameroon, and a member of BEEMo.Lab (Biomedical Engineering,
+    Energy & Modeling Laboratory) at the Faculty of Science and Technology.
+    I design **affordable medical devices for African hospitals**, from the mathematical model to the
+    working prototype: neonatal incubators, a mobile dental unit, a telemedicine phonocardiograph and a
+    bioimpedance system. I also work on **radiation protection** in hospitals and on the **nonlinear
+    dynamics** of semiconductor lasers and electronic circuits, the subject of my Ph.D. at the
+    University of Dschang. I have taught at university for over 20 years, coordinated five degree
+    programmes and supervised 24 Master's theses, most of them built around a working device.
   fr: >-
-    Je suis Maître de Conférences en Physique à l'Université des Montagnes à Bangangté (Cameroun), où
-    j'enseigne la physique et le génie biomédical depuis 2005. Mes recherches portent sur les
-    **dispositifs médicaux à bas coût** pour les hôpitaux des pays à faibles revenus (incubateurs
-    néonatals, unité dentaire mobile, phonocardiographe, systèmes de bioimpédance) et sur la
-    **radioprotection** en milieu hospitalier. Je travaille aussi sur la **dynamique non linéaire**
-    des lasers à semi-conducteurs et des circuits électroniques, sujet de mon doctorat à l'Université
-    de Dschang. J'ai encadré 24 mémoires de Master et coordonné plusieurs programmes de génie
-    biomédical de l'université.
+    Physicien et ingénieur biomédical, je suis Maître de conférences à l'Université des Montagnes à
+    Bangangté (Cameroun) et membre du BEEMo.Lab (Biomedical Engineering, Energy & Modeling Laboratory)
+    de la Faculté des sciences et technologies.
+    Je conçois des **dispositifs médicaux abordables pour les hôpitaux d'Afrique**, du modèle
+    mathématique au prototype fonctionnel : couveuses néonatales, unité dentaire mobile,
+    phonocardiographe pour la télémédecine, système de bio-impédance. Je travaille aussi sur la
+    **radioprotection** en milieu hospitalier et sur la **dynamique non linéaire** des lasers à
+    semi-conducteurs et des circuits électroniques, sujet de mon doctorat à l'Université de Dschang.
+    J'enseigne à l'université depuis plus de vingt ans ; j'ai coordonné cinq formations et encadré
+    24 mémoires de master, la plupart autour d'un dispositif fonctionnel.
+
+# Key figures on the home page (same as the CV). Theses are counted from theses.yml.
+key_figures:
+  prototypes: 7
+  programmes: 5
+  years: 20
 
 # Metrics: update from Google Scholar from time to time, together with `cites` in publications.yml.
 metrics:

@@ -140,7 +140,7 @@
       var step = function (ts) {
         if (!t0) t0 = ts;
         var p = Math.min(1, (ts - t0) / dur), eased = 1 - Math.pow(1 - p, 3);
-        el.textContent = Math.round(end * eased);
+        el.textContent = Math.round(end * eased) + (el.getAttribute('data-suffix') || '');
         if (p < 1) requestAnimationFrame(step);
       };
       el.textContent = '0';

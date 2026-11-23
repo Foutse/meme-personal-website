@@ -9,8 +9,7 @@ en:
   tagline: Affordable medical devices for hospitals in Africa
   lead: "Physicist and biomedical engineer at the Université des Montagnes, Cameroon. I design low-cost medical devices, work on radiation safety in hospitals, and study the nonlinear dynamics of lasers and circuits."
   about: About
-  stats: { pubs: Peer-reviewed publications, citations: Citations, h: h-index, theses: "Master's theses supervised" }
-  stats_note: "Publications and citations from Google Scholar, %s. Conference proceedings are listed separately."
+  stats: { pubs: Peer-reviewed publications, citations: Citations, h: h-index, theses: "Master's theses supervised", prototypes: Device prototypes, programmes: Degree programmes coordinated, years: Years of university teaching }
   news: News
   featured: Selected work
   all_projects: All projects →
@@ -46,10 +45,12 @@ en:
   talks: Conference presentations
   teaching: Teaching and supervision
   teaching_title: Courses
-  teaching_intro: "Courses taught at the Université des Montagnes, from first-year undergraduate (L1) to Master's level (M1)."
+  teaching_intro: "Over 20 years of university teaching in physics and biomedical engineering, from first-year undergraduate (L1) to Master's level (M1), and five degree programmes coordinated at the Université des Montagnes."
+  programmes_title: Programmes coordinated
+  programmes_intro: "Degree programmes I have led or coordinated at the Université des Montagnes."
   supervision: Master's theses supervised
   students_title: Master's projects
-  theses_intro: "24 Master's theses between 2017 and 2024, most of them in biomedical engineering."
+  theses_intro: "24 Master's theses between 2017 and 2024, most of them built around a working device in biomedical engineering. Two of the students co-authored journal papers with me."
   th: { year: Year, student: Student, title: Title }
   theses_note: All at the Université des Montagnes unless stated otherwise.
   cv_title: Curriculum vitae
@@ -59,8 +60,8 @@ en:
   ranks: Academic rank
   memberships: Memberships
   service: University service
-  committees: "Member of the Ethics and Quality Assurance Committee (2018–2025) and of the Pedagogical Commission (2020–2025) of the Université des Montagnes."
-  advisor: "Advisor: Prof. Paul Woafo."
+  advisor: "Supervisors: Prof. Paul Woafo and the late Dr. Lisette Meffo Poinkan."
+  training: Professional training
   contact: Contact
   email: Email
   cv: Download CV (PDF)
@@ -79,8 +80,7 @@ fr:
   tagline: Des dispositifs médicaux abordables pour les hôpitaux d'Afrique
   lead: "Physicien et ingénieur biomédical à l'Université des Montagnes (Cameroun). Je conçois des dispositifs médicaux à bas coût, travaille sur la radioprotection à l'hôpital et étudie la dynamique non linéaire des lasers et des circuits."
   about: Présentation
-  stats: { pubs: Publications à comité de lecture, citations: Citations, h: Indice h, theses: Mémoires de Master encadrés }
-  stats_note: "Publications et citations selon Google Scholar, %s. Les actes de conférence sont listés à part."
+  stats: { pubs: Publications à comité de lecture, citations: Citations, h: Indice h, theses: Mémoires de master encadrés, prototypes: Prototypes de dispositifs, programmes: Formations coordonnées, years: Années d'enseignement universitaire }
   news: Actualités
   featured: Travaux choisis
   all_projects: Tous les projets →
@@ -116,10 +116,12 @@ fr:
   talks: Communications
   teaching: Enseignement et encadrement
   teaching_title: Cours
-  teaching_intro: "Cours dispensés à l'Université des Montagnes, de la Licence 1 au Master 1."
+  teaching_intro: "Plus de vingt ans d'enseignement universitaire en physique et en ingénierie biomédicale, de la Licence 1 au Master 1, et cinq formations coordonnées à l'Université des Montagnes."
+  programmes_title: Formations coordonnées
+  programmes_intro: "Formations que j'ai dirigées ou coordonnées à l'Université des Montagnes."
   supervision: Mémoires de Master encadrés
   students_title: Sujets de Master
-  theses_intro: "24 mémoires de Master entre 2017 et 2024, pour la plupart en ingénierie biomédicale."
+  theses_intro: "24 mémoires de master entre 2017 et 2024, pour la plupart en ingénierie biomédicale et autour d'un dispositif fonctionnel. Deux des personnes encadrées ont cosigné des articles de revue avec moi."
   th: { year: Année, student: Étudiant(e), title: Titre }
   theses_note: Tous à l'Université des Montagnes sauf mention contraire.
   cv_title: Curriculum vitae
@@ -129,8 +131,8 @@ fr:
   ranks: Grades universitaires
   memberships: Sociétés savantes
   service: Responsabilités institutionnelles
-  committees: "Membre du Comité éthique et assurance qualité (2018–2025) et de la Commission pédagogique (2020–2025) de l'Université des Montagnes."
-  advisor: "Directeur : Pr Paul Woafo."
+  advisor: "Encadrement : Pr Paul Woafo et Dr Lisette Meffo Poinkan (in memoriam)."
+  training: Formations suivies
   contact: Contact
   email: Courriel
   cv: Télécharger le CV (PDF)

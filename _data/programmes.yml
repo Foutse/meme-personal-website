@@ -1,0 +1,13 @@
+# Degree programmes coordinated (from the CV). Shown on the Teaching page.
+- when: "2024 – 2025"
+  name: { en: "Distance-learning Master's in Quality Control, Regulatory Affairs and Biomedical Engineering", fr: "Master à distance Contrôle qualité, affaires réglementaires et ingénierie biomédicale" }
+  note: { en: "Run with the AUF (Agence universitaire de la Francophonie)", fr: "Mené avec l'AUF (Agence universitaire de la Francophonie)" }
+  note_url: https://www.auf.org/
+- when: "2024 – 2025"
+  name: { en: "Master's in Biomedical Engineering, Instrumentation track", fr: "Master Ingénierie biomédicale, option instrumentation" }
+- when: "2018 – 2020"
+  name: { en: "Biomedical Instrumentation and Maintenance programme (years 2–3)", fr: "Filière Instrumentation et maintenance biomédicale (niveaux 2 et 3)" }
+- when: "2014 – 2016"
+  name: { en: "Master's in Biomedical Engineering (interim coordinator)", fr: "Master Génie biomédical (coordonnateur par intérim)" }
+- when: "2014 – 2016"
+  name: { en: "Master's in Computer Engineering and Systems (interim coordinator)", fr: "Master Génie informatique et systèmes (coordonnateur par intérim)" }

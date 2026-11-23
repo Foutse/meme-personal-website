@@ -57,11 +57,11 @@
     fr: "Un phonocardiographe pour la télémédecine et un algorithme générant des signaux cardiaques synthétiques réalistes."
   body:
     en: |
-      A phonocardiograph records the sounds of the heart so that they can be analysed, stored and sent to a doctor elsewhere. This work produced a phonocardiograph designed for telemedicine.
+      A phonocardiograph records the sounds of the heart so that they can be analysed, stored and sent to a doctor elsewhere. This work, with the University of Dhaka (Bangladesh), produced a phonocardiograph designed for telemedicine.
 
       To test such devices and the software that analyses heart sounds, the team also developed an algorithm that generates synthetic heart-sound signals from a few parameters measured on real recordings (amplitude, heart rate and the interval between the two heart sounds). Compared with recordings from public databases, the synthetic signals matched closely, with correlations above 0.8 and heart-rate differences as small as 1.6%.
     fr: |
-      Un phonocardiographe enregistre les bruits du cœur afin de pouvoir les analyser, les conserver et les transmettre à un médecin à distance. Ces travaux ont produit un phonocardiographe conçu pour la télémédecine.
+      Un phonocardiographe enregistre les bruits du cœur afin de pouvoir les analyser, les conserver et les transmettre à un médecin à distance. Ces travaux, menés avec l'Université de Dhaka (Bangladesh), ont produit un phonocardiographe conçu pour la télémédecine.
 
       Pour tester ces appareils et les logiciels d'analyse des bruits cardiaques, l'équipe a aussi développé un algorithme qui génère des signaux cardiaques synthétiques à partir de quelques paramètres mesurés sur de vrais enregistrements (amplitude, fréquence cardiaque et intervalle entre les deux bruits du cœur). Comparés à des enregistrements de bases de données publiques, les signaux synthétiques concordent étroitement, avec des corrélations supérieures à 0,8 et des écarts de fréquence cardiaque de seulement 1,6 %.
   papers: [10.1016/j.bspc.2020.101983, 10.1007/s12553-022-00646-x]

@@ -51,6 +51,10 @@ layout: base
       <ul class="plain">
         {% for r in c.service %}<li><span class="when">{{ r.when }}</span> {{ r.text[L] }}</li>{% endfor %}
       </ul>
+      <h2 class="mt">{{ t.training }}</h2>
+      <ul class="plain">
+        {% for r in c.training %}<li><span class="when">{{ r.when }}</span> {{ r.text[L] }}</li>{% endfor %}
+      </ul>
       <h2 class="mt">{{ t.memberships }}</h2>
       <ul class="plain memberships">
         {% for m in c.memberships %}

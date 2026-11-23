@@ -27,6 +27,22 @@ layout: base
   </div>
 </section>
 
+<section class="section alt">
+  <div class="wrap">
+    <h2>{{ t.programmes_title }}</h2>
+    <p class="section-intro">{{ t.programmes_intro }}</p>
+    <ol class="timeline programmes">
+      {% for pg in site.data.programmes %}
+      <li>
+        <span class="when">{{ pg.when }}</span>
+        <h3>{{ pg.name[L] }}</h3>
+        {% if pg.note %}<p class="org">{% if pg.note_url %}<a href="{{ pg.note_url }}">{{ pg.note[L] }}</a>{% else %}{{ pg.note[L] }}{% endif %}</p>{% endif %}
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>
+
 <section class="band">
   <div class="wrap band-inner">
     <div>

@@ -36,9 +36,9 @@ education:
     org: { en: "University of Dschang · Mechanics, Materials and Structures · *Très Honorable*", fr: "Université de Dschang · Mécanique, matériaux et structures · Mention Très Honorable" }
     thesis: "“Contribution to the study of the dynamical behavior of edge-emitting semiconductor laser: analytical, numerical and analog simulation approach.”"
   - when: "2005"
-    degree: { en: "DEA (pre-doctoral Master's) in Physics", fr: DEA en Physique }
+    degree: { en: "DEA (M.Phil.) in Physics", fr: DEA en Physique }
     org: { en: "University of Yaoundé I · Atoms and Radiation", fr: "Université de Yaoundé I · Option Atome et rayonnement" }
-  - when: "2000 – 2002"
+  - when: "2002"
     degree: { en: Licence and Maîtrise in Physics, fr: Licence et Maîtrise de Physique }
     org: { en: University of Yaoundé I, fr: Université de Yaoundé I }
 ranks:
@@ -59,3 +59,9 @@ service:
     text: { en: "Member, Ethics and Quality Assurance Committee, Université des Montagnes", fr: "Membre du Comité éthique et assurance qualité, Université des Montagnes" }
   - when: "2020 – 2025"
     text: { en: "Member, Pedagogical Commission, Université des Montagnes", fr: "Membre de la Commission pédagogique, Université des Montagnes" }
+# Training courses attended.
+training:
+  - when: "2017"
+    text: { en: "IAEA seminar on radiological quality control, project RAF6048", fr: "Séminaire AIEA de contrôle qualité radiologique, projet RAF6048" }
+  - when: "2017 – 2019"
+    text: { en: "OHCEA One Health workshops on course design and scientific writing", fr: "Ateliers One Health de l'OHCEA sur la conception de cours et la rédaction scientifique" }

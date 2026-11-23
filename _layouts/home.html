@@ -4,7 +4,6 @@ layout: base
 {%- assign L = page.lang -%}
 {%- assign t = site.data.i18n[L] -%}
 {%- assign p = site.data.profile -%}
-{%- assign peer = site.data.publications | where_exp: "x", "x.kind != 'proceedings'" -%}
 
 <section class="hero">
   <div class="wrap">
@@ -53,13 +52,13 @@ layout: base
         <path class="trace-pulse" pathLength="1000" d="M0 28h560l12-18 14 40 14-34 10 12h390"/>
       </svg>
     </div>
+    {%- assign k = p.key_figures %}
     <dl class="stats">
-      <div><dt>{{ t.stats.pubs }}</dt><dd data-count="{{ peer | size }}">{{ peer | size }}</dd></div>
-      <div><dt>{{ t.stats.citations }}</dt><dd data-count="{{ p.metrics.citations }}">{{ p.metrics.citations }}</dd></div>
-      <div><dt>{{ t.stats.h }}</dt><dd data-count="{{ p.metrics.h_index }}">{{ p.metrics.h_index }}</dd></div>
       <div><dt>{{ t.stats.theses }}</dt><dd data-count="{{ site.data.theses | size }}">{{ site.data.theses | size }}</dd></div>
+      <div><dt>{{ t.stats.prototypes }}</dt><dd data-count="{{ k.prototypes }}">{{ k.prototypes }}</dd></div>
+      <div><dt>{{ t.stats.programmes }}</dt><dd data-count="{{ k.programmes }}">{{ k.programmes }}</dd></div>
+      <div><dt>{{ t.stats.years }}</dt><dd data-count="{{ k.years }}" data-suffix="+">{{ k.years }}+</dd></div>
     </dl>
-    <p class="stats-note">{{ t.stats_note | replace: "%s", p.metrics.updated[L] }}</p>
   </div>
 </section>
 
