@@ -1,157 +1,588 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="l-en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Prof. Firstname Lastname</title>
-  <meta name="description" content="Professor of [Department] at [University]. Research in [field].">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Foutse Momo — Associate Professor of Physics</title>
+  <meta name="description" content="Foutse Momo, Associate Professor (Maître de Conférences) of Physics at the Université des Montagnes, Bangangté, Cameroon. Low-cost biomedical instrumentation, radiation protection, semiconductor laser dynamics, bioimpedance.">
+  <meta property="og:title" content="Foutse Momo — Associate Professor of Physics">
+  <meta property="og:description" content="Low-cost biomedical instrumentation, radiation protection and nonlinear dynamics. Université des Montagnes, Cameroon.">
+  <meta property="og:image" content="assets/img/foutse-momo.jpg">
+  <meta property="og:type" content="profile">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    // Pick language before first paint: saved choice, else browser language.
+    (function () {
+      var l = (location.search.match(/[?&]lang=(en|fr)/) || [])[1] || null;
+      if (!l) { try { l = localStorage.getItem('lang'); } catch (e) {} }
+      if (!l) l = (navigator.language || 'en').toLowerCase().indexOf('fr') === 0 ? 'fr' : 'en';
+      document.documentElement.className = 'l-' + l;
+      document.documentElement.lang = l;
+    })();
+  </script>
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
+  <a class="skip" href="#main"><span lang="en">Skip to content</span><span lang="fr">Aller au contenu</span></a>
 
   <header class="site-header">
     <div class="wrap header-inner">
-      <a class="brand" href="#top">Firstname Lastname</a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
-      <nav id="nav" class="nav">
-        <a href="#about">About</a>
-        <a href="#research">Research</a>
-        <a href="#publications">Publications</a>
-        <a href="#teaching">Teaching</a>
-        <a href="#group">Group</a>
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-      </nav>
+      <a class="brand" href="#top">Foutse Momo</a>
+      <div class="header-actions">
+        <nav id="nav" class="nav" aria-label="Main">
+          <a href="#research"><span lang="en">Research</span><span lang="fr">Recherche</span></a>
+          <a href="#projects"><span lang="en">Projects</span><span lang="fr">Projets</span></a>
+          <a href="#publications">Publications</a>
+          <a href="#teaching"><span lang="en">Teaching</span><span lang="fr">Enseignement</span></a>
+          <a href="#supervision"><span lang="en">Supervision</span><span lang="fr">Encadrement</span></a>
+          <a href="#experience"><span lang="en">Experience</span><span lang="fr">Parcours</span></a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button class="lang-toggle" type="button" aria-label="Changer de langue / Switch language">
+          <span lang="en">FR</span><span lang="fr">EN</span>
+        </button>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">
+          <span lang="en">Menu</span><span lang="fr">Menu</span>
+        </button>
+      </div>
     </div>
   </header>
 
   <main id="main">
-    <!-- ABOUT -->
-    <section id="about" class="hero wrap">
-      <img class="portrait" src="assets/img/portrait.svg" alt="Portrait of Firstname Lastname" width="220" height="220">
-      <div>
-        <h1>Prof. Firstname Lastname</h1>
-        <p class="role">Professor of [Department]<br>[University], [City, Country]</p>
-        <p>
-          [Short bio, 3–5 sentences. Who you are, what you work on, and what questions drive your research.
-          Mention your PhD institution, current appointment, and any major affiliations.]
+    <!-- ============ ABOUT ============ -->
+    <section id="top" class="hero">
+      <div class="wrap hero-inner">
+        <img class="portrait" src="assets/img/foutse-momo.jpg" alt="Foutse Momo" width="240" height="240">
+        <div class="hero-text">
+          <p class="eyebrow">
+            <span lang="en">Associate Professor of Physics</span>
+            <span lang="fr">Maître de Conférences en Physique</span>
+          </p>
+          <h1>Foutse Momo, <span class="phd">Ph.D.</span></h1>
+          <p class="affil">
+            <span lang="en">Faculty of Science and Technology, Université des Montagnes, Bangangté, Cameroon</span>
+            <span lang="fr">Faculté des Sciences et Technologies, Université des Montagnes, Bangangté, Cameroun</span>
+          </p>
+          <p lang="en">
+            I design <strong>low-cost biomedical instruments</strong> for hospitals in low-income settings, from neonatal
+            incubators and mobile dental units to phonocardiographs and bioimpedance systems. I also work on
+            <strong>radiation protection</strong> in hospitals and on the <strong>nonlinear dynamics</strong> of
+            semiconductor lasers and electronic oscillators. I have taught physics and biomedical engineering at the
+            Université des Montagnes since 2007, where I coordinate the Master's programmes in Biomedical Engineering.
+          </p>
+          <p lang="fr">
+            Je conçois des <strong>instruments biomédicaux à bas coût</strong> pour les hôpitaux des pays à faibles
+            revenus : incubateurs néonatals, unités dentaires mobiles, phonocardiographes, systèmes de bioimpédance.
+            Je travaille aussi sur la <strong>radioprotection</strong> en milieu hospitalier et sur la
+            <strong>dynamique non linéaire</strong> des lasers à semi-conducteurs et des oscillateurs électroniques.
+            J'enseigne la physique et le génie biomédical à l'Université des Montagnes depuis 2007, où je coordonne
+            les Masters en Ingénierie Biomédicale.
+          </p>
+          <ul class="links">
+            <li><a href="mailto:mfoutse@udm.aed-cm.org">mfoutse@udm.aed-cm.org</a></li>
+            <li><a href="https://scholar.google.com/citations?user=wDQUzpUAAAAJ">Google Scholar</a></li>
+            <li><a href="https://www.linkedin.com/in/foutse-momo-4298b946/">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="wrap">
+        <dl class="stats">
+          <div><dt><span lang="en">Publications</span><span lang="fr">Publications</span></dt><dd>14</dd></div>
+          <div><dt><span lang="en">Citations</span><span lang="fr">Citations</span></dt><dd>140</dd></div>
+          <div><dt>h-index</dt><dd>7</dd></div>
+          <div><dt><span lang="en">Master's theses supervised</span><span lang="fr">Mémoires de Master encadrés</span></dt><dd>24</dd></div>
+        </dl>
+        <p class="stats-note">
+          <span lang="en">Citation figures from Google Scholar, November 2026.</span>
+          <span lang="fr">Citations selon Google Scholar, novembre 2026.</span>
         </p>
-        <ul class="links">
-          <li><a href="mailto:name@university.edu">Email</a></li>
-          <li><a href="assets/cv.pdf">CV (PDF)</a></li>
-          <li><a href="https://scholar.google.com/">Google Scholar</a></li>
-          <li><a href="https://orcid.org/">ORCID</a></li>
-          <li><a href="https://github.com/">GitHub</a></li>
+      </div>
+    </section>
+
+    <!-- ============ RESEARCH ============ -->
+    <section id="research">
+      <div class="wrap">
+        <h2><span lang="en">Research themes</span><span lang="fr">Thématiques de recherche</span></h2>
+        <div class="grid themes">
+          <article class="card">
+            <h3><span lang="en">Low-cost biomedical instrumentation</span><span lang="fr">Instrumentation biomédicale à bas coût</span></h3>
+            <p lang="en">Designing, prototyping and field-testing affordable medical devices adapted to hospitals in developing countries.</p>
+            <p lang="fr">Conception, prototypage et évaluation sur le terrain de dispositifs médicaux abordables, adaptés aux hôpitaux des pays en développement.</p>
+          </article>
+          <article class="card">
+            <h3><span lang="en">Radiation protection</span><span lang="fr">Radioprotection</span></h3>
+            <p lang="en">Exposure to ionising radiation in hospitals, radiological quality control and dosimetry.</p>
+            <p lang="fr">Exposition aux rayonnements ionisants en milieu hospitalier, contrôle qualité radiologique et dosimétrie.</p>
+          </article>
+          <article class="card">
+            <h3><span lang="en">Semiconductor lasers</span><span lang="fr">Lasers à semi-conducteurs</span></h3>
+            <p lang="en">Dynamics of edge-emitting semiconductor lasers (analytical, numerical and analog-circuit models) and their medical applications.</p>
+            <p lang="fr">Dynamique des lasers à semi-conducteurs émettant par la tranche (modèles analytiques, numériques et analogiques) et leurs applications médicales.</p>
+          </article>
+          <article class="card">
+            <h3><span lang="en">Oscillators and bioimpedance</span><span lang="fr">Oscillateurs et bioimpédance</span></h3>
+            <p lang="en">Self-sustained electronic oscillators and their use in bioimpedance measurement and spectroscopy.</p>
+            <p lang="fr">Oscillateurs électroniques auto-entretenus et leurs applications à la mesure et à la spectroscopie de bioimpédance.</p>
+          </article>
+          <article class="card">
+            <h3><span lang="en">Modelling biological systems</span><span lang="fr">Modélisation des systèmes biologiques</span></h3>
+            <p lang="en">Analog and numerical modelling of biological systems and biosignals to support medical diagnosis.</p>
+            <p lang="fr">Modélisation analogique et numérique des systèmes biologiques et des biosignaux pour l'aide au diagnostic.</p>
+          </article>
+          <article class="card">
+            <h3><span lang="en">Nonlinear dynamics and chaos</span><span lang="fr">Dynamique non linéaire et chaos</span></h3>
+            <p lang="en">Chaotic circuits, memristors and motor dynamics, with electronic and microcontroller implementations.</p>
+            <p lang="fr">Circuits chaotiques, memristors et dynamique des moteurs, avec implémentations électroniques et sur microcontrôleur.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section id="projects" class="alt">
+      <div class="wrap">
+        <h2><span lang="en">Selected devices and projects</span><span lang="fr">Dispositifs et projets choisis</span></h2>
+        <div class="grid projects">
+          <article class="card project">
+            <p class="tag"><span lang="en">Neonatal care</span><span lang="fr">Néonatologie</span></p>
+            <h3><span lang="en">Neonatal incubators</span><span lang="fr">Incubateurs néonatals</span></h3>
+            <p lang="en">Energy-efficient incubators with phototherapy, a built-in baby scale, remote monitoring and heart-rate control, built for hospitals with unreliable power.</p>
+            <p lang="fr">Incubateurs économes en énergie avec photothérapie, pèse-bébé, surveillance à distance et contrôle de la fréquence cardiaque, conçus pour des hôpitaux à l'alimentation électrique instable.</p>
+            <p class="refs"><a href="https://doi.org/10.1016/j.jnn.2019.07.011">2019</a> · <a href="https://doi.org/10.1007/s12553-018-0253-3">2019</a> · <a href="https://doi.org/10.1016/j.medengphy.2019.10.021">2020</a></p>
+          </article>
+          <article class="card project">
+            <p class="tag"><span lang="en">Oral health</span><span lang="fr">Santé bucco-dentaire</span></p>
+            <h3><span lang="en">Mobile dental unit</span><span lang="fr">Unité dentaire mobile</span></h3>
+            <p lang="en">A low-cost mobile dental unit for oral care in underserved areas, taken from concept to operation.</p>
+            <p lang="fr">Une unité dentaire mobile à bas coût pour les soins bucco-dentaires dans les zones mal desservies, de la conception à la mise en service.</p>
+            <p class="refs"><a href="https://doi.org/10.1007/s12553-020-00477-8">2020</a></p>
+          </article>
+          <article class="card project">
+            <p class="tag"><span lang="en">Telemedicine</span><span lang="fr">Télémédecine</span></p>
+            <h3><span lang="en">Phonocardiography</span><span lang="fr">Phonocardiographie</span></h3>
+            <p lang="en">A phonocardiograph for telemedicine and an algorithm that generates realistic synthetic heart-sound signals.</p>
+            <p lang="fr">Un phonocardiographe pour la télémédecine et un algorithme générant des signaux cardiaques synthétiques réalistes.</p>
+            <p class="refs"><a href="https://doi.org/10.1016/j.bspc.2020.101983">2020</a> · <a href="https://doi.org/10.1007/s12553-022-00646-x">2022</a></p>
+          </article>
+          <article class="card project">
+            <p class="tag"><span lang="en">Measurement</span><span lang="fr">Mesure</span></p>
+            <h3><span lang="en">Bioimpedance spectroscopy</span><span lang="fr">Spectroscopie de bioimpédance</span></h3>
+            <p lang="en">Improved accuracy for low-frequency bioimpedance spectroscopy based on the AD8302 gain and phase detector.</p>
+            <p lang="fr">Amélioration de la précision d'un système de spectroscopie de bioimpédance basse fréquence basé sur le détecteur de gain et de phase AD8302.</p>
+            <p class="refs"><a href="https://doi.org/10.1016/j.measurement.2018.03.079">2018</a></p>
+          </article>
+          <article class="card project">
+            <p class="tag"><span lang="en">Laboratory</span><span lang="fr">Laboratoire</span></p>
+            <h3><span lang="en">Digital microscope</span><span lang="fr">Microscope numérique</span></h3>
+            <p lang="en">Prototype of a digital microscope adapted to laboratories in low-income countries (Bioscience conference, 2023).</p>
+            <p lang="fr">Prototype de microscope numérique adapté aux laboratoires des pays à faibles revenus (Conférence de Bioscience, 2023).</p>
+          </article>
+          <article class="card project">
+            <p class="tag"><span lang="en">Agriculture</span><span lang="fr">Agriculture</span></p>
+            <h3><span lang="en">Egg incubator</span><span lang="fr">Couveuse à œufs</span></h3>
+            <p lang="en">A low-cost, energy-efficient egg incubator designed and prototyped for Cameroonian farmers.</p>
+            <p lang="fr">Une couveuse à œufs économe en énergie et à bas coût, conçue et prototypée pour les éleveurs camerounais.</p>
+            <p class="refs"><a href="https://doi.org/10.1016/j.sciaf.2020.e00618">2020</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PUBLICATIONS ============ -->
+    <section id="publications">
+      <div class="wrap">
+        <h2>Publications</h2>
+        <div class="pub-tools">
+          <div class="filters" role="group" aria-label="Filter">
+            <button type="button" class="chip active" data-filter="all"><span lang="en">All</span><span lang="fr">Toutes</span></button>
+            <button type="button" class="chip" data-filter="bio"><span lang="en">Biomedical instrumentation</span><span lang="fr">Instrumentation biomédicale</span></button>
+            <button type="button" class="chip" data-filter="nl"><span lang="en">Lasers and nonlinear dynamics</span><span lang="fr">Lasers et dynamique non linéaire</span></button>
+          </div>
+          <a class="scholar-link" href="https://scholar.google.com/citations?user=wDQUzpUAAAAJ">
+            <span lang="en">Full profile on Google Scholar →</span><span lang="fr">Profil complet sur Google Scholar →</span>
+          </a>
+        </div>
+
+        <div class="pubs">
+          <h3 class="year">2025</h3>
+          <ol>
+            <li data-topic="nl">
+              <p class="title">Chaos annihilation-based on genetic algorithms in a non-smooth air-gap permanent magnet synchronous motor embedded in the microcontroller</p>
+              <p class="authors">I. K. Ngongiah, R. Tsapla Fotsa, J. Mvogo Ngono, N. Nyang Kibanya, E. Godwe, <b>F. Momo</b></p>
+              <p class="venue"><em>ADBA Computer Science</em> 2(2), 30–35</p>
+              <p class="meta"><a class="btn" href="https://doi.org/10.69882/adba.cs.2025071">DOI</a> <span class="cites">5 <span lang="en">citations</span><span lang="fr">citations</span></span></p>
+            </li>
+            <li data-topic="nl">
+              <p class="title">Permanent magnet synchronous motor with load torque: dynamics, circuitry execution and control</p>
+              <p class="authors">R. Tsapla Fotsa, P. K. Koubeu Papemsi, G. P. Ayemtsa Kuete, J. R. Mboupda Pone, S. R. Dzonde Naoussi, <b>F. Momo</b>, P. Ele</p>
+              <p class="venue"><em>Chaos and Fractals</em> 2(1), 14–19</p>
+              <p class="meta"><a class="btn" href="https://doi.org/10.69882/adba.chf.2025013">DOI</a> <span class="cites">16 <span lang="en">citations</span><span lang="fr">citations</span></span></p>
+            </li>
+          </ol>
+
+          <h3 class="year">2022</h3>
+          <ol>
+            <li data-topic="bio">
+              <p class="title">Design and development of a phonocardiograph for telemedicine applications</p>
+              <p class="authors">Y. Mohamadou, P. Tiam Kapen, <b>F. Momo</b>, A. L. Kamga Kamga, O. Docna, M. Mohammad, M. Ahmad, K. Siddique-e Rabbani</p>
+              <p class="venue"><em>Health and Technology</em> 12(2), 453–463 · Springer</p>
+              <p class="meta"><a class="btn" href="https://doi.org/10.1007/s12553-022-00646-x">DOI</a> <span class="cites">6 <span lang="en">citations</span><span lang="fr">citations</span></span></p>
+            </li>
+          </ol>
+
+          <h3 class="year">2021</h3>
+          <ol>
+            <li data-topic="nl">
+              <p class="title">Extreme multistability, hidden chaotic attractors and amplitude controls in an absolute memristor Van der Pol–Duffing circuit: dynamical analysis and electronic implementation</p>
+              <p class="authors">J. R. Mboupda Pone, <b>F. Momo</b>, G. H. Kom, I. O. Lowe Kombou, S. Takougang Kingni, A. Tiedeu</p>
+              <p class="venue"><span lang="en">Book chapter in</span><span lang="fr">Chapitre dans</span> <em>Mem-elements for Neuromorphic Circuits with Artificial Intelligence Applications</em>, 165–180 · Elsevier</p>
+              <p class="meta"><a class="btn" href="https://doi.org/10.1016/b978-0-12-821184-7.00016-5">DOI</a> <span class="cites">1 citation</span></p>
+            </li>
+          </ol>
+
+          <h3 class="year">2020</h3>
+          <ol>
+            <li data-topic="bio">
+              <p class="title">Design and prototyping of a low-cost, energy efficient eggs incubator in developing countries: a case study of Cameroon</p>
+              <p class="authors">P. Tiam Kapen, Y. Mohamadou, <b>F. Momo</b>, H. Manfouo, F. O. Njotchui Mbakop</p>
+              <p class="venue"><em>Scientific African</em> 10, e00618 · Elsevier</p>
+              <p class="meta"><a class="btn" href="https://doi.org/10.1016/j.sciaf.2020.e00618">DOI</a> <span class="cites">23 <span lang="en">citations</span><span lang="fr">citations</span></span></p>
+            </li>
+            <li data-topic="bio">
+              <p class="title">Phonocardiogram: a robust algorithm for generating synthetic signals and comparison with real life ones</p>
+              <p class="authors">P. Tiam Kapen, Y. Mohamadou, S. U. Kouam Kouam, <b>F. Momo</b>, A. R. Tchamda, G. Tchuen</p>
+              <p class="venue"><em>Biomedical Signal Processing and Control</em> 60, 101983 · Elsevier</p>
+              <p class="meta"><a class="btn" href="https://doi.org/10.1016/j.bspc.2020.101983">DOI</a> <span class="cites">13 <span lang="en">citations</span><span lang="fr">citations</span></span></p>
+            </li>
+            <li data-topic="bio">
+              <p class="title">A multi-function neonatal incubator for low-income countries: implementation and ab initio social impact</p>
+              <p class="authors">P. Tiam Kapen, Y. Mohamadou, <b>F. Momo</b>, J. Dongmeza Koudjou, F. de P. Mkankam Kamga</p>
+              <p class="venue"><em>Medical Engineering &amp; Physics</em> 77, 114–117 · Elsevier</p>
+              <p class="meta"><a class="btn" href="https://doi.org/10.1016/j.medengphy.2019.10.021">DOI</a> <span class="cites">8 <span lang="en">citations</span><span lang="fr">citations</span></span></p>
+            </li>
+            <li data-topic="bio">
+              <p class="title">Low-cost mobile dental unit for oral care service delivery in third world countries: from concept to operation</p>
+              <p class="authors"><b>F. Momo</b>, Y. Mohamadou, P. Tiam Kapen, S. Chapi Tchounang</p>
+              <p class="venue"><em>Health and Technology</em> 10(6), 1525–1532 · Springer</p>
+              <p class="meta"><a class="btn" href="https://doi.org/10.1007/s12553-020-00477-8">DOI</a> <span class="cites">2 <span lang="en">citations</span><span lang="fr">citations</span></span></p>
+            </li>
+          </ol>
+
+          <h3 class="year">2019</h3>
+          <ol>
+            <li data-topic="bio">
+              <p class="title">Development of a neonatal incubator with phototherapy, biometric fingerprint reader, remote monitoring, and heart rate control adapted for developing countries hospitals</p>
+              <p class="authors">P. Tiam Kapen, Y. Mohamadou, <b>F. Momo</b>, J. Dongmeza Koudjou, N. Kanmagne, J. Dongmeza Dongmo</p>
+              <p class="venue"><em>Journal of Neonatal Nursing</em> 25(6), 298–303 · Elsevier</p>
+              <p class="meta"><a class="btn" href="https://doi.org/10.1016/j.jnn.2019.07.011">DOI</a> <span class="cites">18 <span lang="en">citations</span><span lang="fr">citations</span></span></p>
+            </li>
+            <li data-topic="bio">
+              <p class="title">An energy efficient neonatal incubator: mathematical modeling and prototyping</p>
+              <p class="authors">P. Tiam Kapen, Y. Mohamadou, <b>F. Momo</b>, J. Dongmeza Koudjou, A. Gnimpikba</p>
+              <p class="venue"><em>Health and Technology</em> 9(1), 57–63 · Springer</p>
+              <p class="meta"><a class="btn" href="https://doi.org/10.1007/s12553-018-0253-3">DOI</a> <span class="cites">15 <span lang="en">citations</span><span lang="fr">citations</span></span></p>
+            </li>
+          </ol>
+
+          <h3 class="year">2018</h3>
+          <ol>
+            <li data-topic="bio">
+              <p class="title">Accuracy enhancement in low frequency gain and phase detector (AD8302) based bioimpedance spectroscopy system</p>
+              <p class="authors">Y. Mohamadou, <b>F. Momo</b>, L. Theophile, C. Njike Kouekeu Landry, T. Fabrice, E. Simeu</p>
+              <p class="venue"><em>Measurement</em> 123, 304–308 · Elsevier</p>
+              <p class="meta"><a class="btn" href="https://doi.org/10.1016/j.measurement.2018.03.079">DOI</a> <span class="cites">18 <span lang="en">citations</span><span lang="fr">citations</span></span></p>
+            </li>
+          </ol>
+
+          <h3 class="year">2016</h3>
+          <ol>
+            <li data-topic="nl">
+              <p class="title">Behavior of a new electronic circuit mimicking the edge-emitting semiconductor laser</p>
+              <p class="authors"><b>F. Momo</b>, P. Woafo</p>
+              <p class="venue"><em>Optik – International Journal for Light and Electron Optics</em> 127(6), 3430–3434 · Elsevier</p>
+              <p class="meta"><a class="btn" href="https://doi.org/10.1016/j.ijleo.2015.12.110">DOI</a> <span class="cites">1 citation</span></p>
+            </li>
+          </ol>
+
+          <h3 class="year">2015</h3>
+          <ol>
+            <li data-topic="nl">
+              <p class="title">Edge-emitting semiconductor laser subject to nonsinusoidal excitation from three-dimensional autonomous system: numerical and electronic models analysis</p>
+              <p class="authors"><b>F. Momo</b>, P. Woafo</p>
+              <p class="venue"><em>Optical and Quantum Electronics</em> 47(10), 3405–3417 · Springer</p>
+              <p class="meta"><a class="btn" href="https://doi.org/10.1007/s11082-015-0216-0">DOI</a> <span class="cites">7 <span lang="en">citations</span><span lang="fr">citations</span></span></p>
+            </li>
+            <li data-topic="nl">
+              <p class="title">Edge-emitting semiconductor laser driven by a van der Pol oscillator: analytical and numerical analysis</p>
+              <p class="authors"><b>F. Momo</b>, S. T. Kingni, B. Nana, P. Woafo</p>
+              <p class="venue"><em>Optical and Quantum Electronics</em> 47(3), 705–720 · Springer</p>
+              <p class="meta"><a class="btn" href="https://doi.org/10.1007/s11082-014-9946-7">DOI</a> <span class="cites">7 <span lang="en">citations</span><span lang="fr">citations</span></span></p>
+            </li>
+          </ol>
+        </div>
+
+        <h3 class="sub"><span lang="en">Conference presentations</span><span lang="fr">Communications</span></h3>
+        <ul class="plain talks">
+          <li><span class="when">2024</span> <span lang="en"><em>Impact of microwaves on the physico-chemical characteristics of some foods.</em> DAAD Alumni Event, Université des Montagnes.</span><span lang="fr"><em>Impact des micro-ondes sur les caractéristiques physico-chimiques de quelques aliments.</em> DAAD Alumni Event, Université des Montagnes.</span></li>
+          <li><span class="when">2023</span> D. Nde, <b>F. Momo</b>, Y. Mohamadou, P. Tiam Kapen, P. R. Fotsing Kwetche. <em>Prototyping of a digital microscope adapted for low-income countries.</em> <span lang="en">30th Annual Bioscience Conference, Université des Montagnes.</span><span lang="fr">30<sup>e</sup> Conférence annuelle de Bioscience, Université des Montagnes.</span></li>
+          <li><span class="when">2020</span> <em>Some results in the field of medical instrumentation research and innovation in Cameroon.</em> <span lang="en">Cameroon Academy of Sciences, Week of Science in the Service of National Development, Yaoundé.</span><span lang="fr">Académie des Sciences du Cameroun, Semaine de la Science au service du développement national, Yaoundé.</span></li>
+          <li><span class="when">2015</span> <b>F. Momo</b>, P. Woafo. <em>Edge-emitting semiconductor laser subject to nonsinusoidal and sinusoidal modulations: numerical and electronic models analysis.</em> <span lang="en">4th International Conference of the Cameroon Physical Society.</span><span lang="fr">4<sup>e</sup> Conférence internationale de la Société Camerounaise de Physique.</span></li>
+          <li><span class="when">2013</span> <b>F. Momo</b>, B. Nana, P. Woafo. <em>Nonlinear dynamics in edge-emitting semiconductor lasers driven by a Van der Pol oscillator.</em> <span lang="en">3rd International Conference of the Cameroon Physical Society, Yaoundé.</span><span lang="fr">3<sup>e</sup> Conférence internationale de la Société Camerounaise de Physique, Yaoundé.</span></li>
         </ul>
       </div>
     </section>
 
-    <!-- RESEARCH -->
-    <section id="research" class="wrap">
-      <h2>Research</h2>
-      <p class="lead">[One-paragraph overview of the research programme.]</p>
-      <div class="cards">
-        <article class="card">
-          <h3>[Research area 1]</h3>
-          <p>[Two or three sentences describing the problem, approach and why it matters.]</p>
-        </article>
-        <article class="card">
-          <h3>[Research area 2]</h3>
-          <p>[Two or three sentences describing the problem, approach and why it matters.]</p>
-        </article>
-        <article class="card">
-          <h3>[Research area 3]</h3>
-          <p>[Two or three sentences describing the problem, approach and why it matters.]</p>
-        </article>
+    <!-- ============ TEACHING ============ -->
+    <section id="teaching" class="alt">
+      <div class="wrap">
+        <h2><span lang="en">Teaching</span><span lang="fr">Enseignement</span></h2>
+        <p lang="en">Courses taught at the Université des Montagnes, from first-year undergraduate to Master's level.</p>
+        <p lang="fr">Cours dispensés à l'Université des Montagnes, de la première année de Licence au Master.</p>
+        <div class="grid teaching">
+          <div>
+            <h3><span lang="en">Undergraduate, year 1</span><span lang="fr">Licence, niveau I</span></h3>
+            <ul class="plain">
+              <li><span lang="en">Geometrical optics</span><span lang="fr">Optique géométrique</span></li>
+              <li><span lang="en">Point mechanics</span><span lang="fr">Mécanique du point</span></li>
+              <li><span lang="en">Statics of solids</span><span lang="fr">Statique du solide</span></li>
+              <li><span lang="en">Electrostatics, magnetostatics and electromagnetism</span><span lang="fr">Électrostatique, magnétostatique et électromagnétisme</span></li>
+              <li><span lang="en">Biophysics</span><span lang="fr">Biophysique</span></li>
+              <li><span lang="en">Radiation protection</span><span lang="fr">Radioprotection</span></li>
+            </ul>
+          </div>
+          <div>
+            <h3><span lang="en">Undergraduate, years 2–3</span><span lang="fr">Licence, niveaux II–III</span></h3>
+            <ul class="plain">
+              <li><span lang="en">Thermodynamics</span><span lang="fr">Thermodynamique</span></li>
+              <li><span lang="en">Materials science</span><span lang="fr">Science des matériaux</span></li>
+              <li><span lang="en">Biomechanics</span><span lang="fr">Biomécanique</span></li>
+              <li><span lang="en">Biophysics</span><span lang="fr">Biophysique</span></li>
+              <li><span lang="en">Atomic and nuclear physics</span><span lang="fr">Physique atomique et nucléaire</span></li>
+              <li><span lang="en">Radiation protection</span><span lang="fr">Radioprotection</span></li>
+            </ul>
+          </div>
+          <div>
+            <h3><span lang="en">Advanced and Master's</span><span lang="fr">Niveau avancé et Master</span></h3>
+            <ul class="plain">
+              <li><span lang="en">Embedded systems (year 4)</span><span lang="fr">Systèmes embarqués (niveau 400)</span></li>
+              <li><span lang="en">Radiation protection and radiotherapy (Master 1)</span><span lang="fr">Radioprotection et radiothérapie (Master 1)</span></li>
+              <li><span lang="en">Waves and ionising / non-ionising radiation (Master 1)</span><span lang="fr">Ondes et rayonnements ionisants et non ionisants (Master 1)</span></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- PUBLICATIONS -->
-    <section id="publications" class="wrap">
-      <h2>Selected publications</h2>
-      <p class="muted">Full list on <a href="https://scholar.google.com/">Google Scholar</a>.</p>
-      <ol class="pubs" reversed>
-        <li>
-          <span class="authors"><strong>Lastname, F.</strong>, Coauthor, A., &amp; Coauthor, B.</span>
-          (2026). <span class="title">Title of the paper.</span>
-          <em>Journal or Conference Name</em>, 12(3), 45–67.
-          <a href="#">[PDF]</a> <a href="#">[DOI]</a> <a href="#">[Code]</a>
-        </li>
-        <li>
-          <span class="authors">Student, C., &amp; <strong>Lastname, F.</strong></span>
-          (2025). <span class="title">Title of the paper.</span>
-          <em>Journal or Conference Name</em>.
-          <a href="#">[PDF]</a> <a href="#">[DOI]</a>
-        </li>
-        <li>
-          <span class="authors"><strong>Lastname, F.</strong></span>
-          (2024). <span class="title">Title of the book or paper.</span>
-          <em>Publisher</em>.
-          <a href="#">[Link]</a>
-        </li>
-      </ol>
+    <!-- ============ SUPERVISION ============ -->
+    <section id="supervision">
+      <div class="wrap">
+        <h2><span lang="en">Master's theses supervised</span><span lang="fr">Mémoires de Master encadrés</span></h2>
+        <p lang="en">24 Master's theses, 2017–2024, most of them in biomedical engineering. Titles are in the language of the thesis.</p>
+        <p lang="fr">24 mémoires de Master entre 2017 et 2024, pour la plupart en ingénierie biomédicale.</p>
+        <details class="theses">
+          <summary><span lang="en">Show all 24 theses</span><span lang="fr">Afficher les 24 mémoires</span></summary>
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th><span lang="en">Year</span><span lang="fr">Année</span></th>
+                  <th><span lang="en">Student</span><span lang="fr">Étudiant·e</span></th>
+                  <th><span lang="en">Title</span><span lang="fr">Titre</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>2024</td><td>HYEMDJOUNG TATONG Bonikel</td><td>Conception d'un bloc opératoire : plan architectural, dimensionnement des fluides médicaux, plateau technique et évaluation des coûts</td></tr>
+                <tr><td>2024</td><td>LEMONE FOYA</td><td>Simulation des pressions exercées sur le moignon fémoral et proposition d'amélioration du confort</td></tr>
+                <tr><td>2024</td><td>NANA KAMGAING Alban</td><td>Étude et mise en place d'un centre d'hémodialyse</td></tr>
+                <tr><td>2024</td><td>NANSI KONTCHO Pierre Phanuel</td><td>Conception et mise en place d'un service de stérilisation et de buanderie moderne : écart entre trois services, conseils sur les plans architecturaux et choix des équipements</td></tr>
+                <tr><td>2024</td><td>NONGNI KUETE Bertol</td><td>Conception d'un cabinet dentaire à deux fauteuils : ergonomie, dimensionnement du circuit des fluides (eau et air), plateau technique et analyse des coûts</td></tr>
+                <tr><td>2023</td><td>AL-TOUHAMI ABDERHAMANE SAKINE</td><td>Contrôle par microcontrôleur de la dynamique de circuit analogue du laser à semi-conducteur émettant par la tranche <span class="inst">(Université de Ngaoundéré)</span></td></tr>
+                <tr><td>2023</td><td>TSAFACK MASSEMO Hypollyte Franck</td><td>Conception d'un prototype de spectrophotomètre à lumière à l'aide d'une LED RGB</td></tr>
+                <tr><td>2023</td><td>WANDJI DJADOU Franck Valdaire</td><td>Conception et réalisation d'un déshydrateur alimentaire à carte de commande universelle avec distillation</td></tr>
+                <tr><td>2022</td><td>NKUIDJA NGANKOU Jolic Jordan</td><td>Réalisation d'un dispositif dédié à la mesure de la saturation en oxygène, des fréquences cardiaque et respiratoire à travers le signal PPG</td></tr>
+                <tr><td>2022</td><td>KUICHUA KAMDEM Ovide Bertrand</td><td>Conception et réalisation d'un système de langue des signes camerounaise en français et en anglais accessible via logiciel et application mobile : application en milieu hospitalier</td></tr>
+                <tr><td>2022</td><td>YONGO Eurêka Claudy</td><td>Conception d'une borne médicale pédiatrique</td></tr>
+                <tr><td>2022</td><td>KAPGANG Lauraine</td><td>Conception et réalisation d'un prototype d'électrooculographe</td></tr>
+                <tr><td>2021</td><td>YOUALEU MONKAM Willy Thierry</td><td>Modélisation et simulation de l'activité mécanique du cœur</td></tr>
+                <tr><td>2020</td><td>NZIMI NYABEYEU Fabiola V.</td><td>Algorithme d'aide au diagnostic par analyse de l'image planétaire</td></tr>
+                <tr><td>2020</td><td>TETA SITAMZE Ismael</td><td>Développement et implémentation d'une plateforme de gestion de la maintenance assistée par ordinateur</td></tr>
+                <tr><td>2020</td><td>SODJUI Joséphine Christelle</td><td>Conception et réalisation d'un prototype de distillateur d'alcool</td></tr>
+                <tr><td>2020</td><td>FODJU DJIDJOU Ismaël</td><td>Conception et réalisation d'un prototype de dosimètre</td></tr>
+                <tr><td>2019</td><td>NGAGOUE NGEKAM Matady Ivan</td><td>Impact du contrôle de qualité sur la dose délivrée et la qualité diagnostique de l'image en radiographie</td></tr>
+                <tr><td>2017</td><td>TAMO SOUOP Théophile Amos</td><td>Conception et réalisation d'un logiciel de gestion de la maintenance assistée par ordinateur pour service technique</td></tr>
+                <tr><td>2017</td><td>CHAPI TCHOUNANG Samuel Michel</td><td>Conception et réalisation d'une unité dentaire : partie puissance, pneumatique et hydraulique</td></tr>
+                <tr><td>2017</td><td>MAGNI Kelye Pamela</td><td>Conception et réalisation d'une unité dentaire : carte de commande et aspiration des muqueuses</td></tr>
+                <tr><td>2017</td><td>GNIMPIKBA Anero</td><td>Conception et réalisation d'un incubateur néonatal, pèse-bébé et module de photothérapie</td></tr>
+                <tr><td>2017</td><td>KAMGA Baurade</td><td>Conception et réalisation d'un tensiomètre couplé à un oxymètre de pouls avec transmission</td></tr>
+                <tr><td>2017</td><td>YENKO TAGO Alex Stéphane</td><td>Conception et réalisation d'un système de télégestion des équipements biomédicaux</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="note">
+            <span lang="en">All at the Université des Montagnes unless stated otherwise.</span>
+            <span lang="fr">Tous à l'Université des Montagnes sauf mention contraire.</span>
+          </p>
+        </details>
+      </div>
     </section>
 
-    <!-- TEACHING -->
-    <section id="teaching" class="wrap">
-      <h2>Teaching</h2>
-      <table class="teaching">
-        <thead><tr><th>Course</th><th>Level</th><th>Term</th></tr></thead>
-        <tbody>
-          <tr><td>[CODE 101] Course title</td><td>Undergraduate</td><td>Fall 2026</td></tr>
-          <tr><td>[CODE 501] Course title</td><td>Graduate</td><td>Spring 2027</td></tr>
-        </tbody>
-      </table>
+    <!-- ============ EXPERIENCE ============ -->
+    <section id="experience" class="alt">
+      <div class="wrap two-col">
+        <div>
+          <h2><span lang="en">Experience</span><span lang="fr">Parcours professionnel</span></h2>
+          <ol class="timeline">
+            <li>
+              <span class="when">2021 – <span lang="en">present</span><span lang="fr">aujourd'hui</span></span>
+              <h3><span lang="en">Associate Professor</span><span lang="fr">Maître de Conférences</span></h3>
+              <p class="org">Université des Montagnes</p>
+              <ul>
+                <li lang="en">Coordinator, FOAD/AUF Master's in Quality Control, Regulatory Affairs and Biomedical Engineering, and Master's in Biomedical Engineering (Instrumentation), 2024–2025</li>
+                <li lang="fr">Coordonnateur du Master FOAD/AUF Contrôle qualité, Affaires réglementaires et Ingénierie biomédicale, et du Master Ingénierie biomédicale option instrumentation, 2024–2025</li>
+                <li lang="en">Academic Secretary, Faculty of Science and Technology, 2023–2025</li>
+                <li lang="fr">Secrétaire académique de la Faculté des Sciences et Technologies, 2023–2025</li>
+                <li lang="en">Administrative Officer, Faculty of Science and Technology, 2022–2023</li>
+                <li lang="fr">Responsable administratif de la Faculté des Sciences et Technologies, 2022–2023</li>
+              </ul>
+            </li>
+            <li>
+              <span class="when">2016 – 2021</span>
+              <h3><span lang="en">Senior Lecturer</span><span lang="fr">Chargé de Cours</span></h3>
+              <p class="org">Université des Montagnes</p>
+              <ul>
+                <li lang="en">Coordinator, Biomedical Instrumentation and Maintenance programme, years 2–3, 2018–2020</li>
+                <li lang="fr">Coordonnateur de la filière Instrumentation et maintenance biomédicale, niveaux 2 et 3, 2018–2020</li>
+                <li lang="en">Coordinator of practical laboratory work, Faculty of Science and Technology, 2016–2020</li>
+                <li lang="fr">Coordonnateur des travaux pratiques de la Faculté des Sciences et Technologies, 2016–2020</li>
+              </ul>
+            </li>
+            <li>
+              <span class="when">2008 – 2016</span>
+              <h3><span lang="en">Assistant Lecturer</span><span lang="fr">Assistant</span></h3>
+              <p class="org">Université des Montagnes</p>
+              <ul>
+                <li lang="en">Interim coordinator, Master's in Biomedical Engineering and in Computer Engineering and Systems, 2014–2016</li>
+                <li lang="fr">Coordonnateur par intérim des Masters Génie biomédical et Génie informatique et systèmes, 2014–2016</li>
+              </ul>
+            </li>
+            <li>
+              <span class="when">2004 – 2008</span>
+              <h3><span lang="en">Teaching Assistant and Part-time Lecturer</span><span lang="fr">Moniteur et Vacataire</span></h3>
+              <p class="org"><span lang="en">University of Yaoundé I, Department of Physics; Université des Montagnes</span><span lang="fr">Université de Yaoundé I, Département de Physique ; Université des Montagnes</span></p>
+            </li>
+          </ol>
+          <p class="note">
+            <span lang="en">Member of the Pedagogical Commission and of the Ethics and Quality Assurance Committee of the Université des Montagnes since 2018.</span>
+            <span lang="fr">Membre de la Commission pédagogique et du Comité éthique et assurance qualité de l'Université des Montagnes depuis 2018.</span>
+          </p>
+        </div>
+
+        <div>
+          <h2><span lang="en">Education</span><span lang="fr">Formation</span></h2>
+          <ol class="timeline">
+            <li>
+              <span class="when">2016</span>
+              <h3><span lang="en">Ph.D. in Physics</span><span lang="fr">Doctorat/Ph.D. en Physique</span></h3>
+              <p class="org"><span lang="en">University of Dschang · Mechanics, Materials and Structures · <em>Très Honorable</em></span><span lang="fr">Université de Dschang · Mécanique, matériaux et structures · Mention Très Honorable</span></p>
+              <p class="thesis">“Contribution to the study of the dynamical behavior of edge-emitting semiconductor laser: analytical, numerical and analog simulation approach.” <span lang="en">Advisor: Prof. Paul Woafo.</span><span lang="fr">Directeur : Pr Paul Woafo.</span></p>
+            </li>
+            <li>
+              <span class="when">2005</span>
+              <h3><span lang="en">DEA (pre-doctoral Master's) in Physics</span><span lang="fr">DEA en Physique</span></h3>
+              <p class="org"><span lang="en">University of Yaoundé I · Atoms and Radiation</span><span lang="fr">Université de Yaoundé I · Option Atome et rayonnement</span></p>
+            </li>
+            <li>
+              <span class="when">2000 – 2002</span>
+              <h3><span lang="en">Licence and Maîtrise in Physics</span><span lang="fr">Licence et Maîtrise de Physique</span></h3>
+              <p class="org"><span lang="en">University of Yaoundé I</span><span lang="fr">Université de Yaoundé I</span></p>
+            </li>
+          </ol>
+
+          <h2 class="mt"><span lang="en">Academic rank</span><span lang="fr">Grades universitaires</span></h2>
+          <ul class="plain">
+            <li><span class="when">2021</span> <span lang="en">Associate Professor (Maître de Conférences), Cameroonian universities</span><span lang="fr">Maître de Conférences des Universités camerounaises</span></li>
+            <li><span class="when">2016</span> <span lang="en">Senior Lecturer (Chargé de Cours), Cameroonian universities</span><span lang="fr">Chargé de Cours des Universités camerounaises</span></li>
+          </ul>
+
+          <h2 class="mt"><span lang="en">Memberships</span><span lang="fr">Sociétés savantes</span></h2>
+          <ul class="plain">
+            <li><span lang="en">Cameroon Physical Society (CPS)</span><span lang="fr">Société Camerounaise de Physique (CPS)</span></li>
+            <li><span lang="en">Cameroon Bioscience Society (CBS)</span><span lang="fr">Société Camerounaise de Bioscience (CBS)</span></li>
+            <li><span lang="en">Cameroonian Society for Radiation Protection (SCPR)</span><span lang="fr">Société Camerounaise de Protection Radiologique (SCPR)</span></li>
+          </ul>
+        </div>
+      </div>
     </section>
 
-    <!-- GROUP -->
-    <section id="group" class="wrap">
-      <h2>Research group</h2>
-      <p>[A sentence on the group, plus whether you are recruiting students or postdocs.]</p>
-      <ul class="people">
-        <li><strong>[Name]</strong> — PhD student, [topic]</li>
-        <li><strong>[Name]</strong> — MSc student, [topic]</li>
-        <li><strong>[Name]</strong> — Postdoctoral researcher, [topic]</li>
-      </ul>
-    </section>
-
-    <!-- NEWS -->
-    <section id="news" class="wrap">
-      <h2>News</h2>
-      <ul class="news">
-        <li><time datetime="2026-11">Nov 2026</time> [News item, e.g. paper accepted at …]</li>
-        <li><time datetime="2026-09">Sep 2026</time> [News item, e.g. invited talk at …]</li>
-        <li><time datetime="2026-06">Jun 2026</time> [News item, e.g. new grant awarded …]</li>
-      </ul>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="wrap">
-      <h2>Contact</h2>
-      <address>
-        Department of [Department]<br>
-        [University]<br>
-        [Office, Building, Street]<br>
-        [City, Postcode, Country]<br>
-        <a href="mailto:name@university.edu">name@university.edu</a>
-      </address>
+    <!-- ============ CONTACT ============ -->
+    <section id="contact">
+      <div class="wrap contact">
+        <div>
+          <h2>Contact</h2>
+          <address>
+            <span lang="en">Faculty of Science and Technology</span><span lang="fr">Faculté des Sciences et Technologies</span><br>
+            Université des Montagnes<br>
+            <span lang="en">P.O. Box 208, Bangangté, Cameroon</span><span lang="fr">B.P. 208, Bangangté, Cameroun</span>
+          </address>
+        </div>
+        <ul class="plain contact-links">
+          <li><span class="label">Email</span> <a href="mailto:mfoutse@udm.aed-cm.org">mfoutse@udm.aed-cm.org</a></li>
+          <li><span class="label">Scholar</span> <a href="https://scholar.google.com/citations?user=wDQUzpUAAAAJ">Foutse Momo</a></li>
+          <li><span class="label">LinkedIn</span> <a href="https://www.linkedin.com/in/foutse-momo-4298b946/">foutse-momo</a></li>
+        </ul>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="wrap">© <span id="year">2026</span> Firstname Lastname</div>
+    <div class="wrap">
+      © <span id="year">2026</span> Foutse Momo ·
+      <span lang="en">Last updated November 2026</span><span lang="fr">Dernière mise à jour : novembre 2026</span>
+    </div>
   </footer>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    const t = document.querySelector('.nav-toggle'), n = document.getElementById('nav');
-    t.addEventListener('click', () => {
-      const open = n.classList.toggle('open');
-      t.setAttribute('aria-expanded', open);
-    });
-    n.addEventListener('click', e => { if (e.target.tagName === 'A') { n.classList.remove('open'); t.setAttribute('aria-expanded', false); } });
+    (function () {
+      var root = document.documentElement;
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Language switch
+      document.querySelector('.lang-toggle').addEventListener('click', function () {
+        var next = root.className.indexOf('l-fr') > -1 ? 'en' : 'fr';
+        root.className = 'l-' + next;
+        root.lang = next;
+        try { localStorage.setItem('lang', next); } catch (e) {}
+      });
+
+      // Mobile menu
+      var t = document.querySelector('.nav-toggle'), n = document.getElementById('nav');
+      t.addEventListener('click', function () {
+        var open = n.classList.toggle('open');
+        t.setAttribute('aria-expanded', open);
+      });
+      n.addEventListener('click', function (e) {
+        if (e.target.closest('a')) { n.classList.remove('open'); t.setAttribute('aria-expanded', 'false'); }
+      });
+
+      // Publication filter
+      var chips = document.querySelectorAll('.chip');
+      chips.forEach(function (c) {
+        c.addEventListener('click', function () {
+          var f = c.getAttribute('data-filter');
+          chips.forEach(function (x) { x.classList.toggle('active', x === c); });
+          document.querySelectorAll('.pubs ol').forEach(function (ol) {
+            var shown = 0;
+            ol.querySelectorAll('li').forEach(function (li) {
+              var ok = f === 'all' || li.getAttribute('data-topic') === f;
+              li.hidden = !ok;
+              if (ok) shown++;
+            });
+            ol.hidden = !shown;
+            ol.previousElementSibling.hidden = !shown;
+          });
+        });
+      });
+    })();
   </script>
 </body>
 </html>
