@@ -95,9 +95,8 @@ p { margin: 0 0 .9rem; }
    ========================================================================== */
 .site-header {
   position: sticky; top: 0; z-index: 20;
-  background: var(--bg); /* fallback for older browsers */
-  background: color-mix(in srgb, var(--bg) 90%, transparent);
-  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+  /* Solid background: a blurred see-through header makes scrolling stutter on long pages. */
+  background: var(--bg);
   border-bottom: 1px solid var(--border);
 }
 .header-inner { display: flex; align-items: center; justify-content: space-between; min-height: 4rem; gap: 1rem; }

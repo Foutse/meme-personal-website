@@ -110,8 +110,9 @@
 
   // Reveal blocks as they scroll into view.
   var targets = document.querySelectorAll(
+    // Small elements only: animating large blocks (tables, long text) makes scrolling stutter.
     'main .section h2, main .section .section-intro, .card, .theme, .pub, .news li, .talks li, .timeline > li, ' +
-    '.band-inner, .chart, .table-scroll, .prose, .theses-list li, .page-head .lead, .stats-inline'
+    '.theses-list li'
   );
   var groups = new Map();
   each(targets, function (el) {
