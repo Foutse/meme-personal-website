@@ -1,30 +1,53 @@
-# Foutse Momo — academic website
+# foutsemomo.com
 
-Personal website of Dr Foutse Momo, Associate Professor (Maître de Conférences) of Physics,
-Université des Montagnes, Bangangté, Cameroon.
+Academic website of Dr Foutse Momo, Associate Professor of Physics, Université des Montagnes (Cameroon).
+English at `/`, French at `/fr/`, CV as PDF in both languages.
 
-Plain HTML + CSS, no build step, bilingual (English / French), hosted on GitHub Pages.
+Built with Jekyll, which GitHub Pages runs automatically on every push to `main`.
 
-## Files
-- `index.html` — all content. Every text appears twice: `<span lang="en">…</span><span lang="fr">…</span>`.
-  Edit both when changing text.
-- `assets/css/style.css` — design (colours at the top, dark mode included).
-- `assets/img/foutse-momo.jpg` — portrait (480×480).
+## Where the content lives
+All text is in `_data/` (YAML). Each entry has an `en:` and an `fr:` version where needed.
+
+| File | Content |
+|---|---|
+| `_data/profile.yml` | name, bio, links, contact, citation metrics, Master's-projects text |
+| `_data/news.yml` | news items (newest first; the 4 most recent are shown) |
+| `_data/research.yml` | research strands and themes |
+| `_data/projects.yml` | device/project cards (optional `image:`) |
+| `_data/publications.yml` | publications (newest first) |
+| `_data/talks.yml` | conference presentations |
+| `_data/teaching.yml` | courses |
+| `_data/theses.yml` | supervised Master's theses |
+| `_data/career.yml` | experience, education, ranks, memberships |
+| `_data/i18n.yml` | interface labels in both languages |
+
+Layouts: `_layouts/home.html` (both language pages) and `_layouts/cv.html` (CV).
+Open questions for Prof. Momo: `CONTENT-TODO.md`.
 
 ## Common updates
-- **New publication:** copy an `<li data-topic="…">` block in the Publications section, under the right
-  year heading. `data-topic` is `bio` (biomedical instrumentation) or `nl` (lasers / nonlinear dynamics).
-- **Citation numbers:** update the stats block near the top and the "Nov 2026" note.
-- **New thesis:** add a `<tr>` to the supervision table and update the count (24).
+- **New paper:** copy a block in `_data/publications.yml`, keep newest first. `topic: bio` or `nl`.
+- **Citations:** `metrics` in `profile.yml` and `cites` in `publications.yml`.
+- **News:** add an item at the top of `_data/news.yml`.
 
-## Language
-Visitors get French if their browser is in French, English otherwise; the FR/EN button switches and
-remembers the choice. Direct links: `…/?lang=fr` or `…/?lang=en`.
+Small text edits can be made directly on github.com (pencil icon); the site rebuilds in about a minute.
 
-## Preview locally
-`python3 -m http.server` then open http://localhost:8000
+## CV PDFs
+`assets/cv/*.pdf` are generated from the data. After changing content, regenerate them:
 
-## Publish
-Settings → Pages → Deploy from a branch → `main` / root.
-URL: https://foutsemomo.com (custom domain, DNS at Porkbun; see `CNAME`)
-(GitHub Pages on a private repo needs a paid plan; otherwise make the repo public.)
+```sh
+sh tools/build.sh   # needs Docker and Google Chrome
+```
+
+The first time, build the Docker image used by the script:
+
+```sh
+docker build -t site-jekyll - <<'EOF'
+FROM ruby:3.3
+RUN gem install jekyll -v 3.10.0 --no-document && gem install jekyll-sitemap -v 1.4.0 kramdown-parser-gfm webrick --no-document
+WORKDIR /site
+EOF
+```
+
+## Hosting
+GitHub Pages from `main` (root). Custom domain `foutsemomo.com` (`CNAME` file), DNS at Porkbun:
+4 A records to GitHub (185.199.108–111.153) and `www` CNAME to `foutse.github.io`.

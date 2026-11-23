@@ -1,0 +1,346 @@
+{%- assign L = page.lang -%}
+{%- if L == "fr" -%}{%- assign O = "en" -%}{%- assign home = "/fr/" -%}{%- assign other = "/" -%}
+{%- else -%}{%- assign O = "fr" -%}{%- assign home = "/" -%}{%- assign other = "/fr/" -%}{%- endif -%}
+{%- assign t = site.data.i18n[L] -%}
+{%- assign p = site.data.profile -%}
+{%- assign pubs = site.data.publications -%}
+{%- assign peer = pubs | where_exp: "x", "x.kind != 'proceedings'" -%}
+<!doctype html>
+<html lang="{{ L }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ p.name }} — {{ p.title[L] }}</title>
+  <meta name="description" content="{{ page.description }}">
+  <link rel="canonical" href="{{ site.url }}{{ home }}">
+  <link rel="alternate" hreflang="en" href="{{ site.url }}/">
+  <link rel="alternate" hreflang="fr" href="{{ site.url }}/fr/">
+  <link rel="alternate" hreflang="x-default" href="{{ site.url }}/">
+  <meta property="og:title" content="{{ p.name }} — {{ p.title[L] }}">
+  <meta property="og:description" content="{{ page.description }}">
+  <meta property="og:image" content="{{ site.url }}{{ p.photo }}">
+  <meta property="og:url" content="{{ site.url }}{{ home }}">
+  <meta property="og:type" content="profile">
+  <meta property="og:locale" content="{% if L == 'fr' %}fr_FR{% else %}en_GB{% endif %}">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script>
+    (function () {
+      var lang = "{{ L }}", q = (location.search.match(/[?&]lang=(en|fr)/) || [])[1], saved = null;
+      try { saved = localStorage.getItem('lang'); } catch (e) {}
+      if (q) { try { localStorage.setItem('lang', q); } catch (e) {} }
+      var want = q || saved;
+      if (!want && lang === 'en' && /^fr\b/i.test(navigator.language || '') && !/bot|crawl|spider/i.test(navigator.userAgent)) want = 'fr';
+      if (want && want !== lang) location.replace(want === 'fr' ? '/fr/' + location.hash : '/' + location.hash);
+    })();
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": {{ p.name | jsonify }},
+    "jobTitle": {{ p.title[L] | jsonify }},
+    "url": "{{ site.url }}{{ home }}",
+    "image": "{{ site.url }}{{ p.photo }}",
+    "email": "mailto:{{ p.email }}",
+    "worksFor": { "@type": "CollegeOrUniversity", "name": "Université des Montagnes", "address": { "@type": "PostalAddress", "addressLocality": "Bangangté", "addressCountry": "CM" } },
+    "alumniOf": [ { "@type": "CollegeOrUniversity", "name": "University of Dschang" }, { "@type": "CollegeOrUniversity", "name": "University of Yaoundé I" } ],
+    "knowsAbout": ["Biomedical instrumentation", "Medical devices", "Radiation protection", "Bioimpedance", "Semiconductor lasers", "Nonlinear dynamics"],
+    "sameAs": [{{ p.scholar | jsonify }}, {{ p.linkedin | jsonify }}{% if p.orcid != "" %}, {{ p.orcid | jsonify }}{% endif %}{% if p.researchgate != "" %}, {{ p.researchgate | jsonify }}{% endif %}]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">{{ t.skip }}</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="{{ home }}">{{ p.name }}</a>
+      <div class="header-actions">
+        <nav id="nav" class="nav" aria-label="Main">
+          <a href="#research">{{ t.nav.research }}</a>
+          <a href="#projects">{{ t.nav.projects }}</a>
+          <a href="#publications">{{ t.nav.publications }}</a>
+          <a href="#teaching">{{ t.nav.teaching }}</a>
+          <a href="#supervision">{{ t.nav.supervision }}</a>
+          <a href="#experience">{{ t.nav.experience }}</a>
+          <a href="#contact">{{ t.nav.contact }}</a>
+        </nav>
+        <a class="lang-toggle" href="{{ other }}" hreflang="{{ O }}" lang="{{ O }}" data-lang="{{ O }}" aria-label="{{ t.switch_label }}">{{ t.switch_short }}</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">{{ t.menu }}</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ABOUT -->
+    <section class="hero">
+      <div class="wrap hero-inner">
+        <img class="portrait" src="{{ p.photo }}" alt="{{ p.name }}" width="240" height="240">
+        <div class="hero-text">
+          <p class="eyebrow">{{ p.title[L] }}</p>
+          <h1>{{ p.name }}, <span class="phd">Ph.D.</span></h1>
+          <p class="affil">{{ p.affiliation[L] }}</p>
+          <div class="bio">{{ p.bio[L] | markdownify }}</div>
+          <ul class="links">
+            <li><a href="mailto:{{ p.email }}">{{ p.email }}</a></li>
+            <li><a href="/assets/cv/foutse-momo-cv-{{ L }}.pdf">{{ t.cv }}</a></li>
+            <li><a href="{{ p.scholar }}">Google Scholar</a></li>
+            {% if p.orcid != "" %}<li><a href="{{ p.orcid }}">ORCID</a></li>{% endif %}
+            {% if p.researchgate != "" %}<li><a href="{{ p.researchgate }}">ResearchGate</a></li>{% endif %}
+            <li><a href="{{ p.linkedin }}">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="wrap">
+        <dl class="stats">
+          <div><dt>{{ t.stats.pubs }}</dt><dd>{{ peer | size }}</dd></div>
+          <div><dt>{{ t.stats.citations }}</dt><dd>{{ p.metrics.citations }}</dd></div>
+          <div><dt>{{ t.stats.h }}</dt><dd>{{ p.metrics.h_index }}</dd></div>
+          <div><dt>{{ t.stats.theses }}</dt><dd>{{ site.data.theses | size }}</dd></div>
+        </dl>
+        <p class="stats-note">{{ t.stats_note | replace: "%s", p.metrics.updated[L] }}</p>
+      </div>
+    </section>
+
+    <!-- NEWS -->
+    <section id="news" class="news-section">
+      <div class="wrap">
+        <h2>{{ t.news }}</h2>
+        <ul class="plain news">
+          {% for n in site.data.news limit: 4 %}
+          <li><span class="when">{{ n.date[L] }}</span> <span>{{ n.text[L] | markdownify | remove: "<p>" | remove: "</p>" | strip }}</span></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section id="research">
+      <div class="wrap">
+        <h2>{{ t.research }}</h2>
+        {% for s in site.data.research %}
+        <div class="strand strand-{{ s.strand }}">
+          <h3 class="strand-title">{{ s.title[L] }}</h3>
+          <p class="strand-intro">{{ s.intro[L] }}</p>
+          <div class="grid themes">
+            {% for th in s.themes %}
+            <article class="card">
+              <h4>{{ th.title[L] }}</h4>
+              <p>{{ th.text[L] }}</p>
+            </article>
+            {% endfor %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="alt">
+      <div class="wrap">
+        <h2>{{ t.projects }}</h2>
+        <div class="grid projects">
+          {% for pr in site.data.projects %}
+          <article class="card project">
+            {% if pr.image %}<img class="project-img" src="{{ pr.image }}" alt="{{ pr.title[L] }}" loading="lazy">{% endif %}
+            <p class="tag">{{ pr.tag[L] }}</p>
+            <h3>{{ pr.title[L] }}</h3>
+            <p>{{ pr.text[L] }}</p>
+            {% if pr.papers %}
+            <p class="refs">
+              {% for pa in pr.papers %}<a href="https://doi.org/{{ pa.doi }}">{{ t.paper }} ({{ pa.year }})</a>{% unless forloop.last %} · {% endunless %}{% endfor %}
+            </p>
+            {% endif %}
+          </article>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section id="publications">
+      <div class="wrap">
+        <h2>{{ t.publications }}</h2>
+        <div class="pub-tools">
+          <div class="filters" role="group" aria-label="Filter">
+            <button type="button" class="chip active" data-filter="all" aria-pressed="true">{{ t.all }}</button>
+            <button type="button" class="chip" data-filter="bio" aria-pressed="false">{{ t.topic_bio }}</button>
+            <button type="button" class="chip" data-filter="nl" aria-pressed="false">{{ t.topic_nl }}</button>
+          </div>
+          <a class="scholar-link" href="{{ p.scholar }}">{{ t.scholar_full }}</a>
+        </div>
+        <div class="pubs">
+          {% assign years = pubs | group_by: "year" %}
+          {% for y in years %}
+          <h3 class="year">{{ y.name }}</h3>
+          <ol>
+            {% for x in y.items %}
+            {%- if x.venue[L] -%}{%- assign venue = x.venue[L] -%}{%- else -%}{%- assign venue = x.venue -%}{%- endif -%}
+            <li data-topic="{{ x.topic }}">
+              <p class="title">{{ x.title }}</p>
+              <p class="authors">{{ x.authors | replace: "F. Momo", "<b>F. Momo</b>" }}</p>
+              <p class="venue">{% if x.kind == "proceedings" %}<span class="kind">{{ t.proceedings }}</span> {% elsif x.kind == "chapter" %}{{ t.chapter_in }} {% endif %}{{ venue | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
+              {% if x.doi %}
+              <p class="meta"><a class="btn" href="https://doi.org/{{ x.doi }}">DOI</a> {% if x.cites %}<span class="cites">{{ x.cites }} {% if x.cites == 1 %}{{ t.citation }}{% else %}{{ t.citations }}{% endif %}</span>{% endif %}</p>
+              {% endif %}
+            </li>
+            {% endfor %}
+          </ol>
+          {% endfor %}
+        </div>
+
+        <h3 class="sub">{{ t.talks }}</h3>
+        <ul class="plain talks">
+          {% for tk in site.data.talks %}
+          <li><span class="when">{{ tk.year }}</span> {{ tk.text[L] | markdownify | remove: "<p>" | remove: "</p>" | strip }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </section>
+
+    <!-- TEACHING -->
+    <section id="teaching" class="alt">
+      <div class="wrap">
+        <h2>{{ t.teaching }}</h2>
+        <p>{{ t.teaching_intro }}</p>
+        <div class="grid teaching">
+          {% for g in site.data.teaching %}
+          <div>
+            <h3>{{ g.group[L] }}</h3>
+            <ul class="plain">
+              {% for c in g.courses %}<li><span>{{ c.name[L] }}</span> <span class="level">{{ c.levels }}</span></li>{% endfor %}
+            </ul>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+    <!-- SUPERVISION -->
+    <section id="supervision">
+      <div class="wrap">
+        <h2>{{ t.supervision }}</h2>
+        <div class="students-box">
+          <h3>{{ t.students_title }}</h3>
+          <p>{{ p.students[L] }}</p>
+          <p><a class="cta" href="mailto:{{ p.email }}">{{ p.email }}</a></p>
+        </div>
+        <p>{{ t.theses_intro }}</p>
+        <details class="theses">
+          <summary>{{ t.theses_show }}</summary>
+          <div class="table-scroll">
+            <table>
+              <thead><tr><th>{{ t.th.year }}</th><th>{{ t.th.student }}</th><th>{{ t.th.title }}</th></tr></thead>
+              <tbody>
+                {% for th in site.data.theses %}
+                <tr><td>{{ th.year }}</td><td>{{ th.student }}</td><td>{{ th[L] }}{% if th.institution %} <span class="inst">({{ th.institution }})</span>{% endif %}</td></tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+          <p class="note">{{ t.theses_note }}</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    {% assign c = site.data.career %}
+    <section id="experience" class="alt">
+      <div class="wrap two-col">
+        <div>
+          <h2>{{ t.experience }}</h2>
+          <ol class="timeline">
+            {% for e in c.experience %}
+            <li>
+              <span class="when">{{ e.when[L] }}</span>
+              <h3>{{ e.role[L] }}</h3>
+              <p class="org">{{ e.org[L] }}</p>
+              {% if e.items %}<ul>{% for it in e.items[L] %}<li>{{ it }}</li>{% endfor %}</ul>{% endif %}
+            </li>
+            {% endfor %}
+          </ol>
+          <p class="note">{{ t.committees }}</p>
+        </div>
+        <div>
+          <h2>{{ t.education }}</h2>
+          <ol class="timeline">
+            {% for e in c.education %}
+            <li>
+              <span class="when">{{ e.when }}</span>
+              <h3>{{ e.degree[L] }}</h3>
+              <p class="org">{{ e.org[L] | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
+              {% if e.thesis %}<p class="thesis">{{ e.thesis }} {{ t.advisor }}</p>{% endif %}
+            </li>
+            {% endfor %}
+          </ol>
+          <h2 class="mt">{{ t.ranks }}</h2>
+          <ul class="plain">
+            {% for r in c.ranks %}<li><span class="when">{{ r.when }}</span> {{ r.text[L] }}</li>{% endfor %}
+          </ul>
+          <h2 class="mt">{{ t.memberships }}</h2>
+          <ul class="plain">
+            {% for m in c.memberships %}<li>{{ m[L] }}</li>{% endfor %}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="wrap contact">
+        <div>
+          <h2>{{ t.contact }}</h2>
+          <address>{{ p.address[L] | join: "<br>" }}</address>
+        </div>
+        <ul class="plain contact-links">
+          <li><span class="label">{{ t.email }}</span> <a href="mailto:{{ p.email }}">{{ p.email }}</a></li>
+          <li><span class="label">Scholar</span> <a href="{{ p.scholar }}">{{ p.name }}</a></li>
+          {% if p.orcid != "" %}<li><span class="label">ORCID</span> <a href="{{ p.orcid }}">{{ p.orcid | remove: "https://orcid.org/" }}</a></li>{% endif %}
+          <li><span class="label">LinkedIn</span> <a href="{{ p.linkedin }}">foutse-momo</a></li>
+          <li><span class="label">CV</span> <a href="/assets/cv/foutse-momo-cv-{{ L }}.pdf">PDF</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">© {{ site.time | date: "%Y" }} {{ p.name }} · {{ t.updated }}{% if L == "fr" %} :{% else %}:{% endif %} {{ p.metrics.updated[L] }}</div>
+  </footer>
+
+  <script>
+    (function () {
+      // Remember the language when the switch is used.
+      var sw = document.querySelector('.lang-toggle');
+      sw.addEventListener('click', function () { try { localStorage.setItem('lang', sw.getAttribute('data-lang')); } catch (e) {} });
+
+      // Mobile menu
+      var t = document.querySelector('.nav-toggle'), n = document.getElementById('nav');
+      t.addEventListener('click', function () {
+        var open = n.classList.toggle('open');
+        t.setAttribute('aria-expanded', open);
+      });
+      n.addEventListener('click', function (e) {
+        if (e.target.closest('a')) { n.classList.remove('open'); t.setAttribute('aria-expanded', 'false'); }
+      });
+
+      // Publication filter
+      var chips = document.querySelectorAll('.chip');
+      Array.prototype.forEach.call(chips, function (c) {
+        c.addEventListener('click', function () {
+          var f = c.getAttribute('data-filter');
+          Array.prototype.forEach.call(chips, function (x) { x.classList.toggle('active', x === c); x.setAttribute('aria-pressed', x === c); });
+          Array.prototype.forEach.call(document.querySelectorAll('.pubs ol'), function (ol) {
+            var shown = 0;
+            Array.prototype.forEach.call(ol.querySelectorAll('li'), function (li) {
+              var ok = f === 'all' || li.getAttribute('data-topic') === f;
+              li.hidden = !ok; if (ok) shown++;
+            });
+            ol.hidden = !shown; ol.previousElementSibling.hidden = !shown;
+          });
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

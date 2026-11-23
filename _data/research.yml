@@ -1,0 +1,37 @@
+# Two research strands. The first is the main one.
+- strand: main
+  title: { en: Affordable medical technology, fr: Technologies médicales abordables }
+  intro:
+    en: "Medical devices and radiation safety for hospitals that cannot afford imported equipment."
+    fr: "Dispositifs médicaux et sécurité radiologique pour les hôpitaux qui ne peuvent pas s'offrir d'équipements importés."
+  themes:
+    - title: { en: Low-cost biomedical instrumentation, fr: Instrumentation biomédicale à bas coût }
+      text:
+        en: "Designing, prototyping and field-testing affordable medical devices adapted to hospitals in developing countries."
+        fr: "Conception, prototypage et évaluation sur le terrain de dispositifs médicaux abordables, adaptés aux hôpitaux des pays en développement."
+    - title: { en: Radiation protection, fr: Radioprotection }
+      text:
+        en: "Exposure to ionising radiation in hospitals, radiological quality control and dosimetry."
+        fr: "Exposition aux rayonnements ionisants en milieu hospitalier, contrôle qualité radiologique et dosimétrie."
+    - title: { en: Bioimpedance and biosignals, fr: Bioimpédance et biosignaux }
+      text:
+        en: "Self-sustained electronic oscillators for bioimpedance measurement, and processing of heart sounds and other biosignals."
+        fr: "Oscillateurs électroniques auto-entretenus pour la mesure de la bioimpédance, et traitement des bruits cardiaques et autres biosignaux."
+    - title: { en: Modelling biological systems, fr: Modélisation des systèmes biologiques }
+      text:
+        en: "Analog and numerical models of biological systems to support medical diagnosis."
+        fr: "Modèles analogiques et numériques des systèmes biologiques pour l'aide au diagnostic."
+- strand: second
+  title: { en: Nonlinear dynamics and photonics, fr: Dynamique non linéaire et photonique }
+  intro:
+    en: "The physics behind the devices, and the subject of my Ph.D."
+    fr: "La physique derrière les dispositifs, et le sujet de mon doctorat."
+  themes:
+    - title: { en: Semiconductor lasers, fr: Lasers à semi-conducteurs }
+      text:
+        en: "Dynamics of edge-emitting semiconductor lasers through analytical, numerical and analog-circuit models, and their medical applications."
+        fr: "Dynamique des lasers à semi-conducteurs émettant par la tranche par des modèles analytiques, numériques et analogiques, et leurs applications médicales."
+    - title: { en: Chaotic circuits and control, fr: Circuits chaotiques et contrôle }
+      text:
+        en: "Memristor circuits and electric motors: chaos, multistability and their control on microcontrollers."
+        fr: "Circuits à memristor et moteurs électriques : chaos, multistabilité et leur contrôle sur microcontrôleur."

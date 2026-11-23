@@ -1,0 +1,13 @@
+title: Foutse Momo
+url: https://foutsemomo.com
+baseurl: ""
+plugins:
+  - jekyll-sitemap
+exclude:
+  - README.md
+  - CONTENT-TODO.md
+  - Gemfile
+  - Gemfile.lock
+  - tools/
+kramdown:
+  input: GFM

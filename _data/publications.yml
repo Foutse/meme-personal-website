@@ -1,0 +1,118 @@
+# Newest first. topic: bio (medical devices / radiation) or nl (lasers / nonlinear dynamics).
+# kind: article (default), chapter, proceedings.  cites: from Google Scholar (update with profile.yml metrics).
+# Write "F. Momo" exactly so it is highlighted in bold.
+- year: 2025
+  topic: nl
+  title: "Chaos annihilation-based on genetic algorithms in a non-smooth air-gap permanent magnet synchronous motor embedded in the microcontroller"
+  authors: "I. K. Ngongiah, R. Tsapla Fotsa, J. Mvogo Ngono, N. Nyang Kibanya, E. Godwe, F. Momo"
+  venue: "*ADBA Computer Science* 2(2), 30–35"
+  doi: 10.69882/adba.cs.2025071
+  cites: 5
+- year: 2025
+  topic: nl
+  title: "Permanent magnet synchronous motor with load torque: dynamics, circuitry execution and control"
+  authors: "R. Tsapla Fotsa, P. K. Koubeu Papemsi, G. P. Ayemtsa Kuete, J. R. Mboupda Pone, S. R. Dzonde Naoussi, F. Momo, P. Ele"
+  venue: "*Chaos and Fractals* 2(1), 14–19"
+  doi: 10.69882/adba.chf.2025013
+  cites: 16
+- year: 2022
+  topic: bio
+  title: "Design and development of a phonocardiograph for telemedicine applications"
+  authors: "Y. Mohamadou, P. Tiam Kapen, F. Momo, A. L. Kamga Kamga, O. Docna, M. Mohammad, M. Ahmad, K. Siddique-e Rabbani"
+  venue: "*Health and Technology* 12(2), 453–463 · Springer"
+  doi: 10.1007/s12553-022-00646-x
+  cites: 6
+- year: 2021
+  topic: nl
+  kind: chapter
+  title: "Extreme multistability, hidden chaotic attractors and amplitude controls in an absolute memristor Van der Pol–Duffing circuit: dynamical analysis and electronic implementation"
+  authors: "J. R. Mboupda Pone, F. Momo, G. H. Kom, I. O. Lowe Kombou, S. Takougang Kingni, A. Tiedeu"
+  venue: "*Mem-elements for Neuromorphic Circuits with Artificial Intelligence Applications*, 165–180 · Elsevier"
+  doi: 10.1016/b978-0-12-821184-7.00016-5
+  cites: 1
+- year: 2020
+  topic: bio
+  title: "Design and prototyping of a low-cost, energy efficient eggs incubator in developing countries: a case study of Cameroon"
+  authors: "P. Tiam Kapen, Y. Mohamadou, F. Momo, H. Manfouo, F. O. Njotchui Mbakop"
+  venue: "*Scientific African* 10, e00618 · Elsevier"
+  doi: 10.1016/j.sciaf.2020.e00618
+  cites: 23
+- year: 2020
+  topic: bio
+  title: "Phonocardiogram: a robust algorithm for generating synthetic signals and comparison with real life ones"
+  authors: "P. Tiam Kapen, Y. Mohamadou, S. U. Kouam Kouam, F. Momo, A. R. Tchamda, G. Tchuen"
+  venue: "*Biomedical Signal Processing and Control* 60, 101983 · Elsevier"
+  doi: 10.1016/j.bspc.2020.101983
+  cites: 13
+- year: 2020
+  topic: bio
+  title: "A multi-function neonatal incubator for low-income countries: implementation and ab initio social impact"
+  authors: "P. Tiam Kapen, Y. Mohamadou, F. Momo, J. Dongmeza Koudjou, F. de P. Mkankam Kamga"
+  venue: "*Medical Engineering & Physics* 77, 114–117 · Elsevier"
+  doi: 10.1016/j.medengphy.2019.10.021
+  cites: 8
+- year: 2020
+  topic: bio
+  title: "Low-cost mobile dental unit for oral care service delivery in third world countries: from concept to operation"
+  authors: "F. Momo, Y. Mohamadou, P. Tiam Kapen, S. Chapi Tchounang"
+  venue: "*Health and Technology* 10(6), 1525–1532 · Springer"
+  doi: 10.1007/s12553-020-00477-8
+  cites: 2
+- year: 2019
+  topic: bio
+  title: "Development of a neonatal incubator with phototherapy, biometric fingerprint reader, remote monitoring, and heart rate control adapted for developing countries hospitals"
+  authors: "P. Tiam Kapen, Y. Mohamadou, F. Momo, J. Dongmeza Koudjou, N. Kanmagne, J. Dongmeza Dongmo"
+  venue: "*Journal of Neonatal Nursing* 25(6), 298–303 · Elsevier"
+  doi: 10.1016/j.jnn.2019.07.011
+  cites: 18
+- year: 2019
+  topic: bio
+  title: "An energy efficient neonatal incubator: mathematical modeling and prototyping"
+  authors: "P. Tiam Kapen, Y. Mohamadou, F. Momo, J. Dongmeza Koudjou, A. Gnimpikba"
+  venue: "*Health and Technology* 9(1), 57–63 · Springer"
+  doi: 10.1007/s12553-018-0253-3
+  cites: 15
+- year: 2018
+  topic: bio
+  title: "Accuracy enhancement in low frequency gain and phase detector (AD8302) based bioimpedance spectroscopy system"
+  authors: "Y. Mohamadou, F. Momo, L. Theophile, C. Njike Kouekeu Landry, T. Fabrice, E. Simeu"
+  venue: "*Measurement* 123, 304–308 · Elsevier"
+  doi: 10.1016/j.measurement.2018.03.079
+  cites: 18
+- year: 2016
+  topic: nl
+  title: "Behavior of a new electronic circuit mimicking the edge-emitting semiconductor laser"
+  authors: "F. Momo, P. Woafo"
+  venue: "*Optik – International Journal for Light and Electron Optics* 127(6), 3430–3434 · Elsevier"
+  doi: 10.1016/j.ijleo.2015.12.110
+  cites: 1
+- year: 2015
+  topic: nl
+  title: "Edge-emitting semiconductor laser subject to nonsinusoidal excitation from three-dimensional autonomous system: numerical and electronic models analysis"
+  authors: "F. Momo, P. Woafo"
+  venue: "*Optical and Quantum Electronics* 47(10), 3405–3417 · Springer"
+  doi: 10.1007/s11082-015-0216-0
+  cites: 7
+- year: 2015
+  topic: nl
+  title: "Edge-emitting semiconductor laser driven by a van der Pol oscillator: analytical and numerical analysis"
+  authors: "F. Momo, S. T. Kingni, B. Nana, P. Woafo"
+  venue: "*Optical and Quantum Electronics* 47(3), 705–720 · Springer"
+  doi: 10.1007/s11082-014-9946-7
+  cites: 7
+- year: 2015
+  topic: nl
+  kind: proceedings
+  title: "Edge-emitting semiconductor laser subject to nonsinusoidal and sinusoidal modulations: numerical and electronic models analysis"
+  authors: "F. Momo, P. Woafo"
+  venue:
+    en: "*Proc. 4th International Conference of the Cameroon Physical Society (CPS)*"
+    fr: "*Actes de la 4<sup>e</sup> Conférence internationale de la Société Camerounaise de Physique (CPS)*"
+- year: 2013
+  topic: nl
+  kind: proceedings
+  title: "Nonlinear dynamics in edge-emitting semiconductor lasers driven by a Van der Pol oscillator"
+  authors: "F. Momo, B. Nana, P. Woafo"
+  venue:
+    en: "*Proc. 3rd International Conference of the Cameroon Physical Society (CPS)*, Yaoundé (poster)"
+    fr: "*Actes de la 3<sup>e</sup> Conférence internationale de la Société Camerounaise de Physique (CPS)*, Yaoundé (poster)"

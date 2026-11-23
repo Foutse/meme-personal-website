@@ -1,0 +1,50 @@
+experience:
+  - when: { en: "2021 – present", fr: "2021 – aujourd'hui" }
+    role: { en: Associate Professor, fr: Maître de Conférences }
+    org: { en: Université des Montagnes, fr: Université des Montagnes }
+    items:
+      en:
+        - "Coordinator, FOAD/AUF Master's in Quality Control, Regulatory Affairs and Biomedical Engineering, and Master's in Biomedical Engineering (Instrumentation), 2024–2025"
+        - "Academic Secretary, Faculty of Science and Technology, 2023–2025"
+        - "Administrative Officer, Faculty of Science and Technology, 2022–2023"
+      fr:
+        - "Coordonnateur du Master FOAD/AUF Contrôle qualité, Affaires réglementaires et Ingénierie biomédicale, et du Master Ingénierie biomédicale option instrumentation, 2024–2025"
+        - "Secrétaire académique de la Faculté des Sciences et Technologies, 2023–2025"
+        - "Responsable administratif de la Faculté des Sciences et Technologies, 2022–2023"
+  - when: { en: "2016 – 2021", fr: "2016 – 2021" }
+    role: { en: Senior Lecturer, fr: Chargé de Cours }
+    org: { en: Université des Montagnes, fr: Université des Montagnes }
+    items:
+      en:
+        - "Coordinator, Biomedical Instrumentation and Maintenance programme, years 2–3, 2018–2020"
+        - "Coordinator of practical laboratory work, Faculty of Science and Technology, 2016–2020"
+      fr:
+        - "Coordonnateur de la filière Instrumentation et maintenance biomédicale, niveaux 2 et 3, 2018–2020"
+        - "Coordonnateur des travaux pratiques de la Faculté des Sciences et Technologies, 2016–2020"
+  - when: { en: "2008 – 2016", fr: "2008 – 2016" }
+    role: { en: Assistant Lecturer, fr: Assistant }
+    org: { en: Université des Montagnes, fr: Université des Montagnes }
+    items:
+      en: ["Interim coordinator, Master's in Biomedical Engineering and in Computer Engineering and Systems, 2014–2016"]
+      fr: ["Coordonnateur par intérim des Masters Génie biomédical et Génie informatique et systèmes, 2014–2016"]
+  - when: { en: "2004 – 2008", fr: "2004 – 2008" }
+    role: { en: Teaching Assistant and Part-time Lecturer, fr: Moniteur et Vacataire }
+    org: { en: "University of Yaoundé I (Department of Physics) and Université des Montagnes", fr: "Université de Yaoundé I (Département de Physique) et Université des Montagnes" }
+education:
+  - when: "2016"
+    degree: { en: Ph.D. in Physics, fr: Doctorat/Ph.D. en Physique }
+    org: { en: "University of Dschang · Mechanics, Materials and Structures · *Très Honorable*", fr: "Université de Dschang · Mécanique, matériaux et structures · Mention Très Honorable" }
+    thesis: "“Contribution to the study of the dynamical behavior of edge-emitting semiconductor laser: analytical, numerical and analog simulation approach.”"
+  - when: "2005"
+    degree: { en: "DEA (pre-doctoral Master's) in Physics", fr: DEA en Physique }
+    org: { en: "University of Yaoundé I · Atoms and Radiation", fr: "Université de Yaoundé I · Option Atome et rayonnement" }
+  - when: "2000 – 2002"
+    degree: { en: Licence and Maîtrise in Physics, fr: Licence et Maîtrise de Physique }
+    org: { en: University of Yaoundé I, fr: Université de Yaoundé I }
+ranks:
+  - { when: "2021", text: { en: "Associate Professor (Maître de Conférences), Cameroonian universities", fr: "Maître de Conférences des Universités camerounaises" } }
+  - { when: "2016", text: { en: "Senior Lecturer (Chargé de Cours), Cameroonian universities", fr: "Chargé de Cours des Universités camerounaises" } }
+memberships:
+  - { en: Cameroon Physical Society (CPS), fr: Société Camerounaise de Physique (CPS) }
+  - { en: Cameroon Bioscience Society (CBS), fr: Société Camerounaise de Bioscience (CBS) }
+  - { en: Cameroonian Society for Radiation Protection (SCPR), fr: Société Camerounaise de Protection Radiologique (SCPR) }

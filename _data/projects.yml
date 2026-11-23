@@ -1,0 +1,44 @@
+# Optional `image:` per project, e.g. image: /assets/img/projects/incubator.jpg (landscape, ~1200 px wide).
+- tag: { en: Neonatal care, fr: Néonatologie }
+  title: { en: Neonatal incubators, fr: Incubateurs néonatals }
+  text:
+    en: "Energy-efficient incubators with phototherapy, a built-in baby scale, remote monitoring and heart-rate control, built for hospitals with unreliable power."
+    fr: "Incubateurs économes en énergie avec photothérapie, pèse-bébé, surveillance à distance et contrôle de la fréquence cardiaque, conçus pour des hôpitaux à l'alimentation électrique instable."
+  papers:
+    - { year: 2019, doi: 10.1016/j.jnn.2019.07.011 }
+    - { year: 2019, doi: 10.1007/s12553-018-0253-3 }
+    - { year: 2020, doi: 10.1016/j.medengphy.2019.10.021 }
+- tag: { en: Oral health, fr: Santé bucco-dentaire }
+  title: { en: Mobile dental unit, fr: Unité dentaire mobile }
+  text:
+    en: "A low-cost mobile dental unit for oral care in underserved areas, taken from concept to operation."
+    fr: "Une unité dentaire mobile à bas coût pour les soins bucco-dentaires dans les zones mal desservies, de la conception à la mise en service."
+  papers:
+    - { year: 2020, doi: 10.1007/s12553-020-00477-8 }
+- tag: { en: Telemedicine, fr: Télémédecine }
+  title: { en: Phonocardiography, fr: Phonocardiographie }
+  text:
+    en: "A phonocardiograph for telemedicine and an algorithm that generates realistic synthetic heart-sound signals."
+    fr: "Un phonocardiographe pour la télémédecine et un algorithme générant des signaux cardiaques synthétiques réalistes."
+  papers:
+    - { year: 2020, doi: 10.1016/j.bspc.2020.101983 }
+    - { year: 2022, doi: 10.1007/s12553-022-00646-x }
+- tag: { en: Measurement, fr: Mesure }
+  title: { en: Bioimpedance spectroscopy, fr: Spectroscopie de bioimpédance }
+  text:
+    en: "Improved accuracy for low-frequency bioimpedance spectroscopy based on the AD8302 gain and phase detector."
+    fr: "Amélioration de la précision d'un système de spectroscopie de bioimpédance basse fréquence basé sur le détecteur de gain et de phase AD8302."
+  papers:
+    - { year: 2018, doi: 10.1016/j.measurement.2018.03.079 }
+- tag: { en: Laboratory, fr: Laboratoire }
+  title: { en: Digital microscope, fr: Microscope numérique }
+  text:
+    en: "Prototype of a digital microscope adapted to laboratories in low-income countries (Bioscience conference, 2023)."
+    fr: "Prototype de microscope numérique adapté aux laboratoires des pays à faibles revenus (Conférence de Bioscience, 2023)."
+- tag: { en: Agriculture, fr: Agriculture }
+  title: { en: Egg incubator, fr: Couveuse à œufs }
+  text:
+    en: "A low-cost, energy-efficient egg incubator designed and prototyped for Cameroonian farmers."
+    fr: "Une couveuse à œufs économe en énergie et à bas coût, conçue et prototypée pour les éleveurs camerounais."
+  papers:
+    - { year: 2020, doi: 10.1016/j.sciaf.2020.e00618 }

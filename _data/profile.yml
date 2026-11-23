@@ -1,0 +1,58 @@
+# ---------------------------------------------------------------
+# Main profile. Edit here; both the English and French pages update.
+# ---------------------------------------------------------------
+name: Foutse Momo
+email: mfoutse@udm.aed-cm.org
+photo: /assets/img/foutse-momo.jpg
+scholar: https://scholar.google.com/citations?user=wDQUzpUAAAAJ
+linkedin: https://www.linkedin.com/in/foutse-momo-4298b946/
+orcid: ""          # e.g. https://orcid.org/0000-0000-0000-0000  (leave empty to hide)
+researchgate: ""   # leave empty to hide
+
+title:
+  en: Associate Professor of Physics
+  fr: Maître de Conférences en Physique
+affiliation:
+  en: Faculty of Science and Technology, Université des Montagnes, Bangangté, Cameroon
+  fr: Faculté des Sciences et Technologies, Université des Montagnes, Bangangté, Cameroun
+address:
+  en: [Faculty of Science and Technology, Université des Montagnes, "P.O. Box 208, Bangangté, Cameroon"]
+  fr: [Faculté des Sciences et Technologies, Université des Montagnes, "B.P. 208, Bangangté, Cameroun"]
+
+# Bio (Markdown allowed). TO CONFIRM WITH PROF. MOMO.
+bio:
+  en: >-
+    I am an Associate Professor (Maître de Conférences) of Physics at the Université des Montagnes in
+    Bangangté, Cameroon, where I have taught physics and biomedical engineering since 2005.
+    My research focuses on **low-cost medical devices** for hospitals in low-income settings (neonatal
+    incubators, a mobile dental unit, a phonocardiograph, bioimpedance systems) and on **radiation
+    protection** in hospitals. I also work on the **nonlinear dynamics** of semiconductor lasers and
+    electronic circuits, the subject of my Ph.D. at the University of Dschang. I have supervised
+    24 Master's theses and coordinated several of the university's biomedical engineering programmes.
+  fr: >-
+    Je suis Maître de Conférences en Physique à l'Université des Montagnes à Bangangté (Cameroun), où
+    j'enseigne la physique et le génie biomédical depuis 2005. Mes recherches portent sur les
+    **dispositifs médicaux à bas coût** pour les hôpitaux des pays à faibles revenus (incubateurs
+    néonatals, unité dentaire mobile, phonocardiographe, systèmes de bioimpédance) et sur la
+    **radioprotection** en milieu hospitalier. Je travaille aussi sur la **dynamique non linéaire**
+    des lasers à semi-conducteurs et des circuits électroniques, sujet de mon doctorat à l'Université
+    de Dschang. J'ai encadré 24 mémoires de Master et coordonné plusieurs programmes de génie
+    biomédical de l'université.
+
+# Metrics: update from Google Scholar from time to time, together with `cites` in publications.yml.
+metrics:
+  updated: { en: November 2026, fr: novembre 2026 }
+  citations: 140
+  h_index: 7
+
+# Prospective students. TO CONFIRM WITH PROF. MOMO.
+students:
+  en: >-
+    I supervise Master's projects in biomedical instrumentation, medical device design, radiation
+    protection and hospital engineering, most of them built around a working prototype.
+    If you are interested in a project, email me with a short CV and the topic you would like to work on.
+  fr: >-
+    J'encadre des mémoires de Master en instrumentation biomédicale, conception de dispositifs
+    médicaux, radioprotection et ingénierie hospitalière, le plus souvent autour d'un prototype
+    fonctionnel. Si un projet vous intéresse, écrivez-moi en joignant un court CV et le sujet
+    qui vous intéresse.

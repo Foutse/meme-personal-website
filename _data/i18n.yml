@@ -1,0 +1,86 @@
+# Interface labels in both languages.
+en:
+  skip: Skip to content
+  menu: Menu
+  switch_label: Version française
+  switch_short: FR
+  nav: { research: Research, projects: Projects, publications: Publications, teaching: Teaching, supervision: Supervision, experience: Experience, contact: Contact }
+  stats: { pubs: Peer-reviewed publications, citations: Citations, h: h-index, theses: "Master's theses supervised" }
+  stats_note: "Publications and citations from Google Scholar, %s. Conference proceedings are listed separately."
+  news: News
+  research: Research
+  projects: Selected devices and projects
+  paper: Paper
+  publications: Publications
+  all: All
+  topic_bio: Medical devices and radiation
+  topic_nl: Lasers and nonlinear dynamics
+  scholar_full: Full profile on Google Scholar →
+  proceedings: Proceedings
+  chapter_in: Book chapter in
+  citations: citations
+  citation: citation
+  talks: Conference presentations
+  teaching: Teaching
+  teaching_intro: "Courses taught at the Université des Montagnes, from first-year undergraduate (L1) to Master's level (M1)."
+  supervision: Master's theses supervised
+  students_title: Master's projects
+  theses_intro: "24 Master's theses between 2017 and 2024, most of them in biomedical engineering."
+  theses_show: Show all 24 theses
+  th: { year: Year, student: Student, title: Title }
+  theses_note: All at the Université des Montagnes unless stated otherwise.
+  experience: Experience
+  education: Education
+  ranks: Academic rank
+  memberships: Memberships
+  committees: "Member of the Ethics and Quality Assurance Committee (2018–2025) and of the Pedagogical Commission (2020–2025) of the Université des Montagnes."
+  present: present
+  advisor: "Advisor: Prof. Paul Woafo."
+  contact: Contact
+  email: Email
+  cv: Download CV (PDF)
+  updated: Last updated
+fr:
+  skip: Aller au contenu
+  menu: Menu
+  switch_label: English version
+  switch_short: EN
+  nav: { research: Recherche, projects: Projets, publications: Publications, teaching: Enseignement, supervision: Encadrement, experience: Parcours, contact: Contact }
+  stats: { pubs: Publications à comité de lecture, citations: Citations, h: Indice h, theses: Mémoires de Master encadrés }
+  stats_note: "Publications et citations selon Google Scholar, %s. Les actes de conférence sont listés à part."
+  news: Actualités
+  research: Recherche
+  projects: Dispositifs et projets choisis
+  paper: Article
+  publications: Publications
+  all: Toutes
+  topic_bio: Dispositifs médicaux et rayonnements
+  topic_nl: Lasers et dynamique non linéaire
+  scholar_full: Profil complet sur Google Scholar →
+  proceedings: Actes
+  chapter_in: Chapitre dans
+  citations: citations
+  citation: citation
+  talks: Communications
+  teaching: Enseignement
+  teaching_intro: "Cours dispensés à l'Université des Montagnes, de la Licence 1 au Master 1."
+  supervision: Mémoires de Master encadrés
+  students_title: Sujets de Master
+  theses_intro: "24 mémoires de Master entre 2017 et 2024, pour la plupart en ingénierie biomédicale."
+  theses_show: Afficher les 24 mémoires
+  th: { year: Année, student: Étudiant(e), title: Titre }
+  theses_note: Tous à l'Université des Montagnes sauf mention contraire.
+  experience: Parcours professionnel
+  education: Formation
+  ranks: Grades universitaires
+  memberships: Sociétés savantes
+  committees: "Membre du Comité éthique et assurance qualité (2018–2025) et de la Commission pédagogique (2020–2025) de l'Université des Montagnes."
+  present: aujourd'hui
+  advisor: "Directeur : Pr Paul Woafo."
+  contact: Contact
+  email: Courriel
+  cv: Télécharger le CV (PDF)
+  updated: Dernière mise à jour
+cv:
+  en: { profile: Profile, languages: Languages, languages_text: "French (fluent), English (good)" }
+  fr: { profile: Profil, languages: Langues, languages_text: "Français (courant), anglais (bien)" }

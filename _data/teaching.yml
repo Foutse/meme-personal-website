@@ -1,0 +1,18 @@
+# Levels: L1–L4 = undergraduate years, M1 = Master 1.
+- group: { en: Physics, fr: Physique }
+  courses:
+    - { name: { en: Geometrical optics, fr: Optique géométrique }, levels: L1 }
+    - { name: { en: Point mechanics, fr: Mécanique du point }, levels: L1 }
+    - { name: { en: Statics of solids, fr: Statique du solide }, levels: L1 }
+    - { name: { en: "Electrostatics, magnetostatics and electromagnetism", fr: "Électrostatique, magnétostatique et électromagnétisme" }, levels: L1 }
+    - { name: { en: Thermodynamics, fr: Thermodynamique }, levels: L2 }
+    - { name: { en: Materials science, fr: Science des matériaux }, levels: L2 }
+    - { name: { en: Atomic and nuclear physics, fr: Physique atomique et nucléaire }, levels: L3 }
+- group: { en: Biomedical engineering and radiation, fr: Génie biomédical et rayonnements }
+  courses:
+    - { name: { en: Biophysics, fr: Biophysique }, levels: "L1, L2" }
+    - { name: { en: Biomechanics, fr: Biomécanique }, levels: L2 }
+    - { name: { en: Radiation protection, fr: Radioprotection }, levels: "L1, L3" }
+    - { name: { en: Embedded systems, fr: Systèmes embarqués }, levels: L4 }
+    - { name: { en: Radiation protection and radiotherapy, fr: Radioprotection et radiothérapie }, levels: M1 }
+    - { name: { en: Waves and ionising / non-ionising radiation, fr: Ondes et rayonnements ionisants et non ionisants }, levels: M1 }
