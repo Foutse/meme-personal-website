@@ -15,7 +15,7 @@
       {%- for d in data -%}
       {%- capture label -%}{{ d.year }}: {{ d.n }} {% if d.n == 1 %}{{ t.citation }}{% else %}{{ t.citations }}{% endif %}{%- endcapture -%}
       <div class="col">
-        <span class="bar{% if d.year == last.year %} partial{% endif %}" style="--n: {{ d.n }}" tabindex="0" role="img" aria-label="{{ label }}" data-label="{{ label }}">
+        <span class="bar{% if d.year == last.year %} partial{% endif %}" style="--n: {{ d.n }}; --i: {{ forloop.index0 }}" tabindex="0" role="img" aria-label="{{ label }}" data-label="{{ label }}">
           {%- if d.n == max or d.year == last.year -%}<span class="val">{{ d.n }}</span>{%- endif -%}
         </span>
         <span class="yr">{% assign y = d.year | append: "" %}{% if forloop.first or forloop.last or d.year == 2020 %}{{ y }}{% else %}{{ y | slice: 2, 2 | prepend: "’" }}{% endif %}</span>

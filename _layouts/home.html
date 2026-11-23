@@ -17,6 +17,20 @@ layout: base
         <li><a class="button" href="{{ t.urls.publications }}">{{ t.nav.publications }}</a></li>
         <li><a class="button" href="/assets/cv/foutse-momo-cv-{{ L }}.pdf">{{ t.cv }}</a></li>
       </ul>
+      <div class="spotlight" aria-label="{{ t.projects }}">
+        <ul class="plain spot-list">
+          {% for pr in site.data.projects %}
+          <li class="spot{% if forloop.first %} on{% endif %}">
+            <a href="{{ t.urls.research }}{{ pr.slug[L] }}/">
+              <span class="spot-art strand-{{ pr.strand }}">{% include icon.html name=pr.icon %}</span>
+              <span class="spot-text"><span class="tag">{{ pr.tag[L] }}</span><strong>{{ pr.title[L] }}</strong></span>
+              <span class="spot-go" aria-hidden="true">→</span>
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+        <div class="spot-dots" aria-hidden="true">{% for pr in site.data.projects %}<span{% if forloop.first %} class="on"{% endif %}></span>{% endfor %}</div>
+      </div>
     </div>
     <figure class="hero-photo">
       <img src="{{ p.photo }}" alt="{{ p.name }}" width="480" height="480">
@@ -24,12 +38,17 @@ layout: base
     </figure>
   </div>
   <div class="wrap">
-    <div class="trace" aria-hidden="true"></div>
+    <div class="trace" aria-hidden="true">
+      <svg viewBox="0 0 1000 56" preserveAspectRatio="none">
+        <path class="trace-line" pathLength="1000" d="M0 28h560l12-18 14 40 14-34 10 12h390"/>
+        <path class="trace-pulse" pathLength="1000" d="M0 28h560l12-18 14 40 14-34 10 12h390"/>
+      </svg>
+    </div>
     <dl class="stats">
-      <div><dt>{{ t.stats.pubs }}</dt><dd>{{ peer | size }}</dd></div>
-      <div><dt>{{ t.stats.citations }}</dt><dd>{{ p.metrics.citations }}</dd></div>
-      <div><dt>{{ t.stats.h }}</dt><dd>{{ p.metrics.h_index }}</dd></div>
-      <div><dt>{{ t.stats.theses }}</dt><dd>{{ site.data.theses | size }}</dd></div>
+      <div><dt>{{ t.stats.pubs }}</dt><dd data-count="{{ peer | size }}">{{ peer | size }}</dd></div>
+      <div><dt>{{ t.stats.citations }}</dt><dd data-count="{{ p.metrics.citations }}">{{ p.metrics.citations }}</dd></div>
+      <div><dt>{{ t.stats.h }}</dt><dd data-count="{{ p.metrics.h_index }}">{{ p.metrics.h_index }}</dd></div>
+      <div><dt>{{ t.stats.theses }}</dt><dd data-count="{{ site.data.theses | size }}">{{ site.data.theses | size }}</dd></div>
     </dl>
     <p class="stats-note">{{ t.stats_note | replace: "%s", p.metrics.updated[L] }}</p>
   </div>

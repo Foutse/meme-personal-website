@@ -35,7 +35,8 @@
   <link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-  <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <script>document.documentElement.classList.add("js")</script>
+  <link rel="preload" href="/assets/fonts/inter-latin.woff2 as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/sourceserif4-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/css/fonts.css">
   <link rel="stylesheet" href="/assets/css/style.css?v={{ site.time | date: '%s' }}">
@@ -84,7 +85,7 @@
           <a href="{{ t.urls.cv }}"{% if section == "cv" %} aria-current="page"{% endif %}>{{ t.nav.cv }}</a>
           <a href="#contact">{{ t.nav.contact }}</a>
         </nav>
-        <a class="lang-toggle" href="{{ other }}" hreflang="{{ O }}" lang="{{ O }}" data-lang="{{ O }}" aria-label="{{ t.switch_label }}">{{ t.switch_short }}</a>
+        <a class="lang-toggle" href="{{ other }}" hreflang="{{ O }}" lang="{{ O }}" data-lang="{{ O }}">{{ t.switch_short }}<span class="sr-only"> – {{ t.switch_label }}</span></a>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">{{ t.menu }}</button>
       </div>
     </div>

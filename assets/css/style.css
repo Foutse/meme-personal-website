@@ -132,14 +132,11 @@ p { margin: 0 0 .9rem; }
    Home
    ========================================================================== */
 .hero { padding: 4.5rem 0 3rem; }
-.trace {
-  /* heart-trace motif between the intro and the figures */
-  height: 56px; margin: 2.5rem 0 -1.5rem; opacity: .35; color: var(--accent);
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 56' preserveAspectRatio='none'%3E%3Cpath d='M0 28h560l12-18 14 40 14-34 10 12h390' fill='none' stroke='%231d5c8c' stroke-width='1.5' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
-}
-@media (prefers-color-scheme: dark) {
-  .trace { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 56' preserveAspectRatio='none'%3E%3Cpath d='M0 28h560l12-18 14 40 14-34 10 12h390' fill='none' stroke='%237db6e3' stroke-width='1.5' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E"); }
-}
+.trace { height: 56px; margin: 2.5rem 0 -1.5rem; }
+.trace svg { width: 100%; height: 100%; overflow: visible; display: block; }
+.trace path { fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.trace-line { stroke: var(--accent); opacity: .35; }
+.trace-pulse { stroke: var(--copper); stroke-width: 2.5; stroke-dasharray: 0 1000; opacity: 0; }
 .hero-inner { display: grid; grid-template-columns: 1.35fr 1fr; gap: 3.5rem; align-items: center; }
 .eyebrow { text-transform: uppercase; letter-spacing: .12em; font-size: .78rem; font-weight: 700; color: var(--copper); margin-bottom: 1rem; }
 .hero h1 { max-width: 19ch; }
@@ -367,3 +364,96 @@ td:nth-child(2) { white-space: nowrap; }
   .site-header, .lang-toggle, .filters, .band, .site-footer, .meta button { display: none; }
   body { background: #fff; }
 }
+
+/* ==========================================================================
+   Motion (all of it is disabled for prefers-reduced-motion)
+   ========================================================================== */
+@view-transition { navigation: auto; }
+
+.site-header { transition: box-shadow .25s ease; }
+.site-header.scrolled { box-shadow: 0 6px 20px rgba(20, 30, 50, .08); }
+.button { transition: transform .15s ease, border-color .15s ease, color .15s ease, filter .15s ease; }
+.button:hover { transform: translateY(-1px); }
+
+/* Hero entrance */
+/* Transform only: the text stays readable even where animations do not run. */
+@keyframes rise { from { transform: translateY(14px); } to { transform: none; } }
+.hero-text > *, .hero-photo { animation: rise .7s cubic-bezier(.2, .7, .2, 1) both; }
+.hero-text > :nth-child(2) { animation-delay: .08s; }
+.hero-text > :nth-child(3) { animation-delay: .16s; }
+.hero-text > :nth-child(4) { animation-delay: .24s; }
+.hero-text > :nth-child(5) { animation-delay: .32s; }
+.hero-photo { animation-delay: .15s; }
+
+/* ECG trace: draw once, then a pulse runs along it */
+@keyframes draw { from { stroke-dashoffset: 1000; } to { stroke-dashoffset: 0; } }
+@keyframes pulse-run { 0% { stroke-dashoffset: 0; opacity: 0; } 8% { opacity: 1; } 92% { opacity: 1; } 100% { stroke-dashoffset: -1000; opacity: 0; } }
+.trace-line { stroke-dasharray: 1000; animation: draw 1.8s .4s ease-out both; }
+.trace-pulse { stroke-dasharray: 70 930; animation: pulse-run 3.2s 2.2s linear infinite; }
+
+/* Device spotlight */
+.spotlight { margin-top: 1.75rem; max-width: 30rem; }
+.spot-list { position: relative; height: 4.75rem; }
+.spot { position: absolute; inset: 0; opacity: 0; visibility: hidden; transform: translateY(8px); transition: opacity .45s ease, transform .45s ease, visibility .45s; }
+.spot.on { opacity: 1; visibility: visible; transform: none; }
+.spot a {
+  display: flex; align-items: center; gap: .9rem; height: 100%; padding: .55rem .9rem .55rem .55rem; text-decoration: none;
+  background: var(--surface); border: 1px solid var(--border); border-radius: 14px; box-shadow: var(--shadow); color: var(--text);
+}
+.spot a:hover { border-color: var(--accent); }
+.spot-art { flex: none; display: grid; place-items: center; width: 3.6rem; height: 3.6rem; border-radius: 10px; background: var(--bg-tint); color: var(--accent); }
+.spot-art.strand-second { background: var(--copper-soft); color: var(--copper); }
+.spot-art .icon { width: 40px; height: 40px; }
+.spot-text { display: flex; flex-direction: column; line-height: 1.25; min-width: 0; }
+.spot-text .tag { margin: 0 0 .2rem; font-size: .68rem; }
+.spot-text strong { color: var(--navy); font-size: 1rem; }
+.spot-go { margin-left: auto; color: var(--accent); font-weight: 700; }
+.spot-dots { display: flex; gap: 6px; margin-top: .7rem; padding-left: .3rem; }
+.spot-dots span { width: 6px; height: 6px; border-radius: 50%; background: var(--border); transition: background .3s, width .3s; }
+.spot-dots span.on { background: var(--copper); width: 18px; border-radius: 3px; }
+
+/* Reveal on scroll (only when JS runs) */
+.js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s cubic-bezier(.2, .7, .2, 1); transition-delay: calc(var(--d, 0) * 70ms); }
+.js .reveal.in { opacity: 1; transform: none; }
+
+/* Chart bars grow */
+.js .bars .bar { transform: scaleY(0); transform-origin: bottom; transition: transform .7s cubic-bezier(.2, .8, .2, 1), opacity .12s; transition-delay: calc(var(--i, 0) * 50ms); }
+.js .bars.in .bar { transform: scaleY(1); }
+
+/* Living drawings */
+@keyframes beat { 0%, 100% { transform: scale(1); } 15% { transform: scale(1.12); } 30% { transform: scale(.98); } 45% { transform: scale(1.06); } }
+@keyframes wobble { 0%, 100% { transform: rotate(0); } 25% { transform: rotate(-7deg); } 75% { transform: rotate(7deg); } }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: .15; } }
+@keyframes flow { to { stroke-dashoffset: -24; } }
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+.icon { transform-box: fill-box; transform-origin: center; }
+.icon .accent { transform-box: fill-box; transform-origin: center; }
+.project:hover .icon-heart, .live .icon-heart, .spot.on .icon-heart { animation: beat 1.3s ease-in-out infinite; }
+.project:hover .icon-egg, .live .icon-egg, .spot.on .icon-egg { animation: wobble 1.6s ease-in-out infinite; transform-origin: 50% 85%; }
+.project:hover .icon-radiation, .live .icon-radiation, .spot.on .icon-radiation { animation: spin 9s linear infinite; }
+.project:hover .icon-incubator .accent, .live .icon-incubator .accent, .spot.on .icon-incubator .accent { animation: blink 1.4s ease-in-out infinite; }
+.project:hover .icon-laser .accent, .live .icon-laser .accent, .spot.on .icon-laser .accent,
+.project:hover .icon-wave .accent, .live .icon-wave .accent, .spot.on .icon-wave .accent { stroke-dasharray: 6 6; animation: flow .8s linear infinite; }
+.project:hover .icon-tooth, .live .icon-tooth, .spot.on .icon-tooth,
+.project:hover .icon-microscope, .live .icon-microscope, .spot.on .icon-microscope,
+.project:hover .icon-hospital, .live .icon-hospital, .spot.on .icon-hospital { animation: float 2.4s ease-in-out infinite; }
+.project:hover .project-art { background: var(--accent-soft); }
+.strand-second.project:hover .project-art { background: var(--copper-soft); }
+.project-art { transition: background .2s; }
+
+@media (prefers-reduced-motion: reduce) {
+  @view-transition { navigation: none; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .js .reveal { opacity: 1; transform: none; }
+  .js .bars .bar { transform: none; }
+  .trace-line { stroke-dasharray: none; }
+  .trace-pulse { display: none; }
+}
+@media (max-width: 720px) {
+  .spotlight { max-width: none; }
+}
+/* After a card has been revealed, restore its quick hover behaviour. */
+.js .card.reveal.in { transition: transform .15s ease, border-color .15s ease; transition-delay: 0s; }
+.js .project.reveal.in:hover { transform: translateY(-2px); }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
