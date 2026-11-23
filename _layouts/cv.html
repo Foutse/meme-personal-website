@@ -56,7 +56,6 @@
   {% for e in c.experience %}
   <div class="row"><span class="when">{{ e.when[L] }}</span><div><b>{{ e.role[L] }}</b>, {{ e.org[L] }}{% if e.items %}<ul>{% for it in e.items[L] %}<li>{{ it }}</li>{% endfor %}</ul>{% endif %}</div></div>
   {% endfor %}
-  <p class="muted">{{ t.committees }}</p>
 
   <h2>{{ t.education }}</h2>
   {% for e in c.education %}
@@ -95,6 +94,11 @@
   <h2>{{ t.teaching }}</h2>
   {% for g in site.data.teaching %}
   <p><b>{{ g.group[L] }}:</b> {% for co in g.courses %}{{ co.name[L] }} ({{ co.levels }}){% unless forloop.last %}; {% endunless %}{% endfor %}.</p>
+  {% endfor %}
+
+  <h2>{{ t.service }}</h2>
+  {% for r in c.service %}
+  <div class="row"><span class="when">{{ r.when }}</span><div>{{ r.text[L] }}</div></div>
   {% endfor %}
 
   <h2>{{ t.memberships }}</h2>

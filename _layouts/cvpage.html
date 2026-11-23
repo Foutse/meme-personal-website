@@ -30,7 +30,6 @@ layout: base
         </li>
         {% endfor %}
       </ol>
-      <p class="note">{{ t.committees }}</p>
     </div>
     <div>
       <h2>{{ t.education }}</h2>
@@ -47,6 +46,10 @@ layout: base
       <h2 class="mt">{{ t.ranks }}</h2>
       <ul class="plain">
         {% for r in c.ranks %}<li><span class="when">{{ r.when }}</span> {{ r.text[L] }}</li>{% endfor %}
+      </ul>
+      <h2 class="mt">{{ t.service }}</h2>
+      <ul class="plain">
+        {% for r in c.service %}<li><span class="when">{{ r.when }}</span> {{ r.text[L] }}</li>{% endfor %}
       </ul>
       <h2 class="mt">{{ t.memberships }}</h2>
       <ul class="plain memberships">

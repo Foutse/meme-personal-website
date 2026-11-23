@@ -53,3 +53,9 @@ memberships:
   - name: { en: Cameroon Radiological Protection Society (CRPS), fr: Société Camerounaise de Protection Radiologique (SCPR) }
     note: { en: "Associate society of the International Radiation Protection Association (IRPA)", fr: "Société associée de l'Association internationale de radioprotection (IRPA)" }
     note_url: https://www.irpa.net/
+# Committees and commissions inside the university (not learned societies).
+service:
+  - when: "2018 – 2025"
+    text: { en: "Member, Ethics and Quality Assurance Committee, Université des Montagnes", fr: "Membre du Comité éthique et assurance qualité, Université des Montagnes" }
+  - when: "2020 – 2025"
+    text: { en: "Member, Pedagogical Commission, Université des Montagnes", fr: "Membre de la Commission pédagogique, Université des Montagnes" }
