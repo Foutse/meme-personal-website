@@ -1,0 +1,50 @@
+---
+layout: base
+---
+{%- assign L = page.lang -%}
+{%- assign t = site.data.i18n[L] -%}
+{%- assign p = site.data.profile -%}
+{%- assign peer = site.data.publications | where_exp: "x", "x.kind != 'proceedings'" -%}
+<section class="page-head">
+  <div class="wrap pubs-head">
+    <div>
+      <h1>{{ t.publications }}</h1>
+      <p class="lead">{{ t.pubs_intro }}</p>
+      <dl class="stats stats-inline">
+        <div><dt>{{ t.stats.pubs }}</dt><dd>{{ peer | size }}</dd></div>
+        <div><dt>{{ t.stats.citations }}</dt><dd>{{ p.metrics.citations }}</dd></div>
+        <div><dt>{{ t.stats.h }}</dt><dd>{{ p.metrics.h_index }}</dd></div>
+      </dl>
+    </div>
+    {% include cites-chart.html lang=L %}
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="pub-tools">
+      <div class="filters" role="group" aria-label="Filter">
+        <button type="button" class="chip active" data-filter="all" aria-pressed="true">{{ t.all }}</button>
+        <button type="button" class="chip" data-filter="bio" aria-pressed="false">{{ t.topic_bio }}</button>
+        <button type="button" class="chip" data-filter="nl" aria-pressed="false">{{ t.topic_nl }}</button>
+      </div>
+      <a class="scholar-link" href="{{ p.scholar }}">{{ t.scholar_full }}</a>
+    </div>
+    <div class="pubs">
+      {% assign years = site.data.publications | group_by: "year" %}
+      {% for y in years %}
+      <h2 class="year">{{ y.name }}</h2>
+      <ol class="plain-list">
+        {% for x in y.items %}{% include pub.html pub=x lang=L %}{% endfor %}
+      </ol>
+      {% endfor %}
+    </div>
+
+    <h2 class="sub">{{ t.talks }}</h2>
+    <ul class="plain talks">
+      {% for tk in site.data.talks %}
+      <li><span class="when">{{ tk.year }}</span> <span>{{ tk.text[L] | markdownify | remove: "<p>" | remove: "</p>" | strip }}</span></li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

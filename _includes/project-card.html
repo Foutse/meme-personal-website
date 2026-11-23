@@ -1,0 +1,11 @@
+{%- assign pr = include.project -%}
+{%- assign L = include.lang -%}
+{%- assign t = site.data.i18n[L] -%}
+{%- assign url = t.urls.research | append: pr.slug[L] | append: "/" -%}
+<article class="card project strand-{{ pr.strand }}">
+  {% if pr.image %}<img class="project-img" src="{{ pr.image }}" alt="" loading="lazy">{% else %}<div class="project-art">{% include icon.html name=pr.icon %}</div>{% endif %}
+  <p class="tag">{{ pr.tag[L] }}</p>
+  <h3><a class="stretched" href="{{ url }}">{{ pr.title[L] }}</a></h3>
+  <p>{{ pr.text[L] }}</p>
+  <p class="more" aria-hidden="true">{{ t.read_more }} →</p>
+</article>

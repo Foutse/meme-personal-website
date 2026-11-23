@@ -1,0 +1,35 @@
+---
+layout: base
+---
+{%- assign L = page.lang -%}
+{%- assign t = site.data.i18n[L] -%}
+<section class="page-head">
+  <div class="wrap">
+    <h1>{{ t.research }}</h1>
+    <p class="lead">{{ t.research_intro }}</p>
+  </div>
+</section>
+
+{% for s in site.data.research %}
+<section class="section{% cycle '', ' alt' %}">
+  <div class="wrap">
+    <h2>{{ s.title[L] }}</h2>
+    <p class="section-intro">{{ s.intro[L] }}</p>
+    <div class="grid themes">
+      {% for th in s.themes %}
+      <div class="theme strand-{{ s.strand }}">
+        <h3>{{ th.title[L] }}</h3>
+        <p>{{ th.text[L] }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    {% assign prs = site.data.projects | where: "strand", s.strand %}
+    {% if prs.size > 0 %}
+    <h3 class="sub">{{ t.projects }}</h3>
+    <div class="grid cards-3">
+      {% for pr in prs %}{% include project-card.html project=pr lang=L %}{% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</section>
+{% endfor %}

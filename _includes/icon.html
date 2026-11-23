@@ -1,0 +1,34 @@
+{%- comment -%} Line illustrations. Usage: {% include icon.html name="incubator" %} {%- endcomment -%}
+<svg class="icon icon-{{ include.name }}" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+{%- case include.name -%}
+{%- when "incubator" -%}
+  <path d="M10 30a22 14 0 0 1 44 0"/><rect x="8" y="30" width="48" height="12" rx="2"/>
+  <path d="M14 42v10M50 42v10M10 52h8M46 52h8"/><path d="M22 30c0-4 4-6 8-6s6 3 10 3"/>
+  <circle cx="22" cy="36" r="1.5"/><path d="M30 36h18"/><path d="M38 14v-4M32 15l-2-3M44 15l2-3" class="accent"/>
+{%- when "tooth" -%}
+  <path d="M22 10c-6 0-10 5-10 12 0 6 3 9 4 15 1 7 2 17 6 17 4 0 4-12 10-12s6 12 10 12c4 0 5-10 6-17 1-6 4-9 4-15 0-7-4-12-10-12-4 0-6 2-10 2s-6-2-10-2z"/>
+  <path d="M24 18c2 1 4 1 8 1" class="accent"/>
+{%- when "heart" -%}
+  <path d="M32 52S10 40 10 24c0-7 5-12 11-12 5 0 9 3 11 7 2-4 6-7 11-7 6 0 11 5 11 12 0 16-22 28-22 28z"/>
+  <path d="M14 30h8l3-6 5 12 4-10 3 4h13" class="accent"/>
+{%- when "wave" -%}
+  <rect x="8" y="12" width="48" height="34" rx="3"/><path d="M14 30c4-12 8-12 12 0s8 12 12 0 8-12 12 0" class="accent"/>
+  <path d="M20 46v6M44 46v6M14 52h12M38 52h12"/>
+{%- when "radiation" -%}
+  <circle cx="32" cy="32" r="22"/><circle cx="32" cy="32" r="4" class="accent"/>
+  <path d="M32 26l-6-11a18 18 0 0 1 12 0zM37 35l11 5a18 18 0 0 1-6 10zM27 35l-11 5a18 18 0 0 0 6 10z" class="accent"/>
+{%- when "hospital" -%}
+  <path d="M10 54V22l22-10 22 10v32"/><path d="M6 54h52"/><rect x="26" y="40" width="12" height="14"/>
+  <path d="M32 22v10M27 27h10" class="accent"/><path d="M16 32h4M16 40h4M44 32h4M44 40h4"/>
+{%- when "microscope" -%}
+  <path d="M26 8l8 4-8 18-8-4z"/><path d="M22 28l-3 6M20 40h24M14 54h36M38 54c6-4 8-10 6-16-1-4-4-7-8-8"/>
+  <path d="M34 12l4-6" /><circle cx="22" cy="36" r="2" class="accent"/><path d="M16 46h16" class="accent"/>
+{%- when "egg" -%}
+  <path d="M32 8c-9 0-16 15-16 26a16 16 0 0 0 32 0C48 23 41 8 32 8z"/><path d="M22 34l4 4 4-5 4 5 4-5 4 4" class="accent"/>
+{%- when "laser" -%}
+  <rect x="8" y="22" width="20" height="20" rx="2"/><path d="M28 32h28" class="accent"/><path d="M50 26l6 6-6 6" class="accent"/>
+  <path d="M12 42v8M24 42v8M8 50h20"/><path d="M14 28h8M14 32h8M14 36h8"/>
+{%- else -%}
+  <circle cx="32" cy="32" r="20"/>
+{%- endcase -%}
+</svg>

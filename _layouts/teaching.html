@@ -1,0 +1,56 @@
+---
+layout: base
+---
+{%- assign L = page.lang -%}
+{%- assign t = site.data.i18n[L] -%}
+{%- assign p = site.data.profile -%}
+<section class="page-head">
+  <div class="wrap">
+    <h1>{{ t.teaching }}</h1>
+    <p class="lead">{{ t.teaching_intro }}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <h2>{{ t.teaching_title }}</h2>
+    <div class="grid teaching">
+      {% for g in site.data.teaching %}
+      <div class="card">
+        <h3>{{ g.group[L] }}</h3>
+        <ul class="plain">
+          {% for c in g.courses %}<li><span>{{ c.name[L] }}</span> <span class="level">{{ c.levels }}</span></li>{% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap band-inner">
+    <div>
+      <h2>{{ t.students_title }}</h2>
+      <p>{{ p.students[L] }}</p>
+    </div>
+    <a class="button light" href="mailto:{{ p.email }}">{{ p.email }}</a>
+  </div>
+</section>
+
+<section class="section" id="supervision">
+  <div class="wrap">
+    <h2>{{ t.supervision }}</h2>
+    <p>{{ t.theses_intro }}</p>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>{{ t.th.year }}</th><th>{{ t.th.student }}</th><th>{{ t.th.title }}</th></tr></thead>
+        <tbody>
+          {% for th in site.data.theses %}
+          <tr><td>{{ th.year }}</td><td>{{ th.student }}</td><td>{{ th[L] }}{% if th.institution %} <span class="inst">({{ th.institution }})</span>{% endif %}</td></tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <p class="note">{{ t.theses_note }}</p>
+  </div>
+</section>

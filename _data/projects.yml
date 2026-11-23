@@ -1,44 +1,182 @@
-# Optional `image:` per project, e.g. image: /assets/img/projects/incubator.jpg (landscape, ~1200 px wide).
-- tag: { en: Neonatal care, fr: Néonatologie }
+# Devices and projects. Each one gets its own page in both languages (see research/ and fr/recherche/).
+# slug: part of the page address. icon: name of an icon in _includes/icon.html.
+# image: optional photo, e.g. /assets/img/projects/incubator.jpg (landscape, ~1200 px wide).
+# papers: DOIs from publications.yml. theses: student names exactly as in theses.yml.
+# featured: shown on the home page.
+
+- slug: { en: neonatal-incubators, fr: incubateurs-neonatals }
+  icon: incubator
+  featured: true
+  strand: main
+  tag: { en: Neonatal care, fr: Néonatologie }
   title: { en: Neonatal incubators, fr: Incubateurs néonatals }
   text:
-    en: "Energy-efficient incubators with phototherapy, a built-in baby scale, remote monitoring and heart-rate control, built for hospitals with unreliable power."
-    fr: "Incubateurs économes en énergie avec photothérapie, pèse-bébé, surveillance à distance et contrôle de la fréquence cardiaque, conçus pour des hôpitaux à l'alimentation électrique instable."
-  papers:
-    - { year: 2019, doi: 10.1016/j.jnn.2019.07.011 }
-    - { year: 2019, doi: 10.1007/s12553-018-0253-3 }
-    - { year: 2020, doi: 10.1016/j.medengphy.2019.10.021 }
-- tag: { en: Oral health, fr: Santé bucco-dentaire }
+    en: "Energy-efficient incubators with phototherapy, remote monitoring and heart-rate control, built for hospitals with unreliable power."
+    fr: "Incubateurs économes en énergie avec photothérapie, surveillance à distance et contrôle de la fréquence cardiaque, pour des hôpitaux à l'alimentation électrique instable."
+  body:
+    en: |
+      Incubators keep premature and low-birth-weight babies alive, but they are expensive and often unavailable in hospitals in low-income countries. This work builds incubators from locally available components and adds the functions hospitals ask for.
+
+      The devices regulate the temperature and humidity of the enclosure with a microcontroller, and add phototherapy to treat newborn jaundice, a fingerprint reader to identify staff, a built-in baby scale, and remote monitoring of the baby's temperature and heart rate, with video so that parents and nurses can see the baby from anywhere. A heat-transfer model of the enclosure was used to reduce power consumption, and a first study of the incubator's social impact was carried out in hospitals in Cameroon.
+    fr: |
+      Les incubateurs maintiennent en vie les bébés prématurés et de faible poids de naissance, mais ils sont coûteux et souvent indisponibles dans les hôpitaux des pays à faibles revenus. Ces travaux construisent des incubateurs à partir de composants disponibles localement et y ajoutent les fonctions demandées par les hôpitaux.
+
+      Les dispositifs régulent la température et l'humidité de l'enceinte par microcontrôleur, et intègrent la photothérapie pour traiter la jaunisse du nouveau-né, un lecteur d'empreintes digitales pour identifier le personnel, un pèse-bébé, et la surveillance à distance de la température et de la fréquence cardiaque du bébé, avec une vidéo permettant aux parents et aux infirmiers de voir le bébé où qu'ils soient. Un modèle de transfert de chaleur de l'enceinte a permis de réduire la consommation d'énergie, et une première étude d'impact social a été menée dans des hôpitaux camerounais.
+  papers: [10.1016/j.jnn.2019.07.011, 10.1007/s12553-018-0253-3, 10.1016/j.medengphy.2019.10.021]
+  theses: [Gnimpikba Anero]
+
+- slug: { en: mobile-dental-unit, fr: unite-dentaire-mobile }
+  icon: tooth
+  featured: true
+  strand: main
+  tag: { en: Oral health, fr: Santé bucco-dentaire }
   title: { en: Mobile dental unit, fr: Unité dentaire mobile }
   text:
     en: "A low-cost mobile dental unit for oral care in underserved areas, taken from concept to operation."
     fr: "Une unité dentaire mobile à bas coût pour les soins bucco-dentaires dans les zones mal desservies, de la conception à la mise en service."
-  papers:
-    - { year: 2020, doi: 10.1007/s12553-020-00477-8 }
-- tag: { en: Telemedicine, fr: Télémédecine }
+  body:
+    en: |
+      Dental care is hard to reach outside the main cities. This project designed and built a low-cost mobile dental unit so that oral care can be delivered where there is no dental surgery, and followed it from the first concept to operation.
+
+      Two Master's theses built the unit's subsystems: the power, pneumatic and hydraulic parts, and the control board and suction. A later thesis applied the same approach to the design of a complete two-chair dental surgery.
+    fr: |
+      Les soins dentaires sont difficiles d'accès hors des grandes villes. Ce projet a conçu et construit une unité dentaire mobile à bas coût, afin de pouvoir soigner là où il n'existe pas de cabinet dentaire, de la conception à la mise en service.
+
+      Deux mémoires de Master ont réalisé les sous-systèmes de l'unité : la partie puissance, pneumatique et hydraulique, puis la carte de commande et l'aspiration. Un mémoire plus récent a appliqué la même démarche à la conception d'un cabinet dentaire complet à deux fauteuils.
+  papers: [10.1007/s12553-020-00477-8]
+  theses: [Chapi Tchounang Samuel Michel, Magni Kelye Pamela, Nongni Kuete Bertol]
+
+- slug: { en: phonocardiography, fr: phonocardiographie }
+  icon: heart
+  featured: true
+  strand: main
+  tag: { en: Telemedicine, fr: Télémédecine }
   title: { en: Phonocardiography, fr: Phonocardiographie }
   text:
     en: "A phonocardiograph for telemedicine and an algorithm that generates realistic synthetic heart-sound signals."
     fr: "Un phonocardiographe pour la télémédecine et un algorithme générant des signaux cardiaques synthétiques réalistes."
-  papers:
-    - { year: 2020, doi: 10.1016/j.bspc.2020.101983 }
-    - { year: 2022, doi: 10.1007/s12553-022-00646-x }
-- tag: { en: Measurement, fr: Mesure }
+  body:
+    en: |
+      A phonocardiograph records the sounds of the heart so that they can be analysed, stored and sent to a doctor elsewhere. This work produced a phonocardiograph designed for telemedicine.
+
+      To test such devices and the software that analyses heart sounds, the team also developed an algorithm that generates synthetic heart-sound signals from a few parameters measured on real recordings (amplitude, heart rate and the interval between the two heart sounds). Compared with recordings from public databases, the synthetic signals matched closely, with correlations above 0.8 and heart-rate differences as small as 1.6%.
+    fr: |
+      Un phonocardiographe enregistre les bruits du cœur afin de pouvoir les analyser, les conserver et les transmettre à un médecin à distance. Ces travaux ont produit un phonocardiographe conçu pour la télémédecine.
+
+      Pour tester ces appareils et les logiciels d'analyse des bruits cardiaques, l'équipe a aussi développé un algorithme qui génère des signaux cardiaques synthétiques à partir de quelques paramètres mesurés sur de vrais enregistrements (amplitude, fréquence cardiaque et intervalle entre les deux bruits du cœur). Comparés à des enregistrements de bases de données publiques, les signaux synthétiques concordent étroitement, avec des corrélations supérieures à 0,8 et des écarts de fréquence cardiaque de seulement 1,6 %.
+  papers: [10.1016/j.bspc.2020.101983, 10.1007/s12553-022-00646-x]
+
+- slug: { en: bioimpedance, fr: bioimpedance }
+  icon: wave
+  strand: main
+  tag: { en: Measurement, fr: Mesure }
   title: { en: Bioimpedance spectroscopy, fr: Spectroscopie de bioimpédance }
   text:
-    en: "Improved accuracy for low-frequency bioimpedance spectroscopy based on the AD8302 gain and phase detector."
-    fr: "Amélioration de la précision d'un système de spectroscopie de bioimpédance basse fréquence basé sur le détecteur de gain et de phase AD8302."
-  papers:
-    - { year: 2018, doi: 10.1016/j.measurement.2018.03.079 }
-- tag: { en: Laboratory, fr: Laboratoire }
+    en: "More accurate low-cost bioimpedance measurement at low frequencies, based on the AD8302 gain and phase detector."
+    fr: "Une mesure de bioimpédance à bas coût plus précise aux basses fréquences, basée sur le détecteur de gain et de phase AD8302."
+  body:
+    en: |
+      Bioimpedance spectroscopy measures how body tissues oppose a small electrical current across a range of frequencies. It is a cheap, non-invasive way to characterise tissues, and portable systems often rely on a gain and phase detector chip (the AD8302). These systems lose accuracy at low frequencies because of spikes in the signal.
+
+      This work compared three ways of removing those spikes on a microcontroller: a moving-average filter and two peak-detection algorithms. The peak-detection methods gave the best results, with the frequency-based method running in under 10 ms. Related work studies self-sustained electronic oscillators as a basis for bioimpedance measurement.
+    fr: |
+      La spectroscopie de bioimpédance mesure comment les tissus du corps s'opposent à un faible courant électrique sur une gamme de fréquences. C'est un moyen peu coûteux et non invasif de caractériser les tissus, et les systèmes portables utilisent souvent un détecteur de gain et de phase (l'AD8302). Ces systèmes perdent en précision aux basses fréquences à cause de pics dans le signal.
+
+      Ces travaux ont comparé trois méthodes pour supprimer ces pics sur microcontrôleur : un filtre à moyenne mobile et deux algorithmes de détection de pics. Les méthodes de détection de pics donnent les meilleurs résultats, la méthode basée sur la fréquence s'exécutant en moins de 10 ms. D'autres travaux étudient les oscillateurs électroniques auto-entretenus comme base de mesure de la bioimpédance.
+  papers: [10.1016/j.measurement.2018.03.079]
+
+- slug: { en: radiation-safety, fr: radioprotection }
+  icon: radiation
+  strand: main
+  tag: { en: Radiation protection, fr: Radioprotection }
+  title: { en: Radiation safety in hospitals, fr: Radioprotection à l'hôpital }
+  text:
+    en: "Exposure to ionising radiation in hospitals, radiological quality control and low-cost dosimetry."
+    fr: "Exposition aux rayonnements ionisants à l'hôpital, contrôle qualité radiologique et dosimétrie à bas coût."
+  body:
+    en: |
+      X-ray imaging is essential for diagnosis, but patients and staff must be protected from unnecessary radiation. This work looks at how radiological quality control affects the dose delivered to patients and the diagnostic quality of images, and at building affordable dosimeters to measure exposure.
+
+      It draws on teaching in radiation protection and radiotherapy, and on participation in the first national seminar on radiological quality control, held at the Hôpital Général de Yaoundé in 2017 with the International Atomic Energy Agency.
+    fr: |
+      L'imagerie par rayons X est indispensable au diagnostic, mais les patients et le personnel doivent être protégés de toute irradiation inutile. Ces travaux étudient l'effet du contrôle qualité radiologique sur la dose délivrée aux patients et sur la qualité diagnostique des images, ainsi que la réalisation de dosimètres abordables pour mesurer l'exposition.
+
+      Ils s'appuient sur l'enseignement de la radioprotection et de la radiothérapie, et sur la participation au premier séminaire national de contrôle qualité radiologique, tenu à l'Hôpital Général de Yaoundé en 2017 avec l'Agence internationale de l'énergie atomique.
+  theses: [Ngagoue Ngekam Matady Ivan, Fodju Djidjou Ismaël]
+
+- slug: { en: hospital-design, fr: ingenierie-hospitaliere }
+  icon: hospital
+  strand: main
+  tag: { en: Hospital engineering, fr: Ingénierie hospitalière }
+  title: { en: Hospital design, fr: Conception de services hospitaliers }
+  text:
+    en: "Planning hospital services in full: operating theatres, haemodialysis, sterilisation and dental surgeries."
+    fr: "Planification complète de services hospitaliers : blocs opératoires, hémodialyse, stérilisation et cabinets dentaires."
+  body:
+    en: |
+      A medical device only helps if the service around it works. This line of Master's projects plans complete hospital services: the architectural layout, the sizing of medical fluids (oxygen, air, water), the choice of equipment and the cost.
+
+      Projects so far cover an operating theatre, a haemodialysis centre, a sterilisation and laundry service, a two-chair dental surgery, and the comfort of lower-limb prostheses.
+    fr: |
+      Un dispositif médical n'est utile que si le service qui l'entoure fonctionne. Cette série de mémoires de Master planifie des services hospitaliers complets : plan architectural, dimensionnement des fluides médicaux (oxygène, air, eau), choix des équipements et coûts.
+
+      Les projets portent sur un bloc opératoire, un centre d'hémodialyse, un service de stérilisation et de buanderie, un cabinet dentaire à deux fauteuils, et le confort des prothèses du membre inférieur.
+  theses: [Hyemdjoung Tatong Bonikel, Nana Kamgaing Alban, Nansi Kontcho Pierre Phanuel, Nongni Kuete Bertol, Lemone Foya]
+
+- slug: { en: digital-microscope, fr: microscope-numerique }
+  icon: microscope
+  strand: main
+  tag: { en: Laboratory, fr: Laboratoire }
   title: { en: Digital microscope, fr: Microscope numérique }
   text:
-    en: "Prototype of a digital microscope adapted to laboratories in low-income countries (Bioscience conference, 2023)."
-    fr: "Prototype de microscope numérique adapté aux laboratoires des pays à faibles revenus (Conférence de Bioscience, 2023)."
-- tag: { en: Agriculture, fr: Agriculture }
+    en: "A prototype digital microscope adapted to laboratories in low-income countries."
+    fr: "Un prototype de microscope numérique adapté aux laboratoires des pays à faibles revenus."
+  body:
+    en: |
+      Microscopy is central to diagnosis in hospital laboratories, but good microscopes are costly and their images are hard to share. This prototype digital microscope is designed for laboratories in low-income countries.
+
+      It was presented at the 30th Annual Bioscience Conference at the Université des Montagnes in 2023 (D. Nde, F. Momo, Y. Mohamadou, P. Tiam Kapen, P. R. Fotsing Kwetche). Related student work includes a low-cost spectrophotometer built around an RGB LED.
+    fr: |
+      La microscopie est au cœur du diagnostic dans les laboratoires hospitaliers, mais les bons microscopes sont coûteux et leurs images difficiles à partager. Ce prototype de microscope numérique est conçu pour les laboratoires des pays à faibles revenus.
+
+      Il a été présenté à la 30<sup>e</sup> Conférence annuelle de Bioscience de l'Université des Montagnes en 2023 (D. Nde, F. Momo, Y. Mohamadou, P. Tiam Kapen, P. R. Fotsing Kwetche). Un mémoire connexe a réalisé un spectrophotomètre à bas coût basé sur une LED RGB.
+  theses: [Tsafack Massemo Hypollyte Franck]
+
+- slug: { en: egg-incubator, fr: couveuse }
+  icon: egg
+  strand: main
+  tag: { en: Agriculture, fr: Agriculture }
   title: { en: Egg incubator, fr: Couveuse à œufs }
   text:
-    en: "A low-cost, energy-efficient egg incubator designed and prototyped for Cameroonian farmers."
-    fr: "Une couveuse à œufs économe en énergie et à bas coût, conçue et prototypée pour les éleveurs camerounais."
-  papers:
-    - { year: 2020, doi: 10.1016/j.sciaf.2020.e00618 }
+    en: "A 600-egg, energy-efficient incubator for Cameroonian farmers, with an 87% hatching rate."
+    fr: "Une couveuse de 600 œufs, économe en énergie, pour les éleveurs camerounais, avec un taux d'éclosion de 87 %."
+  body:
+    en: |
+      Most poultry in Cameroon is still raised traditionally, and many newly hatched chicks do not survive, a loss for farmers and for food supply. This project built an affordable, energy-efficient incubator to help.
+
+      The 600-egg incubator has an insulated plywood, aluminium and glass-wool enclosure, motorised egg turning, and a microcontroller that controls temperature and humidity with a PID algorithm tuned on a heat-transfer model. Incubating at 37.5 °C and 45.5% humidity, it reached a hatching rate of 87%.
+    fr: |
+      L'aviculture camerounaise reste en grande partie traditionnelle, et beaucoup de poussins ne survivent pas après l'éclosion, une perte pour les éleveurs et pour l'approvisionnement alimentaire. Ce projet a construit une couveuse abordable et économe en énergie pour y remédier.
+
+      La couveuse de 600 œufs possède une enceinte isolée en contreplaqué, aluminium et laine de verre, un retournement motorisé des œufs, et un microcontrôleur qui régule la température et l'humidité par un algorithme PID réglé sur un modèle de transfert de chaleur. À 37,5 °C et 45,5 % d'humidité, elle atteint un taux d'éclosion de 87 %.
+  papers: [10.1016/j.sciaf.2020.e00618]
+
+- slug: { en: laser-circuits, fr: circuits-laser }
+  icon: laser
+  strand: second
+  tag: { en: Photonics, fr: Photonique }
+  title: { en: Semiconductor laser circuits, fr: Circuits de lasers à semi-conducteurs }
+  text:
+    en: "Electronic circuits that reproduce the dynamics of edge-emitting semiconductor lasers, the subject of Prof. Momo's Ph.D."
+    fr: "Des circuits électroniques qui reproduisent la dynamique des lasers à semi-conducteurs émettant par la tranche, sujet de son doctorat."
+  body:
+    en: |
+      Semiconductor lasers are used in medicine, from surgery to diagnosis, and their behaviour becomes complex, sometimes chaotic, when their current is modulated. This Ph.D. work studied edge-emitting semiconductor lasers driven by oscillators, using analytical methods, numerical simulation and analog electronic circuits that mimic the laser.
+
+      The circuits make it possible to study laser dynamics with inexpensive electronics. A later Master's thesis controlled the analog laser circuit with a microcontroller, and related work extends these methods to memristor circuits and electric motors.
+    fr: |
+      Les lasers à semi-conducteurs sont utilisés en médecine, de la chirurgie au diagnostic, et leur comportement devient complexe, parfois chaotique, lorsque leur courant est modulé. Ces travaux de doctorat ont étudié des lasers à semi-conducteurs émettant par la tranche pilotés par des oscillateurs, par des méthodes analytiques, des simulations numériques et des circuits électroniques analogiques qui imitent le laser.
+
+      Ces circuits permettent d'étudier la dynamique des lasers avec une électronique peu coûteuse. Un mémoire de Master a ensuite commandé le circuit analogique du laser par microcontrôleur, et des travaux connexes étendent ces méthodes aux circuits à memristor et aux moteurs électriques.
+  papers: [10.1007/s11082-014-9946-7, 10.1007/s11082-015-0216-0, 10.1016/j.ijleo.2015.12.110]
+  theses: [Al-Touhami Abderhamane Sakine]

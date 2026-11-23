@@ -7,6 +7,8 @@ Not published as a page (excluded in `_config.yml`). Remove items as they are re
 - [ ] **Current roles**: the CV stops in 2025 (Master's coordinator 2024–2025, Academic Secretary 2023–2025). What are his roles now? (`_data/career.yml`)
 - [ ] **Thesis title 2020**: "image **planétaire**" or "image **plantaire**"? (`_data/theses.yml`; the English title is generic until confirmed)
 - [ ] **Student names**: OK to list the 24 students by name? (common practice; otherwise initials only)
+- [ ] **Project pages** (`_data/projects.yml` → `body`): written from the paper abstracts and thesis titles. Check facts and wording, especially the three projects built from theses only (radiation safety, hospital design, digital microscope).
+- [ ] **Home-page headline**: "Affordable medical devices for hospitals in Africa" (`_data/i18n.yml` → `tagline`). Does it describe his work as he would?
 - [ ] **Master's projects text** (`profile.yml` → `students`): OK to invite students to email him?
 
 ## Content to send

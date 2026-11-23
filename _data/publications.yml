@@ -108,6 +108,13 @@
   venue:
     en: "*Proc. 4th International Conference of the Cameroon Physical Society (CPS)*"
     fr: "*Actes de la 4<sup>e</sup> Conférence internationale de la Société Camerounaise de Physique (CPS)*"
+  bibtex: |
+    @inproceedings{momo2015cps,
+      title = {Edge-emitting semiconductor laser subject to nonsinusoidal and sinusoidal modulations: numerical and electronic models analysis},
+      author = {Momo, Foutse and Woafo, Paul},
+      booktitle = {Proceedings of the 4th International Conference of the Cameroon Physical Society},
+      year = {2015}
+    }
 - year: 2013
   topic: nl
   kind: proceedings
@@ -116,3 +123,11 @@
   venue:
     en: "*Proc. 3rd International Conference of the Cameroon Physical Society (CPS)*, Yaoundé (poster)"
     fr: "*Actes de la 3<sup>e</sup> Conférence internationale de la Société Camerounaise de Physique (CPS)*, Yaoundé (poster)"
+  bibtex: |
+    @inproceedings{momo2013cps,
+      title = {Nonlinear dynamics in edge-emitting semiconductor lasers driven by a Van der Pol oscillator},
+      author = {Momo, Foutse and Nana, B. and Woafo, Paul},
+      booktitle = {Proceedings of the 3rd International Conference of the Cameroon Physical Society},
+      address = {Yaound{\'e}, Cameroon},
+      year = {2013}
+    }

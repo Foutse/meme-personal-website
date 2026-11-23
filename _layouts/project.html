@@ -1,0 +1,43 @@
+---
+layout: base
+---
+{%- assign L = page.lang -%}
+{%- assign t = site.data.i18n[L] -%}
+{%- assign pr = site.data.projects | where_exp: "x", "x.slug.en == page.project" | first -%}
+<article>
+  <section class="page-head project-head strand-{{ pr.strand }}">
+    <div class="wrap project-head-inner">
+      <div>
+        <p class="crumb"><a href="{{ t.urls.research }}">{{ t.back_research }}</a></p>
+        <p class="tag">{{ pr.tag[L] }}</p>
+        <h1>{{ pr.title[L] }}</h1>
+        <p class="lead">{{ pr.text[L] }}</p>
+      </div>
+      <div class="project-head-art">{% if pr.image %}<img src="{{ pr.image }}" alt="{{ pr.title[L] }}">{% else %}{% include icon.html name=pr.icon %}{% endif %}</div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap narrow">
+      <div class="prose">{{ pr.body[L] | markdownify }}</div>
+
+      {% if pr.papers %}
+      <h2>{{ t.related_papers }}</h2>
+      <ol class="pubs plain-list">
+        {% for d in pr.papers %}{% assign x = site.data.publications | where: "doi", d | first %}{% if x %}{% include pub.html pub=x lang=L show_year=true %}{% endif %}{% endfor %}
+      </ol>
+      {% endif %}
+
+      {% if pr.theses %}
+      <h2>{{ t.related_theses }}</h2>
+      <ul class="plain theses-list">
+        {% for name in pr.theses %}{% assign th = site.data.theses | where: "student", name | first %}{% if th %}
+        <li><span class="when">{{ th.year }}</span> <span><em>{{ th[L] }}</em><br><span class="muted">{{ th.student }}{% if th.institution %}, {{ th.institution }}{% endif %}</span></span></li>
+        {% endif %}{% endfor %}
+      </ul>
+      {% endif %}
+
+      <p class="back"><a href="{{ t.urls.research }}">{{ t.back_research }}</a></p>
+    </div>
+  </section>
+</article>

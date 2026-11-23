@@ -1,0 +1,29 @@
+{%- comment -%} One publication. Params: pub, lang. {%- endcomment -%}
+{%- assign x = include.pub -%}
+{%- assign L = include.lang -%}
+{%- assign t = site.data.i18n[L] -%}
+{%- if x.venue[L] -%}{%- assign venue = x.venue[L] -%}{%- else -%}{%- assign venue = x.venue -%}{%- endif -%}
+{%- if x.doi -%}{%- assign meta = site.data.pubmeta[x.doi] -%}{%- else -%}{%- assign meta = nil -%}{%- endif -%}
+{%- assign bib = x.bibtex | default: meta.bibtex -%}
+{%- assign uid = x.doi | default: x.title | slugify | truncate: 40, "" -%}
+<li class="pub" data-topic="{{ x.topic }}">
+  <p class="title">{{ x.title }}</p>
+  <p class="authors">{{ x.authors | replace: "F. Momo", "<b>F. Momo</b>" }}</p>
+  <p class="venue">{% if x.kind == "proceedings" %}<span class="kind">{{ t.proceedings }}</span> {% elsif x.kind == "chapter" %}{{ t.chapter_in }} {% endif %}{{ venue | markdownify | remove: "<p>" | remove: "</p>" | strip }}{% if include.show_year %} · {{ x.year }}{% endif %}</p>
+  <div class="meta">
+    {%- if x.doi %}<a class="btn" href="https://doi.org/{{ x.doi }}">DOI</a>{% endif %}
+    {%- if meta.oa and meta.oa != "" %}<a class="btn btn-oa" href="{{ meta.oa }}">{{ t.free_pdf }}</a>{% endif %}
+    {%- if meta.abstract and meta.abstract != "" %}<button type="button" class="btn" aria-expanded="false" aria-controls="abs-{{ uid }}">{{ t.abstract }}</button>{% endif %}
+    {%- if bib %}<button type="button" class="btn" aria-expanded="false" aria-controls="bib-{{ uid }}">{{ t.cite }}</button>{% endif %}
+    {%- if x.cites %}<span class="cites">{{ x.cites }} {% if x.cites == 1 %}{{ t.citation }}{% else %}{{ t.citations }}{% endif %}</span>{% endif %}
+  </div>
+  {%- if meta.abstract and meta.abstract != "" %}
+  <div class="panel" id="abs-{{ uid }}" hidden><p lang="en">{{ meta.abstract }}</p></div>
+  {%- endif %}
+  {%- if bib %}
+  <div class="panel panel-bib" id="bib-{{ uid }}" hidden>
+    <pre><code>{{ bib | strip | escape }}</code></pre>
+    <button type="button" class="btn copy" data-copied="{{ t.copied }}">{{ t.copy }}</button>
+  </div>
+  {%- endif %}
+</li>

@@ -1,0 +1,129 @@
+{%- assign L = page.lang | default: "en" -%}
+{%- if L == "fr" -%}{%- assign O = "en" -%}{%- else -%}{%- assign O = "fr" -%}{%- endif -%}
+{%- assign t = site.data.i18n[L] -%}
+{%- assign p = site.data.profile -%}
+{%- assign alt = site.pages | where: "ref", page.ref | where_exp: "x", "x.lang != page.lang" | first -%}
+{%- if alt -%}{%- assign other = alt.url -%}{%- else -%}{%- assign other = site.data.i18n[O].urls.home -%}{%- endif -%}
+{%- if page.ref == "home" -%}{%- assign full_title = p.name | append: " — " | append: p.title[L] -%}{%- else -%}{%- assign full_title = page.title[L] | default: page.title | append: " — " | append: p.name -%}{%- endif -%}
+{%- assign desc = page.description[L] | default: page.description | default: t.lead -%}
+{%- assign og = "/assets/img/og-" | append: L | append: ".png" -%}
+<!doctype html>
+<html lang="{{ L }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ full_title }}</title>
+  <meta name="description" content="{{ desc | strip_html | strip_newlines | escape }}">
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  {%- if alt %}
+  <link rel="alternate" hreflang="{{ L }}" href="{{ site.url }}{{ page.url }}">
+  <link rel="alternate" hreflang="{{ O }}" href="{{ site.url }}{{ alt.url }}">
+  {%- if L == "en" %}<link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ page.url }}">{% else %}<link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ alt.url }}">{% endif %}
+  {%- endif %}
+  <meta property="og:site_name" content="{{ p.name }}">
+  <meta property="og:title" content="{{ full_title }}">
+  <meta property="og:description" content="{{ desc | strip_html | strip_newlines | escape }}">
+  <meta property="og:image" content="{{ site.url }}{{ og }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:type" content="{% if page.ref == 'home' %}profile{% else %}website{% endif %}">
+  <meta property="og:locale" content="{% if L == 'fr' %}fr_FR{% else %}en_GB{% endif %}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#23324a">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/sourceserif4-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/assets/css/style.css?v={{ site.time | date: '%s' }}">
+  {%- if page.ref == "home" %}
+  <script>
+    (function () {
+      // First visit to the English home page from a French browser: offer the French site.
+      var lang = "{{ L }}", q = (location.search.match(/[?&]lang=(en|fr)/) || [])[1], saved = null;
+      try { saved = localStorage.getItem('lang'); } catch (e) {}
+      if (q) { try { localStorage.setItem('lang', q); } catch (e) {} }
+      var want = q || saved;
+      if (!want && lang === 'en' && /^fr\b/i.test(navigator.language || '') && !/bot|crawl|spider|lighthouse/i.test(navigator.userAgent)) want = 'fr';
+      if (want && want !== lang) location.replace((want === 'fr' ? '{{ site.data.i18n.fr.urls.home }}' : '{{ site.data.i18n.en.urls.home }}') + location.hash);
+    })();
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": {{ p.name | jsonify }},
+    "jobTitle": {{ p.title[L] | jsonify }},
+    "description": {{ t.lead | jsonify }},
+    "url": "{{ site.url }}{{ page.url }}",
+    "image": "{{ site.url }}{{ p.photo }}",
+    "email": "mailto:{{ p.email }}",
+    "worksFor": { "@type": "CollegeOrUniversity", "name": "Université des Montagnes", "address": { "@type": "PostalAddress", "addressLocality": "Bangangté", "addressCountry": "CM" } },
+    "alumniOf": [ { "@type": "CollegeOrUniversity", "name": "University of Dschang" }, { "@type": "CollegeOrUniversity", "name": "University of Yaoundé I" } ],
+    "knowsAbout": ["Biomedical instrumentation", "Medical devices", "Radiation protection", "Bioimpedance", "Semiconductor lasers", "Nonlinear dynamics"],
+    "sameAs": [{{ p.scholar | jsonify }}, {{ p.linkedin | jsonify }}{% if p.orcid != "" %}, {{ p.orcid | jsonify }}{% endif %}{% if p.researchgate != "" %}, {{ p.researchgate | jsonify }}{% endif %}]
+  }
+  </script>
+  {%- endif %}
+</head>
+<body class="page-{{ page.ref | split: '-' | first }}">
+  <a class="skip" href="#main">{{ t.skip }}</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="{{ t.urls.home }}"><span class="brand-mark" aria-hidden="true">FM</span>{{ p.name }}</a>
+      <div class="header-actions">
+        <nav id="nav" class="nav" aria-label="Main">
+          {%- assign section = page.section | default: page.ref -%}
+          <a href="{{ t.urls.research }}"{% if section == "research" %} aria-current="page"{% endif %}>{{ t.nav.research }}</a>
+          <a href="{{ t.urls.publications }}"{% if section == "publications" %} aria-current="page"{% endif %}>{{ t.nav.publications }}</a>
+          <a href="{{ t.urls.teaching }}"{% if section == "teaching" %} aria-current="page"{% endif %}>{{ t.nav.teaching }}</a>
+          <a href="{{ t.urls.cv }}"{% if section == "cv" %} aria-current="page"{% endif %}>{{ t.nav.cv }}</a>
+          <a href="#contact">{{ t.nav.contact }}</a>
+        </nav>
+        <a class="lang-toggle" href="{{ other }}" hreflang="{{ O }}" lang="{{ O }}" data-lang="{{ O }}" aria-label="{{ t.switch_label }}">{{ t.switch_short }}</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">{{ t.menu }}</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+{{ content }}
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="wrap footer-grid">
+      <div>
+        <p class="footer-name">{{ p.name }}, Ph.D.</p>
+        <p>{{ p.title[L] }}</p>
+        <address>{{ p.address[L] | join: "<br>" }}</address>
+      </div>
+      <div>
+        <h2 class="footer-h">{{ t.contact }}</h2>
+        <ul class="plain">
+          <li><a href="mailto:{{ p.email }}">{{ p.email }}</a></li>
+          <li><a href="{{ p.scholar }}">Google Scholar</a></li>
+          {% if p.orcid != "" %}<li><a href="{{ p.orcid }}">ORCID</a></li>{% endif %}
+          {% if p.researchgate != "" %}<li><a href="{{ p.researchgate }}">ResearchGate</a></li>{% endif %}
+          <li><a href="{{ p.linkedin }}">LinkedIn</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="footer-h">{{ p.name }}</h2>
+        <ul class="plain">
+          <li><a href="{{ t.urls.research }}">{{ t.nav.research }}</a></li>
+          <li><a href="{{ t.urls.publications }}">{{ t.nav.publications }}</a></li>
+          <li><a href="{{ t.urls.teaching }}">{{ t.nav.teaching }}</a></li>
+          <li><a href="/assets/cv/foutse-momo-cv-{{ L }}.pdf">{{ t.cv }}</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">© {{ site.time | date: "%Y" }} {{ p.name }} · {{ t.updated }}{% if L == "fr" %} :{% else %}:{% endif %} {{ p.metrics.updated[L] }}</div>
+  </footer>
+
+  <script src="/assets/js/site.js?v={{ site.time | date: '%s' }}" defer></script>
+</body>
+</html>

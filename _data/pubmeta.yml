@@ -1,0 +1,234 @@
+# Generated from Semantic Scholar, Crossref and OpenAlex (Nov 2026). Keyed by DOI.
+# abstract: may be empty. oa: free full-text link when one exists. bibtex: from doi.org.
+"10.69882/adba.cs.2025071":
+  abstract: "This paper is devoted to the dynamical probing, microcontroller execution, and chaos annihilation based on genetic algorithms (GAs) in a non-smooth air-gap permanent magnet synchronous motor (NSAGPMSM) without external disturbances. The numerical simulations of NSAGPMSM in the absence of external disturbances reveal the existence of two different shapes of chaotic characteristics, reverse period doubling and periodic characteristics. The dynamical characteristics are certified by the microcontroller execution of NSAGPMSM in the absence of external disturbances. By optimizing the parameters of NSAGPMSM in the absence of external disturbances, thanks to the convergence of the objective function and its convergence rate, it is proven that GAs is effective in optimizing system parameters, leading to annihilation of chaos in the system to one of its three steady states."
+  oa: "https://journals.adbascientific.com/acs/article/download/77/53"
+  bibtex: |
+    @article{ngongiah2025chaos,
+      title = {Chaos Annihilation-Based on Genetic Algorithms in a Non-smooth Air-gap Permanent Magnet Synchronous Motor Embedded in the Microcontroller},
+      volume = {2},
+      ISSN = {3023-8544},
+      url = {http://dx.doi.org/10.69882/adba.cs.2025071},
+      DOI = {10.69882/adba.cs.2025071},
+      number = {2},
+      journal = {ADBA Computer Science},
+      publisher = {ADBA Information Technology and Publishing Limited Company},
+      author = {Ngongiah, Isidore Komofor and Fotsa, Rolande Tsapla and Ngono, Joseph Mvogo and Kibanya, Noel Nyang and Godwe, Emile and Momo, Foutse},
+      year = {2025},
+      pages = {30–35}
+    }
+"10.69882/adba.chf.2025013":
+  abstract: "This paper is interested in the study of the dynamics and control of the permanent magnet synchronous motor with load torque (PMSMLT). PMSMLT has three fixed points where one is saddle and the two others are saddle focus. PMSMLT exhibits no oscillations, periodic characteristics, chaotic characteristics and coexistence between no oscillations and chaotic characteristics. In order to validate the results obtained numerically, an electronic implementation of PMSMLT is performed in probe simulation program with integrated circuit emphases (PSPICE) environment which reveals a concordance between the numerical simulations and the experimental verifications. The coexisting characteristics is eliminated by the linear augmentation control method."
+  oa: "https://journals.adbascientific.com/chf/article/download/61/42"
+  bibtex: |
+    @article{fotsa2025permanent,
+      title = {Permanent Magnet Synchronous Motor with Load Torque: Dynamics, Circuitry Execution and Control},
+      ISSN = {3023-8951},
+      url = {http://dx.doi.org/10.69882/adba.chf.2025013},
+      DOI = {10.69882/adba.chf.2025013},
+      journal = {Chaos and Fractals},
+      publisher = {ADBA Information Technology and Publishing Limited Company},
+      author = {Fotsa, Rolande Tsapla and Papemsi, Paloma Kevina Koubeu and Kuete, Gideon Pagnol Ayemtsa and Pone, Justin Roger Mboupda and Naoussi, Serge Raoul Dzonde and Momo, Foutse and Ele, Pierre},
+      year = {2025}
+    }
+"10.1007/s12553-022-00646-x":
+  abstract: ""
+  oa: ""
+  bibtex: |
+    @article{mohamadou2022design,
+      title = {Design and development of a phonocardiograph for telemedicine applications},
+      volume = {12},
+      ISSN = {2190-7196},
+      url = {http://dx.doi.org/10.1007/s12553-022-00646-x},
+      DOI = {10.1007/s12553-022-00646-x},
+      number = {2},
+      journal = {Health and Technology},
+      publisher = {Springer Science and Business Media LLC},
+      author = {Mohamadou, Youssoufa and Kapen, Pascalin Tiam and Momo, Foutse and Kamga, Alban Loique Kamga and Docna, Origène and Mohammad, Moniruzzaman and Ahmad, Maruf and Rabbani, Khondkar Siddique-e},
+      year = {2022},
+      pages = {453–463}
+    }
+"10.1016/b978-0-12-821184-7.00016-5":
+  abstract: "An absolute memristor Van der Pol–Duffing circuit is proposed and analyzed in this paper. The proposed circuit is described by a four-dimensional autonomous system with a line equilibrium point. The stability of the line equilibrium point of this system is analyzed. With a suitable choice of the parameters, the proposed circuit can exhibit extreme multistability features, periodic attractors and hidden chaotic attractors. By introducing two additional parameters in the system describing the proposed circuit, it is possible to either partially or totally control the amplitude of its signals. The physical existence of the dynamical behaviors found in the absolute memristor autonomous Van der Pol–Duffing circuit is assessed using PSIM software. Good qualitative agreement is shown between the numerical simulations and the PSIM results."
+  oa: ""
+  bibtex: |
+    @inbook{pone2021extreme,
+      title = {Extreme multistability, hidden chaotic attractors and amplitude controls in an absolute memristor Van der Pol–Duffing circuit: dynamical analysis and electronic implementation},
+      ISBN = {9780128211847},
+      url = {http://dx.doi.org/10.1016/b978-0-12-821184-7.00016-5},
+      DOI = {10.1016/b978-0-12-821184-7.00016-5},
+      booktitle = {Mem-elements for Neuromorphic Circuits with Artificial Intelligence Applications},
+      publisher = {Elsevier},
+      author = {Mboupda Pone, Justin Roger and Momo, Foutse and Kom, Guillaume Honore and Kombou, Ingrid Ornela Lowe and Takougang Kingni, Sifeu and Tiedeu, Alain},
+      year = {2021},
+      pages = {165–181}
+    }
+"10.1016/j.sciaf.2020.e00618":
+  abstract: "Farming in general and poultry in particular is a back bone to Africa's development and self-sufficient in term of food. However, in a country like Cameroon, traditional poultry accounts for more than 70%. Due to this situation, more than 43% of newly hatched chicks do not survive thereby causing a lot of loss both financially and in terms of availability of chicken as food. This paper aims to bring a solution to this problem. The paper deals with the prototyping of an energy efficient eggs incubator in view of providing a solution to the poultry sector in developing countries. The system hardware is composed of an enclosure, mechanical and electronic parts. The enclosure is made of plywood, aluminum and glass wool in order to minimize the heat loss across the multi-layered wall. The mechanical part comprises of electronically controlled mechanical jacks. The electronic module is constituted of a temperature and humidity generator and measurement circuits, a control circuit, a communication module and a microcontroller in charge of monitoring and controlling the operation of the system. Using Proportional-Integral-Derivative (PID) controller, the mathematical modeling of heat transfer permitted the optimization of energy efficiency of the system. The system has a capacity of 600 eggs. The eggs were incubated at a temperature of 37.5°C and a humidity of 45.5% after a preheating stage of 30 min. The developed incubator system gave a hatching rate of 87.27%."
+  oa: "https://www.sciencedirect.com/science/article/pii/S2468227620303550/pdf"
+  bibtex: |
+    @article{kapen2020design,
+      title = {Design and prototyping of a low-cost, energy efficient eggs incubator in developing countries: A case study of Cameroon},
+      volume = {10},
+      ISSN = {2468-2276},
+      url = {http://dx.doi.org/10.1016/j.sciaf.2020.e00618},
+      DOI = {10.1016/j.sciaf.2020.e00618},
+      journal = {Scientific African},
+      publisher = {Elsevier BV},
+      author = {Tiam Kapen, Pascalin and Mohamadou, Youssoufa and Momo, Foutse and Manfouo, Harold and Njotchui Mbakop, Franck Oscar},
+      year = {2020},
+      pages = {e00618}
+    }
+"10.1016/j.bspc.2020.101983":
+  abstract: "The work presented in this paper aims to develop and implement a robust algorithm for generating synthetic phonocardiogram (PCG) signals based on characteristics obtained from real life signals. The purpose of this work is to identify a few set of parameters that can be linked to the physiological state of the heart. The mathematical model used in the synthesis of the signal was based on three coupled ordinary differential equations (ODE) proposed by Jabloun et al. (2013). The amplitude, S2S1 duration, and heart rate of the real life PCG signals were extracted and used in the synthesis of the signals. The real life PCG signals were obtained from the MITHSDB and AADHSDB databases from Massachusetts Institute of Technology and Aalborg University respectively. The signals were preprocessed using a second order Butterworth low pass filter of cutoff frequency of 500 Hz to obtain cleaner versions. The system of equations was numerically solved with the fourth-order Runge-Kutta method. These synthetic PCG signals were then compared with the real life PCG signals. The time domain correlations between the two sets of signals showed a good agreement between the two with values above 0.8 for all tested cases. The percentage differences in heart rate (beats per minutes), amplitude and S2S1 durations between the real life and synthesized PCG signals also showed a close match with percentage values as small as 1.61%, 2.27% and 4.51% for heart rate, amplitude and S2S1 duration respectively."
+  oa: ""
+  bibtex: |
+    @article{kapen2020phonocardiogram,
+      title = {Phonocardiogram: A robust algorithm for generating synthetic signals and comparison with real life ones},
+      volume = {60},
+      ISSN = {1746-8094},
+      url = {http://dx.doi.org/10.1016/j.bspc.2020.101983},
+      DOI = {10.1016/j.bspc.2020.101983},
+      journal = {Biomedical Signal Processing and Control},
+      publisher = {Elsevier BV},
+      author = {Tiam Kapen, Pascalin and Mohamadou, Youssoufa and Kouam Kouam, Serge Urbain and Momo, Foutse and Tchamda, André Rodrigue and Tchuen, Ghislain},
+      year = {2020},
+      pages = {101983}
+    }
+"10.1016/j.medengphy.2019.10.021":
+  abstract: "The World health Organization estimates that about 8 million babies die prematurely worldwide. Most of these cases are found in low-income countries (LICs). The use of neonatal incubators has proven to be very useful in the reduction of infant mortality. However, access to this important medical device is not always easy in LICs. This article presents the implementation of a multi-function neonatal incubator with remote monitoring, fingerprint scanner, phototherapy, and heart rate monitoring. In this view, proportional integral (PI) control algorithm and an Android application were developed. Furthermore, an initial social impact of the implemented neonatal incubator usage was performed in some hospitals in Cameroon."
+  oa: ""
+  bibtex: |
+    @article{kapen2020multi,
+      title = {A multi-function neonatal incubator for low-income countries: Implementation and
+                        <i>ab initio</i>
+                        social impact},
+      volume = {77},
+      ISSN = {1873-4030},
+      url = {http://dx.doi.org/10.1016/j.medengphy.2019.10.021},
+      DOI = {10.1016/j.medengphy.2019.10.021},
+      number = {1},
+      journal = {Medical Engineering &amp; Physics},
+      publisher = {IOP Publishing},
+      author = {Tiam Kapen, Pascalin and Mohamadou, Youssoufa and Momo, Foutse and Dongmeza Koudjou, Jauspin and Mkankam Kamga, François de Paul},
+      year = {2020},
+      pages = {114–117}
+    }
+"10.1007/s12553-020-00477-8":
+  abstract: ""
+  oa: ""
+  bibtex: |
+    @article{momo2020low,
+      title = {Low-cost mobile dental unit for oral care service delivery in third world countries: from concept to operation},
+      volume = {10},
+      ISSN = {2190-7196},
+      url = {http://dx.doi.org/10.1007/s12553-020-00477-8},
+      DOI = {10.1007/s12553-020-00477-8},
+      number = {6},
+      journal = {Health and Technology},
+      publisher = {Springer Science and Business Media LLC},
+      author = {Momo, Foutse and Mohamadou, Youssoufa and Tiam Kapen, Pascalin and Chapi Tchounang, Samuel},
+      year = {2020},
+      pages = {1525–1532}
+    }
+"10.1016/j.jnn.2019.07.011":
+  abstract: "This paper aims to develop an automatic neonatal incubator equipped with phototherapy, biometric fingerprint reader, remote monitoring and heart rate control modules for developing countries due to the lack of neonatal incubators. The proposed device consists of an acquisition module that senses temperatures (of the enclosure and the baby) and humidity, a biometric fingerprint reader to identify the user, a remote monitoring module in charge of supervising the temperature and the heart rate of the baby, a video surveillance module which allows filming and transmitting the images to the web server in order to give parents and nurses the possibility of being able to visualize whatever their location the newborn baby, a phototherapy module used to treat newborn jaundice by lowering the bilirubin levels in the baby's blood, a digital control module from a pulse width modulation (PWM) signal generated by a microcontroller of Arduino Nano type for system operation monitoring, and a human machine interface module for setting parameters. The equations describing the energy balance and heat transfer for newborn baby (Ostrowski and Rojczyk, 2018) are taken into account for the implementation of power supply and the choice of the heating resistor. The desired temperature of 37 °C was obtained after only a few minutes inside the incubator."
+  oa: ""
+  bibtex: |
+    @article{kapen2019development,
+      title = {Development of a neonatal incubator with phototherapy, biometric fingerprint reader, remote monitoring, and heart rate control adapted for developing countries hospitals},
+      volume = {25},
+      ISSN = {1355-1841},
+      url = {http://dx.doi.org/10.1016/j.jnn.2019.07.011},
+      DOI = {10.1016/j.jnn.2019.07.011},
+      number = {6},
+      journal = {Journal of Neonatal Nursing},
+      publisher = {Elsevier BV},
+      author = {Kapen, Pascalin Tiam and Mohamadou, Youssoufa and Momo, Foutse and Jauspin, Dongmeza Koudjou and Kanmagne, Nenkam and Jordan, Dongmeza Dongmo},
+      year = {2019},
+      pages = {298–303}
+    }
+"10.1007/s12553-018-0253-3":
+  abstract: ""
+  oa: ""
+  bibtex: |
+    @article{kapen2018energy,
+      title = {An energy efficient neonatal incubator: mathematical modeling and prototyping},
+      volume = {9},
+      ISSN = {2190-7196},
+      url = {http://dx.doi.org/10.1007/s12553-018-0253-3},
+      DOI = {10.1007/s12553-018-0253-3},
+      number = {1},
+      journal = {Health and Technology},
+      publisher = {Springer Science and Business Media LLC},
+      author = {Kapen, Pascalin Tiam and Mohamadou, Youssoufa and Momo, Foutse and Jauspin, Dongmeza Koudjou and Anero, Gnimpikba},
+      year = {2018},
+      pages = {57–63}
+    }
+"10.1016/j.measurement.2018.03.079":
+  abstract: "Bioimpedance spectroscopy (BIS) is the measurement of the impedance of biological tissues. In the development of a low cost, portable BIS system the gain and phase difference detection (GPD) method is usually used. However this method suffers from low accuracy at low frequencies due to the presence of spikes or peaks. Detection and removal of these peaks will improve the performance of the GPD based BIS system at low frequencies. Peak detection in physiological signals is a well developed area. A lot of algorithms have been developed in the past for the determination of peaks in signals and their time of occurrence. For real-time processing, microcontroller based peak detection algorithms have also been developed in the past. In this paper, the problem of the GPD method at low frequency is examined closely and then three algorithms were used to mitigate it. The first is based on a moving average filter, the second is a simple peak detection and elimination (SPD) and the last is a peak detection based on the frequency of the input signal to the GPD (SFPD). These algorithms were evaluated with both simulated and measured data. Four parameters were used to indicate the performance of the algorithms; run-time, RMSE, sensitivity and positive predictability. The RMSEs were less than 0.17 for moving average, 0.07 for SPD and 0.08 for SFPD. The run-times was less than 10 ms for SFPD while that for the SPD and moving average were around 30 ms and 80 ms respectively. In all it was found that the algorithms based on peak detection have better results. The computational simplicity of the algorithms makes them suitable for microcontroller based implementation."
+  oa: ""
+  bibtex: |
+    @article{mohamadou2018accuracy,
+      title = {Accuracy enhancement in low frequency gain and phase detector (AD8302) based bioimpedance spectroscopy system},
+      volume = {123},
+      ISSN = {0263-2241},
+      url = {http://dx.doi.org/10.1016/j.measurement.2018.03.079},
+      DOI = {10.1016/j.measurement.2018.03.079},
+      journal = {Measurement},
+      publisher = {Elsevier BV},
+      author = {Mohamadou, Youssoufa and Momo, Foutse and Theophile, Lealea and Njike Kouekeu Landry, C. and Fabrice, Tueche and Emmanuel, Simeu},
+      year = {2018},
+      pages = {304–308}
+    }
+"10.1016/j.ijleo.2015.12.110":
+  abstract: ""
+  oa: ""
+  bibtex: |
+    @article{momo2016behavior,
+      title = {Behavior of a new electronic circuit mimicking the edge-emitting semiconductor laser},
+      volume = {127},
+      ISSN = {0030-4026},
+      url = {http://dx.doi.org/10.1016/j.ijleo.2015.12.110},
+      DOI = {10.1016/j.ijleo.2015.12.110},
+      number = {6},
+      journal = {Optik},
+      publisher = {Elsevier BV},
+      author = {Momo, Foutse and Woafo, Paul},
+      year = {2016},
+      pages = {3430–3434}
+    }
+"10.1007/s11082-015-0216-0":
+  abstract: ""
+  oa: ""
+  bibtex: |
+    @article{momo2015edge,
+      title = {Edge-emitting semiconductor laser subject to nonsinusoidal excitation from three-dimensional autonomous system: numerical and electronic models analysis},
+      volume = {47},
+      ISSN = {1572-817X},
+      url = {http://dx.doi.org/10.1007/s11082-015-0216-0},
+      DOI = {10.1007/s11082-015-0216-0},
+      number = {10},
+      journal = {Optical and Quantum Electronics},
+      publisher = {Springer Science and Business Media LLC},
+      author = {Momo, Foutse and Woafo, Paul},
+      year = {2015},
+      pages = {3405–3417}
+    }
+"10.1007/s11082-014-9946-7":
+  abstract: ""
+  oa: ""
+  bibtex: |
+    @article{momo2014edge,
+      title = {Edge-emitting semiconductor laser driven by a van der Pol oscillator: analytical and numerical analysis},
+      volume = {47},
+      ISSN = {1572-817X},
+      url = {http://dx.doi.org/10.1007/s11082-014-9946-7},
+      DOI = {10.1007/s11082-014-9946-7},
+      number = {3},
+      journal = {Optical and Quantum Electronics},
+      publisher = {Springer Science and Business Media LLC},
+      author = {Momo, Foutse and Kingni, S. T. and Nana, B. and Woafo, P.},
+      year = {2014},
+      pages = {705–720}
+    }

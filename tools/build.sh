@@ -10,7 +10,7 @@ PORT=$(python3 -c 'import socket;s=socket.socket();s.bind(("127.0.0.1",0));print
 sleep 1
 CHROME="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 for L in en fr; do
-  P=$([ "$L" = fr ] && echo /fr/cv/ || echo /cv/)
+  P=$([ "$L" = fr ] && echo /fr/cv/print/ || echo /cv/print/)
   "$CHROME" --headless=new --disable-gpu --no-pdf-header-footer --user-data-dir="$OUT/chrome-$L" \
     --print-to-pdf="assets/cv/foutse-momo-cv-$L.pdf" "http://127.0.0.1:$PORT$P" 2>/dev/null
 done
