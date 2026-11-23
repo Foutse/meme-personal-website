@@ -457,3 +457,6 @@ td:nth-child(2) { white-space: nowrap; }
 .js .card.reveal.in { transition: transform .15s ease, border-color .15s ease; transition-delay: 0s; }
 .js .project.reveal.in:hover { transform: translateY(-2px); }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.memberships li { padding: .45rem 0; }
+.memberships .muted { font-size: .88rem; }
+.memberships .muted a { color: inherit; }

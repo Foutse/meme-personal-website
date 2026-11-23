@@ -98,7 +98,7 @@
   {% endfor %}
 
   <h2>{{ t.memberships }}</h2>
-  <ul>{% for m in c.memberships %}<li>{{ m[L] }}</li>{% endfor %}</ul>
+  <ul>{% for m in c.memberships %}<li>{% if m.url %}<a href="{{ m.url }}">{{ m.name[L] }}</a>{% else %}{{ m.name[L] }}{% endif %}{% if m.note %} <span class="muted">({{ m.note[L] }})</span>{% endif %}</li>{% endfor %}</ul>
 
   <h2>{{ cvt.languages }}</h2>
   <p>{{ cvt.languages_text }}</p>

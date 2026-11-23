@@ -49,8 +49,13 @@ layout: base
         {% for r in c.ranks %}<li><span class="when">{{ r.when }}</span> {{ r.text[L] }}</li>{% endfor %}
       </ul>
       <h2 class="mt">{{ t.memberships }}</h2>
-      <ul class="plain">
-        {% for m in c.memberships %}<li>{{ m[L] }}</li>{% endfor %}
+      <ul class="plain memberships">
+        {% for m in c.memberships %}
+        <li>
+          {% if m.url %}<a href="{{ m.url }}">{{ m.name[L] }}</a>{% else %}{{ m.name[L] }}{% endif %}
+          {% if m.note %}<br><span class="muted">{% if m.note_url %}<a href="{{ m.note_url }}">{{ m.note[L] }}</a>{% else %}{{ m.note[L] }}{% endif %}</span>{% endif %}
+        </li>
+        {% endfor %}
       </ul>
     </div>
   </div>

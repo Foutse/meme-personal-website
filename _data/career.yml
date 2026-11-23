@@ -44,7 +44,12 @@ education:
 ranks:
   - { when: "2021", text: { en: "Associate Professor (Maître de Conférences), Cameroonian universities", fr: "Maître de Conférences des Universités camerounaises" } }
   - { when: "2016", text: { en: "Senior Lecturer (Chargé de Cours), Cameroonian universities", fr: "Chargé de Cours des Universités camerounaises" } }
+# url: the society's website. note / note_url: optional extra line (e.g. parent association).
 memberships:
-  - { en: Cameroon Physical Society (CPS), fr: Société Camerounaise de Physique (CPS) }
-  - { en: Cameroon Bioscience Society (CBS), fr: Société Camerounaise de Bioscience (CBS) }
-  - { en: Cameroonian Society for Radiation Protection (SCPR), fr: Société Camerounaise de Protection Radiologique (SCPR) }
+  - name: { en: Cameroon Physical Society (CPS), fr: Société Camerounaise de Physique (SCP) }
+    url: https://www.scp-web.org/
+  - name: { en: Cameroon Biosciences Society (CBS), fr: Comité Camerounais de Biosciences (CCB) }
+    url: https://www.camerounbiosciences.cm/
+  - name: { en: Cameroon Radiological Protection Society (CRPS), fr: Société Camerounaise de Protection Radiologique (SCPR) }
+    note: { en: "Associate society of the International Radiation Protection Association (IRPA)", fr: "Société associée de l'Association internationale de radioprotection (IRPA)" }
+    note_url: https://www.irpa.net/
