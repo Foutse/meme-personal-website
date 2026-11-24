@@ -1,5 +1,5 @@
 # Generated from Semantic Scholar, Crossref and OpenAlex (Nov 2026). Keyed by DOI.
-# abstract: may be empty. oa: free full-text link when one exists. bibtex: from doi.org.
+# abstract: may be empty; six were copied by hand from the publishers' pages (Nov 2026). oa: free full-text link when one exists. bibtex: from doi.org.
 "10.69882/adba.cs.2025071":
   abstract: "This paper is devoted to the dynamical probing, microcontroller execution, and chaos annihilation based on genetic algorithms (GAs) in a non-smooth air-gap permanent magnet synchronous motor (NSAGPMSM) without external disturbances. The numerical simulations of NSAGPMSM in the absence of external disturbances reveal the existence of two different shapes of chaotic characteristics, reverse period doubling and periodic characteristics. The dynamical characteristics are certified by the microcontroller execution of NSAGPMSM in the absence of external disturbances. By optimizing the parameters of NSAGPMSM in the absence of external disturbances, thanks to the convergence of the objective function and its convergence rate, it is proven that GAs is effective in optimizing system parameters, leading to annihilation of chaos in the system to one of its three steady states."
   oa: "https://journals.adbascientific.com/acs/article/download/77/53"
@@ -32,7 +32,7 @@
       year = {2025}
     }
 "10.1007/s12553-022-00646-x":
-  abstract: ""
+  abstract: "Cardiovascular diseases (CVDs) represent one of the leading causes of death in low income countries where there is in general an absence of necessary medical devices and access to qualified medical professionals, particularly in the rural areas. A simple device like the phonocardiograph (PCG) linking patients in these areas to city based qualified medical professionals through telemedicine could provide an important solution. In this paper, the design and development of a low cost, user-friendly phonocardiograph system for telemedicine applications is presented. The device is composed of three main parts namely, the acoustic sensor module, the audio amplifier module and the application software. The acoustic sensor module is made up of a chest piece and a microphone enclosed in an acoustic insulator. COMSOL Multiphysics software was used to simulate the transmission loss through the acoustic insulator to find the material and thickness that will provide of the optimal insulation. It was found that a combination of a 2 mm thickness of Poly Lactic Acid (PLA) with a 10 mm thickness of Polystyrene provided an optimal insulation. The microphone converts the sound waves from the chest piece into electrical signals. This signal is then filtered and amplified by the audio amplifier module and sent to a PC via its microphone input. Using the application software, the electrical signal is digitized and processed for visualization and analysis in situ or remotely. The developed system works in the frequency range of 20 Hz to 1 kHz, with amplification of up to 100 times, and a noise attenuation of 89%."
   oa: ""
   bibtex: |
     @article{mohamadou2022design,
@@ -115,7 +115,7 @@
       pages = {114–117}
     }
 "10.1007/s12553-020-00477-8":
-  abstract: ""
+  abstract: "In this paper, we design and implement two low-cost dental units in order to remedy the difficulties of its accessibility for healthcare services in hospitals and the difficulties encountered with the maintenance of medical equipment. In developing countries, income is low and a huge amount of people do not have access to basic dental healthcare partly due to the cost involved in the purchase and maintenance of imported dental units. In the present work, two varieties of dental units were designed and built using electronic, pneumatic and hydraulic circuits. The first one is a dental cabinet with an electronic command board and without a chair. The second is made of hydraulic and pneumatic systems as command with a foldable chair and a stand. The pneumatic and hydraulic systems enable the dentist to operate the instruments by hand and/or foot. The mechanical design of the two dental units was done in Inventor software. Both equipment types were installed in three healthcare centres in Cameroon and their initial social impact was investigated."
   oa: ""
   bibtex: |
     @article{momo2020low,
@@ -149,7 +149,7 @@
       pages = {298–303}
     }
 "10.1007/s12553-018-0253-3":
-  abstract: ""
+  abstract: "In this paper, we design and implement a low-cost automatic neonatal incubator equipped with a baby weight monitor in order to remedy the difficulties encountered with the maintenance of incubators in developing countries. Indeed, severe temperature fluctuations inside an incubator can lead to neonate heat loss, hypothermia and apnoea, which are closely related to temperature and air flow. The implemented device has been developed by interconnecting three modules. The first is the acquisition module that senses the temperature and humidity, the second is the control module in charge of monitoring and controlling the operation of the system and the third is the human machine interface module through which a user can set operating parameters of the system. The mathematical modeling of Proportional-Integral-Derivative (PID) controller and heat transfer allowed the minimization of heat loss across the wall of the enclosure. The incubator has been tested and the target temperature of 37 °C was reached after almost 15 min. Results from numerical simulation performed with the same condition of the test showed a good agreement between the simulation results and experimental results."
   oa: ""
   bibtex: |
     @article{kapen2018energy,
@@ -182,7 +182,7 @@
       pages = {304–308}
     }
 "10.1016/j.ijleo.2015.12.110":
-  abstract: ""
+  abstract: "An electronic analog circuit of the edge-emitting semiconductor laser is proposed. It is powered with a sine wave, triangular wave and square wave. The numerical results are compared to the experimental one and an agreement is found. By using one parameter controlling the normalized reverse bias of the injection current, the Bifurcation diagram obtained when the electronic system is powered with the triangular wave shows that the system exhibits a period-doubling to chaos and this bifurcation diagram appears to be a shift compare to the one obtained with the sinusoidal wave."
   oa: ""
   bibtex: |
     @article{momo2016behavior,
@@ -199,7 +199,7 @@
       pages = {3430–3434}
     }
 "10.1007/s11082-015-0216-0":
-  abstract: ""
+  abstract: "The edge-emitting semiconductor laser powered by Sifeu et al. oscillator is studied numerically. An electronic/analog model of the system is constructed in order to imitate the behavior of the material model. Period-doubling to chaos, is obtained when varying the amplitude of the reverse bias saturation current. The experimental results show agreement with those obtained numerically."
   oa: ""
   bibtex: |
     @article{momo2015edge,
@@ -216,7 +216,7 @@
       pages = {3405–3417}
     }
 "10.1007/s11082-014-9946-7":
-  abstract: ""
+  abstract: "A device constituted of an edge-emitting semiconductor laser driven by a van der Pol oscillator is studied analytically and numerically. For small value of the parameter controlling the dissipation in van der Pol oscillator, the Lindstedt–Poincaré method is used to find analytically high accurate solutions of the van der Pol equation with a bias term. Then by using the harmonic balance method, we obtain the amplitude of the oscillatory states of the laser output. The analytical results are compared with those from numerical simulation and a good agreement is obtained. By varying the parameter controlling the dissipation in van der Pol oscillator and the normalized reverse bias saturation of the injection current in the laser, we numerically show that the laser output exhibits a period-doubling route to chaos. The coexistence between periodic and chaotic behaviors is found in edge-emitting semiconductor laser driven by a van der Pol oscillator for specific parameters values. It is demonstrated that the edge-emitting semiconductor laser driven by a van der Pol oscillator generates dynamical behaviors found in edge-emitting semiconductor laser subject to a sine modulated current demonstrating the advantage of using a simple and less bulky electronic device to modulate the semiconductor laser pump current."
   oa: ""
   bibtex: |
     @article{momo2014edge,

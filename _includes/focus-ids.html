@@ -1,5 +1,6 @@
 {%- comment -%} Space-separated theme ids (from _data/focus.yml) for one publication. Param: pub. {%- endcomment -%}
 {%- assign fx = include.pub -%}
 {%- if fx.doi -%}{%- assign fm = site.data.pubmeta[fx.doi] -%}{%- else -%}{%- assign fm = nil -%}{%- endif -%}
-{%- assign ftxt = fx.title | append: " " | append: fm.abstract | downcase -%}
+{%- assign fabs = fx.abstract | default: fm.abstract -%}
+{%- assign ftxt = fx.title | append: " " | append: fabs | downcase -%}
 {%- for f in site.data.focus -%}{%- for k in f.match -%}{%- if ftxt contains k -%}{{ f.id }} {% break -%}{%- endif -%}{%- endfor -%}{%- endfor -%}

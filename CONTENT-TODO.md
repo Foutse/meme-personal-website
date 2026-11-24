@@ -13,6 +13,7 @@ Not published as a page (excluded in `_config.yml`). Remove items as they are re
 - [ ] **Master's projects text** (`profile.yml` → `students`): OK to invite students to email him?
 
 ## Content to send
+- [ ] **Abstracts of the two CPS conference proceedings** (2013, 2015): not online. Paste them as `abstract:` on those two entries in `_data/publications.yml`.
 - [ ] **Teaching details**: hours per year, typical class sizes, and any courses he created or designed (e.g. for the AUF distance-learning Master's). Would make the Teaching page much stronger (`_data/teaching.yml`, `_data/programmes.yml`).
 - [ ] **Device photos**: incubators, dental unit, phonocardiograph, bioimpedance system, digital microscope, egg incubator. Landscape, ~1200 px wide → `assets/img/projects/`, then add `image:` in `_data/projects.yml`.
 - [ ] **Portrait**: the site now uses the beige-wall photo, but the only copy is small (246 px). Ask for the original file or a higher-resolution version.

@@ -5,6 +5,7 @@
 {%- if x.venue[L] -%}{%- assign venue = x.venue[L] -%}{%- else -%}{%- assign venue = x.venue -%}{%- endif -%}
 {%- if x.doi -%}{%- assign meta = site.data.pubmeta[x.doi] -%}{%- else -%}{%- assign meta = nil -%}{%- endif -%}
 {%- assign bib = x.bibtex | default: meta.bibtex -%}
+{%- assign abs = x.abstract | default: meta.abstract -%}
 {%- assign uid = x.doi | default: x.title | slugify | truncate: 40, "" -%}
 {%- capture fids -%}{% include focus-ids.html pub=x %}{%- endcapture -%}
 <li class="pub" data-topic="{{ x.topic }}" data-focus=" {{ fids | strip }} ">
@@ -14,11 +15,11 @@
   <div class="meta">
     {%- if x.doi %}<a class="btn" href="https://doi.org/{{ x.doi }}">DOI</a>{% endif %}
     {%- if meta.oa and meta.oa != "" %}<a class="btn btn-oa" href="{{ meta.oa }}">{{ t.free_pdf }}</a>{% endif %}
-    {%- if meta.abstract and meta.abstract != "" %}<button type="button" class="btn" aria-expanded="false" aria-controls="abs-{{ uid }}">{{ t.abstract }}</button>{% endif %}
+    {%- if abs and abs != "" %}<button type="button" class="btn" aria-expanded="false" aria-controls="abs-{{ uid }}">{{ t.abstract }}</button>{% endif %}
     {%- if bib %}<button type="button" class="btn" aria-expanded="false" aria-controls="bib-{{ uid }}">{{ t.cite }}</button>{% endif %}
   </div>
-  {%- if meta.abstract and meta.abstract != "" %}
-  <div class="panel" id="abs-{{ uid }}" hidden><p lang="en">{{ meta.abstract }}</p></div>
+  {%- if abs and abs != "" %}
+  <div class="panel" id="abs-{{ uid }}" hidden><p lang="en">{{ abs }}</p></div>
   {%- endif %}
   {%- if bib %}
   <div class="panel panel-bib" id="bib-{{ uid }}" hidden>
