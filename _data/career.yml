@@ -4,12 +4,12 @@ experience:
     org: { en: Université des Montagnes, fr: Université des Montagnes }
     items:
       en:
+        - "Academic Secretary, Faculty of Science and Technology, since 2023"
         - "Coordinator, FOAD/AUF Master's in Quality Control, Regulatory Affairs and Biomedical Engineering, and Master's in Biomedical Engineering (Instrumentation), 2024–2025"
-        - "Academic Secretary, Faculty of Science and Technology, 2023–2025"
         - "Administrative Officer, Faculty of Science and Technology, 2022–2023"
       fr:
+        - "Secrétaire académique de la Faculté des Sciences et Technologies, depuis 2023"
         - "Coordonnateur du Master FOAD/AUF Contrôle qualité, Affaires réglementaires et Ingénierie biomédicale, et du Master Ingénierie biomédicale option instrumentation, 2024–2025"
-        - "Secrétaire académique de la Faculté des Sciences et Technologies, 2023–2025"
         - "Responsable administratif de la Faculté des Sciences et Technologies, 2022–2023"
   - when: { en: "2016 – 2021", fr: "2016 – 2021" }
     role: { en: Senior Lecturer, fr: Chargé de Cours }

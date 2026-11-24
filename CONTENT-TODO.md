@@ -4,7 +4,8 @@ Not published as a page (excluded in `_config.yml`). Remove items as they are re
 
 ## Accuracy
 - [ ] **Bio** (`_data/profile.yml` → `bio`): now follows the profile paragraph of his Nov 2026 CV, in the first person. Does he approve the wording?
-- [ ] **Current roles**: the CV stops in 2025 (Master's coordinator 2024–2025, Academic Secretary 2023–2025). What are his roles now? (`_data/career.yml`)
+- [ ] **Current roles**: he confirmed he is still Academic Secretary (now "since 2023"). Is he still coordinating the two Master's programmes (2024–2025)? (`_data/career.yml`)
+- [x] He is a physicist, not a biomedical engineer: wording fixed on the site (the PDFs still need it, see below).
 - [ ] **Thesis title 2020**: "image **planétaire**" or "image **plantaire**"? (`_data/theses.yml`; the English title is generic until confirmed)
 - [ ] **Student names**: OK to list the 24 students by name? (common practice; otherwise initials only)
 - [ ] **Project pages** (`_data/projects.yml` → `body`): written from the paper abstracts and thesis titles. Check facts and wording, especially the three projects built from theses only (radiation safety, hospital design, digital microscope).
