@@ -25,14 +25,13 @@ en:
   paper: Paper
   publications: Publications
   pubs_intro: "Peer-reviewed articles, a book chapter and conference proceedings. Click a title's buttons for the abstract, a citation in BibTeX, or a free PDF when one exists."
-  cites_title: Citations over the years
+  cites_title: Google Scholar citation progress
   focus_title: Themes of the papers
-  focus_note: "Word size shows how many papers cover the theme. Click a theme to list its papers."
+  focus_note: "Word size shows how many papers cover the theme. Point at a theme to see related ones; click it to list its papers."
   focus_showing: "%n on “%t”"
   paper_one: paper
   paper_many: papers
   show_all: Show all
-  cites_caption: "Citations of my papers each year on Google Scholar, %f to %y (%y not yet complete)."
   cites_table: Show as a table
   year: Year
   all: All
@@ -102,14 +101,13 @@ fr:
   paper: Article
   publications: Publications
   pubs_intro: "Articles à comité de lecture, un chapitre d'ouvrage et des actes de conférence. Les boutons sous chaque titre donnent le résumé, la référence en BibTeX, ou un PDF gratuit lorsqu'il existe."
-  cites_title: Citations au fil des années
+  cites_title: Progression des citations sur Google Scholar
   focus_title: Thèmes des publications
-  focus_note: "La taille d'un mot indique le nombre d'articles qui traitent du thème. Cliquez sur un thème pour afficher ses articles."
+  focus_note: "La taille d'un mot indique le nombre d'articles qui traitent du thème. Survolez un thème pour voir les thèmes liés ; cliquez pour afficher ses articles."
   focus_showing: "%n sur « %t »"
   paper_one: article
   paper_many: articles
   show_all: Tout afficher
-  cites_caption: "Citations de mes articles chaque année sur Google Scholar, de %f à %y (%y encore incomplète)."
   cites_table: Afficher sous forme de tableau
   year: Année
   all: Toutes

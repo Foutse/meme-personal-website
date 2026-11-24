@@ -4,8 +4,7 @@
 {%- assign data = site.data.citations_by_year -%}
 {%- assign max = 0 -%}{%- for d in data -%}{%- if d.n > max -%}{%- assign max = d.n -%}{%- endif -%}{%- endfor -%}
 {%- assign first = data | first -%}{%- assign last = data | last -%}
-{%- capture caption -%}{{ t.cites_caption | replace: "%f", first.year | replace: "%y", last.year }}{%- endcapture -%}
-<figure class="chart trend" role="img" aria-label="{{ t.cites_title }}. {{ caption }}">
+<figure class="chart trend" role="img" aria-label="{{ t.cites_title }}, {{ first.year }}–{{ last.year }}">
   <figcaption class="chart-title">{{ t.cites_title }}</figcaption>
   <div class="bars" style="--top: {{ max }}" aria-hidden="true">
     <div class="plot">
@@ -17,5 +16,4 @@
       {%- endfor -%}
     </div>
   </div>
-  <p class="chart-note">{{ caption }}</p>
 </figure>

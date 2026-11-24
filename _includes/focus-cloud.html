@@ -11,7 +11,8 @@
     {%- assign parts = all_ids | split: "|" -%}
     {%- for ids in parts -%}{%- assign padded = " " | append: ids -%}{%- assign needle = " " | append: key -%}{%- if padded contains needle -%}{%- assign n = n | plus: 1 -%}{%- endif -%}{%- endfor -%}
     {%- if n > 0 %}
-    <li><button type="button" class="word {{ f.topic }}" style="--w: {{ n }}" data-focus="{{ f.id }}" data-label="{{ f.label[L] }}" aria-pressed="false" title="{{ n }} {% if n == 1 %}{{ t.paper_one }}{% else %}{{ t.paper_many }}{% endif %}">{{ f.label[L] }}<span class="sr-only"> ({{ n }} {% if n == 1 %}{{ t.paper_one }}{% else %}{{ t.paper_many }}{% endif %})</span></button></li>
+    {%- assign i = forloop.index0 %}{% assign f5 = i | modulo: 5 %}{% assign dx = i | modulo: 3 | minus: 1 | times: 3 %}{% assign dy = i | modulo: 2 | times: 2 | minus: 1 | times: 3 %}
+    <li style="--i: {{ i }}; --f: {{ f5 }}; --dx: {{ dx }}px; --dy: {{ dy }}px"><button type="button" class="word {{ f.topic }}" style="--w: {{ n }}" data-focus="{{ f.id }}" data-label="{{ f.label[L] }}" aria-pressed="false" title="{{ n }} {% if n == 1 %}{{ t.paper_one }}{% else %}{{ t.paper_many }}{% endif %}">{{ f.label[L] }}<span class="sr-only"> ({{ n }} {% if n == 1 %}{{ t.paper_one }}{% else %}{{ t.paper_many }}{% endif %})</span></button></li>
     {%- endif -%}
     {%- endfor %}
   </ul>

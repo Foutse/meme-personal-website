@@ -298,6 +298,15 @@ p { margin: 0 0 .9rem; }
 .word:hover, .word:focus-visible { background: var(--bg-tint); }
 .word[aria-pressed="true"] { background: var(--navy); color: var(--bg); }
 .cloud.picked .word[aria-pressed="false"] { opacity: .45; }
+.cloud.hovering .word:not(.rel):not(:hover):not(:focus-visible) { opacity: .28; }
+.word.rel { opacity: 1; }
+/* Motion: words pop in one after another, then drift gently; drift pauses under the pointer. */
+.cloud.anim li { opacity: 0; transform: scale(.4); }
+.cloud.anim.in li { animation: word-in .6s cubic-bezier(.2, .9, .3, 1.25) calc(var(--i) * 45ms) both; }
+.cloud.anim.in .word { animation: word-drift calc(4.5s + var(--f) * .9s) ease-in-out calc(var(--i) * -.37s) infinite alternate; }
+.cloud.anim:hover .word, .cloud.anim:focus-within .word { animation-play-state: paused; }
+@keyframes word-in { from { opacity: 0; transform: scale(.4); } to { opacity: 1; transform: none; } }
+@keyframes word-drift { from { transform: translate(0, 0); } to { transform: translate(var(--dx), var(--dy)); } }
 .key { display: inline-flex; align-items: center; gap: .35rem; margin-right: .9rem; }
 .key::before { content: ""; width: .7rem; height: .7rem; border-radius: 3px; background: var(--accent); }
 .key.nl::before { background: var(--copper); }
@@ -466,6 +475,7 @@ td:nth-child(2) { white-space: nowrap; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .js .reveal { opacity: 1; transform: none; }
   .js .bars .bar { transform: none; }
+  .cloud.anim li { opacity: 1; transform: none; }
   .trace-line { stroke-dasharray: none; }
   .trace-pulse { display: none; }
 }

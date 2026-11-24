@@ -104,6 +104,27 @@
   });
   if (status) status.querySelector('button').addEventListener('click', showAll);
 
+  // Hovering a theme lights up the themes that share papers with it.
+  if (cloud) {
+    var related = {};
+    each(document.querySelectorAll('.pubs li.pub'), function (li) {
+      var ids = (li.getAttribute('data-focus') || '').trim().split(/\s+/);
+      ids.forEach(function (a) { if (!a) return; related[a] = related[a] || {}; ids.forEach(function (b) { related[a][b] = true; }); });
+    });
+    var light = function (w) {
+      var rel = related[w.getAttribute('data-focus')] || {};
+      each(words, function (x) { x.classList.toggle('rel', !!rel[x.getAttribute('data-focus')]); });
+      cloud.classList.add('hovering');
+    };
+    var unlight = function () { cloud.classList.remove('hovering'); each(words, function (x) { x.classList.remove('rel'); }); };
+    each(words, function (w) {
+      w.addEventListener('mouseenter', function () { light(w); });
+      w.addEventListener('focus', function () { light(w); });
+      w.addEventListener('mouseleave', unlight);
+      w.addEventListener('blur', unlight);
+    });
+  }
+
   // Chart tooltips (bars carry data-label).
   each(document.querySelectorAll('.bars'), function (chart) {
     var tip = chart.querySelector('.tip');
@@ -177,7 +198,8 @@
       io.unobserve(e.target);
     });
   }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
-  each(document.querySelectorAll('.reveal, .bars'), function (el) { io.observe(el); });
+  each(document.querySelectorAll('.cloud'), function (el) { el.classList.add('anim'); });
+  each(document.querySelectorAll('.reveal, .bars, .cloud'), function (el) { io.observe(el); });
 
   // Count the key figures up when they appear.
   var counters = new IntersectionObserver(function (entries) {
