@@ -6,14 +6,17 @@ layout: base
 {%- assign p = site.data.profile -%}
 {%- assign peer = site.data.publications | where_exp: "x", "x.kind != 'proceedings'" -%}
 <section class="page-head">
-  <div class="wrap">
-    <h1>{{ t.publications }}</h1>
-    <p class="lead">{{ t.pubs_intro }}</p>
-    {%- assign procs = site.data.publications | where: "kind", "proceedings" %}
-    <dl class="stats stats-inline">
-      <div><dt>{{ t.stats.pubs }}</dt><dd>{{ peer | size }}</dd></div>
-      <div><dt>{{ t.stats.procs }}</dt><dd>{{ procs | size }}</dd></div>
-    </dl>
+  <div class="wrap pubs-head">
+    <div>
+      <h1>{{ t.publications }}</h1>
+      <p class="lead">{{ t.pubs_intro }}</p>
+      {%- assign procs = site.data.publications | where: "kind", "proceedings" %}
+      <dl class="stats stats-inline">
+        <div><dt>{{ t.stats.pubs }}</dt><dd>{{ peer | size }}</dd></div>
+        <div><dt>{{ t.stats.procs }}</dt><dd>{{ procs | size }}</dd></div>
+      </dl>
+    </div>
+    {% include focus-cloud.html lang=L %}
   </div>
 </section>
 
@@ -27,6 +30,7 @@ layout: base
       </div>
       <a class="scholar-link" href="{{ p.scholar }}">{{ t.scholar_full }}</a>
     </div>
+    <p class="focus-status" aria-live="polite" hidden><span></span> <button type="button" class="linklike">{{ t.show_all }}</button></p>
     <div class="pubs">
       {% assign years = site.data.publications | group_by: "year" %}
       {% for y in years %}

@@ -1,0 +1,23 @@
+{%- comment -%} Word cloud of research themes. Size = number of papers. Param: lang. {%- endcomment -%}
+{%- assign L = include.lang -%}
+{%- assign t = site.data.i18n[L] -%}
+{%- capture all_ids -%}{% for x in site.data.publications %}|{% include focus-ids.html pub=x %}{% endfor %}|{%- endcapture -%}
+<figure class="chart focus" data-showing="{{ t.focus_showing }}" data-paper="{{ t.paper_one }}" data-papers="{{ t.paper_many }}">
+  <figcaption class="chart-title">{{ t.focus_title }}</figcaption>
+  <ul class="cloud" aria-label="{{ t.focus_title }}">
+    {%- for f in site.data.focus -%}
+    {%- assign key = f.id | append: " " -%}
+    {%- assign n = 0 -%}
+    {%- assign parts = all_ids | split: "|" -%}
+    {%- for ids in parts -%}{%- assign padded = " " | append: ids -%}{%- assign needle = " " | append: key -%}{%- if padded contains needle -%}{%- assign n = n | plus: 1 -%}{%- endif -%}{%- endfor -%}
+    {%- if n > 0 %}
+    <li><button type="button" class="word {{ f.topic }}" style="--w: {{ n }}" data-focus="{{ f.id }}" data-label="{{ f.label[L] }}" aria-pressed="false" title="{{ n }} {% if n == 1 %}{{ t.paper_one }}{% else %}{{ t.paper_many }}{% endif %}">{{ f.label[L] }}<span class="sr-only"> ({{ n }} {% if n == 1 %}{{ t.paper_one }}{% else %}{{ t.paper_many }}{% endif %})</span></button></li>
+    {%- endif -%}
+    {%- endfor %}
+  </ul>
+  <p class="chart-note">
+    <span class="key bio">{{ t.topic_bio }}</span>
+    <span class="key nl">{{ t.topic_nl }}</span><br>
+    {{ t.focus_note }}
+  </p>
+</figure>

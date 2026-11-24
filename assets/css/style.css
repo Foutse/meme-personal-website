@@ -221,7 +221,7 @@ p { margin: 0 0 .9rem; }
 /* ==========================================================================
    Publications
    ========================================================================== */
-.pubs-head { display: grid; grid-template-columns: 1.1fr 1fr; gap: 3rem; align-items: end; }
+.pubs-head { display: grid; grid-template-columns: 1.1fr 1fr; gap: 3rem; align-items: center; }
 .pub-tools { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .75rem; margin-bottom: 1rem; }
 .filters { display: flex; flex-wrap: wrap; gap: .45rem; }
 .chip {
@@ -283,6 +283,24 @@ p { margin: 0 0 .9rem; }
   font-size: .78rem; font-weight: 600; padding: .2rem .5rem; border-radius: 6px; white-space: nowrap; pointer-events: none;
 }
 .chart-note { font-size: .8rem; color: var(--muted); margin: 0; }
+
+/* Word cloud of paper themes */
+.cloud { list-style: none; margin: 0 0 1rem; padding: .25rem 0; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: .15rem .7rem; }
+.word {
+  font: 600 calc(.78rem + var(--w) * .2rem)/1.15 var(--serif); letter-spacing: -.005em;
+  background: none; border: 0; border-radius: 6px; padding: .15rem .3rem; cursor: pointer;
+  transition: color .15s, background-color .15s, opacity .15s;
+}
+.word.bio { color: var(--accent); }
+.word.nl { color: var(--copper); }
+.word:hover, .word:focus-visible { background: var(--bg-tint); }
+.word[aria-pressed="true"] { background: var(--navy); color: var(--bg); }
+.cloud.picked .word[aria-pressed="false"] { opacity: .45; }
+.key { display: inline-flex; align-items: center; gap: .35rem; margin-right: .9rem; }
+.key::before { content: ""; width: .7rem; height: .7rem; border-radius: 3px; background: var(--accent); }
+.key.nl::before { background: var(--copper); }
+.focus-status { margin: -.5rem 0 1.5rem; color: var(--muted); font-size: .95rem; }
+.linklike { background: none; border: 0; padding: 0; font: inherit; color: var(--accent); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
 .chart-table summary { font-size: .8rem; color: var(--accent); cursor: pointer; margin-top: .3rem; }
 .chart-table table { margin-top: .5rem; font-size: .85rem; }
 

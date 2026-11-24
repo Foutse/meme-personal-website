@@ -22,6 +22,7 @@ All text is in `_data/` (YAML). Each entry has an `en:` and an `fr:` version whe
 | `_data/research.yml` | research strands and themes |
 | `_data/projects.yml` | projects: card, full page text, related papers and theses (optional `image:`) |
 | `_data/pubmeta.yml` | abstracts, free-PDF links and BibTeX per DOI (generated, Nov 2026) |
+| `_data/focus.yml` | themes for the word cloud on the Publications page (label, colour, words to match in titles/abstracts) |
 | `_data/citations_by_year.yml` | citations per year (chart currently not shown; `_includes/cites-chart.html`) |
 | `_data/publications.yml` | publications (newest first) |
 | `_data/talks.yml` | conference presentations |

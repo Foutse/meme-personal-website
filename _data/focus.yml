@@ -1,0 +1,91 @@
+# Themes for the word cloud on the Publications page.
+# A paper belongs to a theme when its title or abstract contains one of the `match` strings
+# (lower case). Size = number of papers. topic: bio or nl (colour). List order = display order.
+- id: dental
+  topic: bio
+  label: { en: Oral care, fr: Soins dentaires }
+  match: ["dental"]
+- id: telemedicine
+  topic: bio
+  label: { en: Telemedicine, fr: Télémédecine }
+  match: ["telemedicine", "remote monitoring"]
+- id: vanderpol
+  topic: nl
+  label: { en: Van der Pol oscillator, fr: Oscillateur de Van der Pol }
+  match: ["van der pol"]
+- id: energy
+  topic: bio
+  label: { en: Energy efficiency, fr: Efficacité énergétique }
+  match: ["energy efficient", "energy-efficient", "energy consumption", "power consumption"]
+- id: memristor
+  topic: nl
+  label: { en: Memristors, fr: Memristors }
+  match: ["memristor"]
+- id: phototherapy
+  topic: bio
+  label: { en: Phototherapy, fr: Photothérapie }
+  match: ["phototherapy"]
+- id: eggs
+  topic: bio
+  label: { en: Poultry farming, fr: Aviculture }
+  match: ["egg"]
+- id: chaos
+  topic: nl
+  label: { en: Chaos, fr: Chaos }
+  match: ["chaos", "chaotic"]
+- id: lowcost
+  topic: bio
+  label: { en: Low-cost devices, fr: Dispositifs à bas coût }
+  match: ["low-cost", "low cost", "affordable", "low-income", "developing countries", "third world", "inexpensive"]
+- id: numerical
+  topic: nl
+  label: { en: Numerical simulation, fr: Simulation numérique }
+  match: ["numerical"]
+- id: lasers
+  topic: nl
+  label: { en: Semiconductor lasers, fr: Lasers à semi-conducteurs }
+  match: ["semiconductor laser"]
+- id: incubators
+  topic: bio
+  label: { en: Neonatal incubators, fr: Couveuses néonatales }
+  match: ["neonatal incubator"]
+- id: genetic
+  topic: nl
+  label: { en: Genetic algorithms, fr: Algorithmes génétiques }
+  match: ["genetic algorithm"]
+- id: social
+  topic: bio
+  label: { en: Social impact, fr: Impact social }
+  match: ["social impact"]
+- id: modelling
+  topic: bio
+  label: { en: Mathematical modelling, fr: Modélisation mathématique }
+  match: ["mathematical model", "modeling", "modelling"]
+- id: circuits
+  topic: nl
+  label: { en: Electronic circuits, fr: Circuits électroniques }
+  match: ["electronic circuit", "electronic model", "electronic implementation", "circuitry", "analog"]
+- id: prototyping
+  topic: bio
+  label: { en: Prototyping, fr: Prototypage }
+  match: ["prototyp", "from concept to operation", "implementation and ab initio"]
+- id: motors
+  topic: nl
+  label: { en: Permanent magnet motors, fr: Moteurs à aimants permanents }
+  match: ["permanent magnet"]
+- id: bioimpedance
+  topic: bio
+  label: { en: Bioimpedance, fr: Bio-impédance }
+  match: ["bioimpedance"]
+- id: multistability
+  topic: nl
+  label: { en: Multistability, fr: Multistabilité }
+  match: ["multistab", "coexist"]
+- id: phonocardiography
+  topic: bio
+  label: { en: Heart sounds, fr: Bruits du cœur }
+  match: ["phonocardio", "heart sound"]
+- id: control
+  topic: nl
+  label: { en: Chaos control, fr: Contrôle du chaos }
+  match: ["chaos annihilation", "amplitude control", "control of chaos", "chaos control"]

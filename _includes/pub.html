@@ -6,7 +6,8 @@
 {%- if x.doi -%}{%- assign meta = site.data.pubmeta[x.doi] -%}{%- else -%}{%- assign meta = nil -%}{%- endif -%}
 {%- assign bib = x.bibtex | default: meta.bibtex -%}
 {%- assign uid = x.doi | default: x.title | slugify | truncate: 40, "" -%}
-<li class="pub" data-topic="{{ x.topic }}">
+{%- capture fids -%}{% include focus-ids.html pub=x %}{%- endcapture -%}
+<li class="pub" data-topic="{{ x.topic }}" data-focus=" {{ fids | strip }} ">
   <p class="title">{{ x.title }}</p>
   <p class="authors">{{ x.authors | replace: "F. Momo", "<b>F. Momo</b>" }}</p>
   <p class="venue">{% if x.kind == "proceedings" %}<span class="kind">{{ t.proceedings }}</span> {% elsif x.kind == "chapter" %}{{ t.chapter_in }} {% endif %}{{ venue | markdownify | remove: "<p>" | remove: "</p>" | strip }}{% if include.show_year %} · {{ x.year }}{% endif %}</p>

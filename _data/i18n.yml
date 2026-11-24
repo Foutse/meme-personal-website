@@ -26,6 +26,12 @@ en:
   publications: Publications
   pubs_intro: "Peer-reviewed articles, a book chapter and conference proceedings. Click a title's buttons for the abstract, a citation in BibTeX, or a free PDF when one exists."
   cites_title: Citations per year
+  focus_title: Themes of the papers
+  focus_note: "Word size shows how many papers cover the theme. Click a theme to list its papers."
+  focus_showing: "%n on “%t”"
+  paper_one: paper
+  paper_many: papers
+  show_all: Show all
   cites_caption: "Citations per year on Google Scholar, %s. %y is a partial year."
   cites_table: Show as a table
   year: Year
@@ -97,6 +103,12 @@ fr:
   publications: Publications
   pubs_intro: "Articles à comité de lecture, un chapitre d'ouvrage et des actes de conférence. Les boutons sous chaque titre donnent le résumé, la référence en BibTeX, ou un PDF gratuit lorsqu'il existe."
   cites_title: Citations par année
+  focus_title: Thèmes des publications
+  focus_note: "La taille d'un mot indique le nombre d'articles qui traitent du thème. Cliquez sur un thème pour afficher ses articles."
+  focus_showing: "%n sur « %t »"
+  paper_one: article
+  paper_many: articles
+  show_all: Tout afficher
   cites_caption: "Citations par année sur Google Scholar, %s. L'année %y est incomplète."
   cites_table: Afficher sous forme de tableau
   year: Année

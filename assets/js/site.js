@@ -40,22 +40,65 @@
     });
   });
 
-  // Publication filter.
+  // Publication filter: topic chips and the theme cloud share one filter.
   var chips = document.querySelectorAll('.chip');
+  var words = document.querySelectorAll('.word');
+  var cloud = document.querySelector('.cloud');
+  var fig = document.querySelector('.focus');
+  var status = document.querySelector('.focus-status');
+  var filterPubs = function (test) {
+    var total = 0;
+    each(document.querySelectorAll('.pubs ol'), function (ol) {
+      var shown = 0;
+      each(ol.querySelectorAll('li.pub'), function (li) {
+        var ok = test(li);
+        li.hidden = !ok; if (ok) shown++;
+      });
+      ol.hidden = !shown; ol.previousElementSibling.hidden = !shown;
+      total += shown;
+    });
+    return total;
+  };
+  var setChip = function (c) {
+    each(chips, function (x) { x.classList.toggle('active', x === c); x.setAttribute('aria-pressed', x === c); });
+  };
+  var setWord = function (w) {
+    each(words, function (x) { x.setAttribute('aria-pressed', x === w); });
+    if (cloud) cloud.classList.toggle('picked', !!w);
+  };
+  var showAll = function () {
+    setWord(null); setChip(document.querySelector('.chip[data-filter="all"]'));
+    filterPubs(function () { return true; });
+    if (status) status.hidden = true;
+  };
   each(chips, function (c) {
     c.addEventListener('click', function () {
       var f = c.getAttribute('data-filter');
-      each(chips, function (x) { x.classList.toggle('active', x === c); x.setAttribute('aria-pressed', x === c); });
-      each(document.querySelectorAll('.pubs ol'), function (ol) {
-        var shown = 0;
-        each(ol.querySelectorAll('li.pub'), function (li) {
-          var ok = f === 'all' || li.getAttribute('data-topic') === f;
-          li.hidden = !ok; if (ok) shown++;
-        });
-        ol.hidden = !shown; ol.previousElementSibling.hidden = !shown;
-      });
+      setChip(c); setWord(null);
+      if (status) status.hidden = true;
+      filterPubs(function (li) { return f === 'all' || li.getAttribute('data-topic') === f; });
     });
   });
+  each(words, function (w) {
+    w.addEventListener('click', function () {
+      if (w.getAttribute('aria-pressed') === 'true') { showAll(); return; }
+      var id = ' ' + w.getAttribute('data-focus') + ' ';
+      setWord(w); setChip(null);
+      var n = filterPubs(function (li) { return (li.getAttribute('data-focus') || '').indexOf(id) !== -1; });
+      if (status && fig) {
+        var unit = n === 1 ? fig.getAttribute('data-paper') : fig.getAttribute('data-papers');
+        status.querySelector('span').textContent = fig.getAttribute('data-showing')
+          .replace('%n', n + ' ' + unit).replace('%t', w.getAttribute('data-label'));
+        status.hidden = false;
+        var top = status.getBoundingClientRect().top;
+        if (top < 0 || top > window.innerHeight * 0.6) {
+          var still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+          status.scrollIntoView({ behavior: still ? 'auto' : 'smooth', block: 'center' });
+        }
+      }
+    });
+  });
+  if (status) status.querySelector('button').addEventListener('click', showAll);
 
   // Chart tooltips (bars carry data-label).
   each(document.querySelectorAll('.bars'), function (chart) {
