@@ -7,7 +7,7 @@ en:
   switch_short: FR
   nav: { research: Research, publications: Publications, teaching: Teaching, cv: CV, contact: Contact }
   tagline: Affordable medical devices for hospitals in Africa
-  lead: "Physicist at the Université des Montagnes, Cameroon. With engineering colleagues, I work on low-cost medical devices for hospitals; I also work on radiation safety in hospitals and on the nonlinear dynamics of lasers and circuits."
+  lead: "Physicist at the Université des Montagnes, Cameroon. My research covers the nonlinear dynamics of lasers and electronic circuits, radiation protection in hospitals and, with engineering colleagues, the design of low-cost medical devices."
   about: About
   stats: { pubs: Peer-reviewed publications, citations: Citations, h: h-index, theses: "Master's theses supervised", procs: Conference proceedings, prototypes: Device prototypes, programmes: Degree programmes coordinated, years: Years of university teaching }
   news: News
@@ -83,7 +83,7 @@ fr:
   switch_short: EN
   nav: { research: Recherche, publications: Publications, teaching: Enseignement, cv: CV, contact: Contact }
   tagline: Des dispositifs médicaux abordables pour les hôpitaux d'Afrique
-  lead: "Physicien à l'Université des Montagnes (Cameroun). Avec des collègues ingénieurs, je travaille sur des dispositifs médicaux à bas coût pour les hôpitaux ; je travaille aussi sur la radioprotection à l'hôpital et sur la dynamique non linéaire des lasers et des circuits."
+  lead: "Physicien à l'Université des Montagnes (Cameroun). Mes recherches portent sur la dynamique non linéaire des lasers et des circuits électroniques, la radioprotection en milieu hospitalier et, avec des collègues ingénieurs, la conception de dispositifs médicaux à bas coût."
   about: Présentation
   stats: { pubs: Publications à comité de lecture, citations: Citations, h: Indice h, theses: Mémoires de master encadrés, procs: Actes de conférence, prototypes: Prototypes de dispositifs, programmes: Formations coordonnées, years: Années d'enseignement universitaire }
   news: Actualités
