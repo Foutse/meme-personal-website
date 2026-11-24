@@ -22,7 +22,7 @@ All text is in `_data/` (YAML). Each entry has an `en:` and an `fr:` version whe
 | `_data/research.yml` | research strands and themes |
 | `_data/projects.yml` | projects: card, full page text, related papers and theses (optional `image:`) |
 | `_data/pubmeta.yml` | abstracts, free-PDF links and BibTeX per DOI (generated, Nov 2026) |
-| `_data/citations_by_year.yml` | citations per year for the chart (from Google Scholar) |
+| `_data/citations_by_year.yml` | citations per year (chart currently not shown; `_includes/cites-chart.html`) |
 | `_data/publications.yml` | publications (newest first) |
 | `_data/talks.yml` | conference presentations |
 | `_data/teaching.yml` | courses |
@@ -37,9 +37,8 @@ Open questions for Prof. Momo: `CONTENT-TODO.md`.
 
 ## Common updates
 - **New paper:** copy a block in `_data/publications.yml`, keep newest first. `topic: bio` or `nl`.
-- **Citations:** `metrics` in `profile.yml` and `cites` in `publications.yml`.
+- **Citations:** not displayed. `cites` in `publications.yml` only sets the order of the home page's selected publications.
 - **News:** add an item at the top of `_data/news.yml`.
-- **Citations chart:** add or update the year in `_data/citations_by_year.yml`.
 - **New project:** add a block to `_data/projects.yml`, then run `python3 tools/make-project-pages.py`
   to create its English and French pages.
 - **Device photo:** put it in `assets/img/projects/` and add `image: /assets/img/projects/<file>.jpg`

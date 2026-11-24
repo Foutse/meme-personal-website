@@ -9,11 +9,11 @@ en:
   tagline: Affordable medical devices for hospitals in Africa
   lead: "Physicist at the Université des Montagnes, Cameroon. With engineering colleagues, I work on low-cost medical devices for hospitals; I also work on radiation safety in hospitals and on the nonlinear dynamics of lasers and circuits."
   about: About
-  stats: { pubs: Peer-reviewed publications, citations: Citations, h: h-index, theses: "Master's theses supervised", prototypes: Device prototypes, programmes: Degree programmes coordinated, years: Years of university teaching }
+  stats: { pubs: Peer-reviewed publications, citations: Citations, h: h-index, theses: "Master's theses supervised", procs: Conference proceedings, prototypes: Device prototypes, programmes: Degree programmes coordinated, years: Years of university teaching }
   news: News
   featured: Selected work
   all_projects: All projects →
-  top_pubs: Most-cited publications
+  top_pubs: Selected publications
   all_pubs: All publications →
   research: Research
   research_intro: "Two strands of work: medical technology that hospitals in low-income countries can afford, and the nonlinear physics behind it."
@@ -80,11 +80,11 @@ fr:
   tagline: Des dispositifs médicaux abordables pour les hôpitaux d'Afrique
   lead: "Physicien à l'Université des Montagnes (Cameroun). Avec des collègues ingénieurs, je travaille sur des dispositifs médicaux à bas coût pour les hôpitaux ; je travaille aussi sur la radioprotection à l'hôpital et sur la dynamique non linéaire des lasers et des circuits."
   about: Présentation
-  stats: { pubs: Publications à comité de lecture, citations: Citations, h: Indice h, theses: Mémoires de master encadrés, prototypes: Prototypes de dispositifs, programmes: Formations coordonnées, years: Années d'enseignement universitaire }
+  stats: { pubs: Publications à comité de lecture, citations: Citations, h: Indice h, theses: Mémoires de master encadrés, procs: Actes de conférence, prototypes: Prototypes de dispositifs, programmes: Formations coordonnées, years: Années d'enseignement universitaire }
   news: Actualités
   featured: Travaux choisis
   all_projects: Tous les projets →
-  top_pubs: Publications les plus citées
+  top_pubs: Publications choisies
   all_pubs: Toutes les publications →
   research: Recherche
   research_intro: "Deux axes de travail : des technologies médicales abordables pour les hôpitaux des pays à faibles revenus, et la physique non linéaire qui les sous-tend."

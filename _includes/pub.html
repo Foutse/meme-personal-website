@@ -15,7 +15,6 @@
     {%- if meta.oa and meta.oa != "" %}<a class="btn btn-oa" href="{{ meta.oa }}">{{ t.free_pdf }}</a>{% endif %}
     {%- if meta.abstract and meta.abstract != "" %}<button type="button" class="btn" aria-expanded="false" aria-controls="abs-{{ uid }}">{{ t.abstract }}</button>{% endif %}
     {%- if bib %}<button type="button" class="btn" aria-expanded="false" aria-controls="bib-{{ uid }}">{{ t.cite }}</button>{% endif %}
-    {%- if x.cites %}<span class="cites">{{ x.cites }} {% if x.cites == 1 %}{{ t.citation }}{% else %}{{ t.citations }}{% endif %}</span>{% endif %}
   </div>
   {%- if meta.abstract and meta.abstract != "" %}
   <div class="panel" id="abs-{{ uid }}" hidden><p lang="en">{{ meta.abstract }}</p></div>

@@ -22,4 +22,4 @@ Not published as a page (excluded in `_config.yml`). Remove items as they are re
 
 ## For the site owner
 - [ ] Register https://foutsemomo.com in Google Search Console and submit `https://foutsemomo.com/sitemap.xml`.
-- [ ] Update citation numbers from Scholar every few months (`profile.yml` → `metrics`, and `cites` in `publications.yml`).
+- Citation counts are no longer shown on the site (Nov 2026). `cites` in `publications.yml` still orders the home page's selected publications.

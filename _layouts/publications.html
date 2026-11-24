@@ -6,17 +6,14 @@ layout: base
 {%- assign p = site.data.profile -%}
 {%- assign peer = site.data.publications | where_exp: "x", "x.kind != 'proceedings'" -%}
 <section class="page-head">
-  <div class="wrap pubs-head">
-    <div>
-      <h1>{{ t.publications }}</h1>
-      <p class="lead">{{ t.pubs_intro }}</p>
-      <dl class="stats stats-inline">
-        <div><dt>{{ t.stats.pubs }}</dt><dd>{{ peer | size }}</dd></div>
-        <div><dt>{{ t.stats.citations }}</dt><dd>{{ p.metrics.citations }}</dd></div>
-        <div><dt>{{ t.stats.h }}</dt><dd>{{ p.metrics.h_index }}</dd></div>
-      </dl>
-    </div>
-    {% include cites-chart.html lang=L %}
+  <div class="wrap">
+    <h1>{{ t.publications }}</h1>
+    <p class="lead">{{ t.pubs_intro }}</p>
+    {%- assign procs = site.data.publications | where: "kind", "proceedings" %}
+    <dl class="stats stats-inline">
+      <div><dt>{{ t.stats.pubs }}</dt><dd>{{ peer | size }}</dd></div>
+      <div><dt>{{ t.stats.procs }}</dt><dd>{{ procs | size }}</dd></div>
+    </dl>
   </div>
 </section>
 
