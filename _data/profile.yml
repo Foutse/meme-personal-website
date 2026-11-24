@@ -22,25 +22,36 @@ address:
 # Bio (Markdown allowed). Follows the profile paragraph of his CV.
 bio:
   en: >-
-    I am a physicist, Associate Professor (Maître de Conférences) at the Université des Montagnes in
-    Bangangté, Cameroon, where I am Academic Secretary of the Faculty of Science and Technology and a
-    member of BEEMo.Lab (Biomedical Engineering, Energy & Modeling Laboratory).
-    With engineering colleagues, I work on **affordable medical devices for African hospitals**, from the mathematical model to the
-    working prototype: neonatal incubators, a mobile dental unit, a telemedicine phonocardiograph and a
-    bioimpedance system. I also work on **radiation protection** in hospitals and on the **nonlinear
-    dynamics** of semiconductor lasers and electronic circuits, the subject of my Ph.D. at the
-    University of Dschang. I have taught at university for over 20 years, coordinated five degree
-    programmes and supervised 24 Master's theses, most of them built around a working device.
+    I am Associate Professor (Maître de Conférences) of Physics at the Université des Montagnes in
+    Bangangté, Cameroon, where I am also Academic Secretary of the Faculty of Science and Technology
+    and a member of BEEMo.Lab (Biomedical Engineering, Energy & Modeling Laboratory).
+
+
+    My background is in physics: I study the **nonlinear dynamics** of semiconductor lasers and
+    electronic circuits, the subject of my Ph.D. at the University of Dschang. My research also extends
+    to **radiation protection** in hospitals and, with engineering colleagues, to the design of
+    **affordable medical devices for African hospitals**, from the mathematical model to a working
+    prototype: neonatal incubators, a mobile dental unit, a telemedicine phonocardiograph and a
+    bioimpedance system.
+
+
+    In more than 20 years of university teaching, I have coordinated five degree programmes and
+    supervised 24 Master's theses, most of them built around a working device.
   fr: >-
-    Physicien, je suis Maître de conférences à l'Université des Montagnes à Bangangté (Cameroun), où
-    je suis Secrétaire académique de la Faculté des sciences et technologies et membre du BEEMo.Lab
-    (Biomedical Engineering, Energy & Modeling Laboratory).
-    Avec des collègues ingénieurs, je travaille sur des **dispositifs médicaux abordables pour les hôpitaux d'Afrique**, du modèle
+    Je suis Maître de conférences en physique à l'Université des Montagnes à Bangangté (Cameroun),
+    où je suis aussi Secrétaire académique de la Faculté des sciences et technologies et membre du
+    BEEMo.Lab (Biomedical Engineering, Energy & Modeling Laboratory).
+
+
+    Physicien de formation, j'étudie la **dynamique non linéaire** des lasers à semi-conducteurs et des
+    circuits électroniques, sujet de mon doctorat à l'Université de Dschang. Mes recherches s'étendent
+    aussi à la **radioprotection** en milieu hospitalier et, avec des collègues ingénieurs, à la
+    conception de **dispositifs médicaux abordables pour les hôpitaux d'Afrique**, du modèle
     mathématique au prototype fonctionnel : couveuses néonatales, unité dentaire mobile,
-    phonocardiographe pour la télémédecine, système de bio-impédance. Je travaille aussi sur la
-    **radioprotection** en milieu hospitalier et sur la **dynamique non linéaire** des lasers à
-    semi-conducteurs et des circuits électroniques, sujet de mon doctorat à l'Université de Dschang.
-    J'enseigne à l'université depuis plus de vingt ans ; j'ai coordonné cinq formations et encadré
+    phonocardiographe pour la télémédecine, système de bio-impédance.
+
+
+    En plus de vingt ans d'enseignement universitaire, j'ai coordonné cinq formations et encadré
     24 mémoires de master, la plupart autour d'un dispositif fonctionnel.
 
 # Key figures on the home page (same as the CV). Theses are counted from theses.yml.
