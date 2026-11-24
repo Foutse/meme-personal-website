@@ -1,33 +1,21 @@
+{%- comment -%} Citations per year as bars, without numbers: shows the trend only. {%- endcomment -%}
 {%- assign L = include.lang -%}
 {%- assign t = site.data.i18n[L] -%}
 {%- assign data = site.data.citations_by_year -%}
 {%- assign max = 0 -%}{%- for d in data -%}{%- if d.n > max -%}{%- assign max = d.n -%}{%- endif -%}{%- endfor -%}
-{%- assign top = max | divided_by: 10 | plus: 1 | times: 10 -%}
-{%- assign last = data | last -%}
-<figure class="chart">
+{%- assign first = data | first -%}{%- assign last = data | last -%}
+{%- capture caption -%}{{ t.cites_caption | replace: "%f", first.year | replace: "%y", last.year }}{%- endcapture -%}
+<figure class="chart trend" role="img" aria-label="{{ t.cites_title }}. {{ caption }}">
   <figcaption class="chart-title">{{ t.cites_title }}</figcaption>
-  <div class="bars" style="--top: {{ top }}">
-    <div class="gridlines" aria-hidden="true">
-      {%- assign step = top | divided_by: 3 -%}
-      {%- for i in (1..3) -%}{%- assign v = step | times: i -%}<span style="--v: {{ v }}">{{ v }}</span>{%- endfor -%}
-    </div>
+  <div class="bars" style="--top: {{ max }}" aria-hidden="true">
     <div class="plot">
       {%- for d in data -%}
-      {%- capture label -%}{{ d.year }}: {{ d.n }} {% if d.n == 1 %}{{ t.citation }}{% else %}{{ t.citations }}{% endif %}{%- endcapture -%}
       <div class="col">
-        <span class="bar{% if d.year == last.year %} partial{% endif %}" style="--n: {{ d.n }}; --i: {{ forloop.index0 }}" tabindex="0" role="img" aria-label="{{ label }}" data-label="{{ label }}">
-          {%- if d.n == max or d.year == last.year -%}<span class="val">{{ d.n }}</span>{%- endif -%}
-        </span>
+        <span class="bar{% if d.year == last.year %} partial{% endif %}" style="--n: {{ d.n }}; --i: {{ forloop.index0 }}"></span>
         <span class="yr">{% assign y = d.year | append: "" %}{% if forloop.first or forloop.last or d.year == 2020 %}{{ y }}{% else %}{{ y | slice: 2, 2 | prepend: "’" }}{% endif %}</span>
       </div>
       {%- endfor -%}
     </div>
-    <div class="tip" hidden></div>
   </div>
-  <p class="chart-note">{{ t.cites_caption | replace: "%s", site.data.profile.metrics.updated[L] | replace: "%y", last.year }}</p>
-  <details class="chart-table">
-    <summary>{{ t.cites_table }}</summary>
-    <table><thead><tr><th>{{ t.year }}</th><th>{{ t.citations }}</th></tr></thead>
-      <tbody>{% for d in data %}<tr><td>{{ d.year }}</td><td>{{ d.n }}</td></tr>{% endfor %}</tbody></table>
-  </details>
+  <p class="chart-note">{{ caption }}</p>
 </figure>

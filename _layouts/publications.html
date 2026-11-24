@@ -15,6 +15,7 @@ layout: base
         <div><dt>{{ t.stats.pubs }}</dt><dd>{{ peer | size }}</dd></div>
         <div><dt>{{ t.stats.procs }}</dt><dd>{{ procs | size }}</dd></div>
       </dl>
+      {% include cites-chart.html lang=L %}
     </div>
     {% include focus-cloud.html lang=L %}
   </div>

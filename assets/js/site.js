@@ -24,6 +24,10 @@
     b.addEventListener('click', function () {
       var panel = document.getElementById(b.getAttribute('aria-controls'));
       var open = b.getAttribute('aria-expanded') !== 'true';
+      if (open) each(b.parentNode.querySelectorAll('button[aria-expanded="true"]'), function (o) {
+        o.setAttribute('aria-expanded', 'false');
+        document.getElementById(o.getAttribute('aria-controls')).hidden = true;
+      });
       b.setAttribute('aria-expanded', open);
       panel.hidden = !open;
     });
@@ -103,6 +107,7 @@
   // Chart tooltips (bars carry data-label).
   each(document.querySelectorAll('.bars'), function (chart) {
     var tip = chart.querySelector('.tip');
+    if (!tip) return;
     var bars = chart.querySelectorAll('.bar');
     var show = function (bar) {
       each(bars, function (x) { x.classList.toggle('dim', x !== bar); });
