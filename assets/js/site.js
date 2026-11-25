@@ -300,3 +300,54 @@
   }
   start();
 })();
+
+
+// "Made in UdM" carousel: arrows, dots, swipe (scroll-snap), gentle autoplay.
+(function () {
+  var box = document.getElementById('costs');
+  if (!box) return;
+  var track = box.querySelector('.cost-track'), slides = track.children;
+  var dots = box.querySelectorAll('.car-dots span'), num = box.querySelector('.car-i');
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var k = 0, paused = false, touched = false;
+  function mark(i) {
+    k = i;
+    for (var j = 0; j < slides.length; j++) {
+      slides[j].classList.toggle('on', j === i);
+      if (j === i) slides[j].classList.add('seen');
+      if (dots[j]) dots[j].classList.toggle('on', j === i);
+    }
+    if (num) num.textContent = i + 1;
+  }
+  function go(i) {
+    i = (i + slides.length) % slides.length;
+    track.scrollTo({ left: slides[i].offsetLeft - track.offsetLeft, behavior: reduce ? 'auto' : 'smooth' });
+    mark(i);
+  }
+  box.querySelector('.prev').addEventListener('click', function () { touched = true; go(k - 1); });
+  box.querySelector('.next').addEventListener('click', function () { touched = true; go(k + 1); });
+  track.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowRight') { e.preventDefault(); touched = true; go(k + 1); }
+    if (e.key === 'ArrowLeft') { e.preventDefault(); touched = true; go(k - 1); }
+  });
+  var t;
+  track.addEventListener('scroll', function () {
+    clearTimeout(t);
+    t = setTimeout(function () {
+      var x = track.scrollLeft, best = 0;
+      for (var j = 1; j < slides.length; j++) if (Math.abs(slides[j].offsetLeft - track.offsetLeft - x) < Math.abs(slides[best].offsetLeft - track.offsetLeft - x)) best = j;
+      if (best !== k) mark(best);
+    }, 80);
+  });
+  track.addEventListener('pointerdown', function () { touched = true; });
+  box.addEventListener('mouseenter', function () { paused = true; });
+  box.addEventListener('mouseleave', function () { paused = false; });
+  box.addEventListener('focusin', function () { paused = true; });
+  box.addEventListener('focusout', function () { paused = false; });
+  mark(0);
+  if (!reduce) setInterval(function () {
+    var r = track.getBoundingClientRect();
+    var inView = r.top < innerHeight && r.bottom > 0;
+    if (!paused && !touched && inView && !document.hidden) go(k + 1);
+  }, 5000);
+})();
