@@ -279,14 +279,19 @@
     ctx.globalAlpha = a; ctx.fillStyle = '#000'; ctx.fillRect(0, 0, w, h);
     ctx.globalCompositeOperation = 'source-over';
   }
-  function frame() {
+  // Speed is tied to elapsed time, not to the screen's refresh rate.
+  var last = 0, carry = 0, STEPS_PER_MS = 0.6;
+  function frame(t) {
     if (!visible || document.hidden) { running = false; return; }
-    fade(0.008);
-    angle += 0.0008;
-    draw(40, 0.7);
+    var ms = last ? Math.min(t - last, 50) : 16; last = t;
+    carry += ms * STEPS_PER_MS;
+    var n = Math.floor(carry); carry -= n;
+    fade(0.004 * ms / 16);
+    angle += 0.0003 * ms / 16;
+    if (n) draw(n, 0.7);
     requestAnimationFrame(frame);
   }
-  function start() { if (!running && !reduce) { running = true; requestAnimationFrame(frame); } }
+  function start() { if (!running && !reduce) { running = true; last = 0; requestAnimationFrame(frame); } }
   function still() { ctx.clearRect(0, 0, w, h); for (var i = 0; i < 2000; i++) step(); draw(60000, 0.35); }
 
   size();
