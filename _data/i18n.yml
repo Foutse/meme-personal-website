@@ -6,7 +6,7 @@ en:
   switch_label: Version française
   switch_short: FR
   nav: { research: Research, publications: Publications, teaching: Teaching, cv: CV, contact: Contact }
-  tagline: Affordable medical devices for hospitals in Africa
+  tagline: From physics to the hospital bedside
   lead: "Physicist at the Université des Montagnes, Cameroon. My research covers the nonlinear dynamics of lasers and electronic circuits, radiation protection in hospitals, and low-cost medical devices developed in interdisciplinary teams."
   about: About
   stats: { pubs: Peer-reviewed publications, citations: Citations, h: h-index, theses: "Master's theses supervised", procs: Conference proceedings, prototypes: Device prototypes, programmes: Degree programmes coordinated, years: Years of university teaching }
@@ -91,7 +91,7 @@ fr:
   switch_label: English version
   switch_short: EN
   nav: { research: Recherche, publications: Publications, teaching: Enseignement, cv: CV, contact: Contact }
-  tagline: Des dispositifs médicaux abordables pour les hôpitaux d'Afrique
+  tagline: De la physique au chevet du patient
   lead: "Physicien à l'Université des Montagnes (Cameroun). Mes recherches portent sur la dynamique non linéaire des lasers et des circuits électroniques, la radioprotection en milieu hospitalier et des dispositifs médicaux à bas coût développés en équipes pluridisciplinaires."
   about: Présentation
   stats: { pubs: Publications à comité de lecture, citations: Citations, h: Indice h, theses: Mémoires de master encadrés, procs: Actes de conférence, prototypes: Prototypes de dispositifs, programmes: Formations coordonnées, years: Années d'enseignement universitaire }

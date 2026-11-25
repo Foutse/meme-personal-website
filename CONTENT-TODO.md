@@ -9,7 +9,7 @@ Not published as a page (excluded in `_config.yml`). Remove items as they are re
 - [x] **Thesis title 2020**: "image plantaire" (sole of the foot). Fixed.
 - [x] **Student names**: full names approved.
 - [ ] **Project pages** (`_data/projects.yml` → `body`): written from the paper abstracts and thesis titles. Check facts and wording, especially the three projects built from theses only (radiation safety, hospital design, digital microscope).
-- [ ] **Home-page headline**: "Affordable medical devices for hospitals in Africa" (`_data/i18n.yml` → `tagline`). Does it describe his work as he would?
+- [ ] **Home-page headline**: "From physics to the hospital bedside" / « De la physique au chevet du patient » (`_data/i18n.yml` → `tagline`). Does he like it?
 - [ ] **Master's projects text** (`profile.yml` → `students`): OK to invite students to email him?
 
 ## Content to send
@@ -18,7 +18,7 @@ Not published as a page (excluded in `_config.yml`). Remove items as they are re
 - [ ] **Device photos**: photos from his talk at the États généraux de la recherche 2025 now on the incubator, dental unit and microscope pages and in the cost comparison (Research page). They are small (250–600 px): ask for the original files, and for photos of the phonocardiograph, bioimpedance system and egg incubator.
 - [ ] **New devices from the talk**: oxygen concentrator, spectrophotometer, food dehydrator, solar vaccine fridge (in development). Shown only in the cost comparison; a short description of each would allow a project page.
 - [ ] **Portrait**: the site now uses the beige-wall photo, but the only copy is small (246 px). Ask for the original file or a higher-resolution version.
-- [x] **ORCID and ResearchGate**: added (Nov 2026).
+- [ ] **ORCID**: his record is empty, so the link is hidden (`profile.yml`). Uncomment it once he has filled it in. ResearchGate is shown.
 - [ ] **Recent news**: 2026 Master's defences coming soon; papers under review. Add when they happen → `_data/news.yml` (and `_data/theses.yml`).
 - [x] **Grants**: none yet (Nov 2026). Add a Funding section to the CV page when there is one.
 - [ ] Anything from LinkedIn missing from the CV (awards, projects, collaborations).
