@@ -219,3 +219,84 @@
   }, { threshold: 0.6 });
   each(document.querySelectorAll('[data-count]'), function (el) { counters.observe(el); });
 })();
+
+
+// Hero background: the chaotic attractor of a Van der Pol–Duffing oscillator,
+//   x' = -k (x^3 - a x - y),  y' = x - y - z,  z' = b y   (k = 100, a = 0.35, b = 300),
+// integrated live (RK4) and drawn as a slowly fading trace.
+(function () {
+  var cv = document.querySelector('.hero-bg');
+  if (!cv || !cv.getContext) return;
+  var ctx = cv.getContext('2d');
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var K = 100, A = 0.35, B = 300, DT = 0.0005;
+  var s = [0.1, 0, 0], w, h, dpr, cx, cy, sx, sy, colA, colB, running = false, visible = true, angle = 0.5;
+
+  function f(x, y, z) { return [-K * (x * x * x - A * x - y), x - y - z, B * y]; }
+  function step() {
+    var x = s[0], y = s[1], z = s[2], d = DT;
+    var a = f(x, y, z);
+    var b = f(x + d / 2 * a[0], y + d / 2 * a[1], z + d / 2 * a[2]);
+    var c = f(x + d / 2 * b[0], y + d / 2 * b[1], z + d / 2 * b[2]);
+    var e = f(x + d * c[0], y + d * c[1], z + d * c[2]);
+    s = [x + d / 6 * (a[0] + 2 * b[0] + 2 * c[0] + e[0]),
+         y + d / 6 * (a[1] + 2 * b[1] + 2 * c[1] + e[1]),
+         z + d / 6 * (a[2] + 2 * b[2] + 2 * c[2] + e[2])];
+  }
+  // Normalised 3-D point, turned slowly about the vertical axis, then projected.
+  function project() {
+    var X = s[0] / 0.73, Y = s[1] / 0.134, Z = s[2] / 2.86;
+    var ca = Math.cos(angle), sa = Math.sin(angle);
+    return [cx + (X * ca + Y * 0.35 * sa) * sx, cy - Z * sy];
+  }
+  function size() {
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    w = cv.clientWidth; h = cv.clientHeight;
+    cv.width = w * dpr; cv.height = h * dpr;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    var wide = w > 760;
+    cx = wide ? w * 0.77 : w * 0.5; cy = wide ? h * 0.235 : h * 0.55;
+    sx = wide ? Math.min(w * 0.15, 260) : w * 0.4; sy = wide ? h * 0.15 : h * 0.33;
+    var cs = getComputedStyle(document.documentElement);
+    colA = cs.getPropertyValue('--accent').trim() || '#1d5c8c';
+    colB = cs.getPropertyValue('--copper').trim() || '#9c5426';
+    ctx.lineWidth = 1; ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+  }
+  // Draw n integration steps as short segments, coloured by which lobe the orbit is on.
+  function draw(n, alpha) {
+    var p = project(), side = s[0] > 0;
+    ctx.globalAlpha = alpha;
+    ctx.beginPath(); ctx.moveTo(p[0], p[1]); ctx.strokeStyle = side ? colA : colB;
+    for (var i = 0; i < n; i++) {
+      step(); var q = project(), now = s[0] > 0;
+      ctx.lineTo(q[0], q[1]);
+      if (now !== side) { ctx.stroke(); ctx.beginPath(); ctx.moveTo(q[0], q[1]); side = now; ctx.strokeStyle = side ? colA : colB; }
+    }
+    ctx.stroke();
+  }
+  function fade(a) {
+    ctx.globalCompositeOperation = 'destination-out';
+    ctx.globalAlpha = a; ctx.fillStyle = '#000'; ctx.fillRect(0, 0, w, h);
+    ctx.globalCompositeOperation = 'source-over';
+  }
+  function frame() {
+    if (!visible || document.hidden) { running = false; return; }
+    fade(0.008);
+    angle += 0.0008;
+    draw(40, 0.7);
+    requestAnimationFrame(frame);
+  }
+  function start() { if (!running && !reduce) { running = true; requestAnimationFrame(frame); } }
+  function still() { ctx.clearRect(0, 0, w, h); for (var i = 0; i < 2000; i++) step(); draw(60000, 0.35); }
+
+  size();
+  for (var i = 0; i < 4000; i++) step();   // settle onto the attractor first
+  if (reduce) { still(); window.addEventListener('resize', function () { size(); still(); }); return; }
+  draw(6000, 0.4);                         // start with a faint sketch, not a blank sky
+  window.addEventListener('resize', size);
+  document.addEventListener('visibilitychange', start);
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (es) { visible = es[0].isIntersecting; if (visible) start(); }).observe(cv);
+  }
+  start();
+})();

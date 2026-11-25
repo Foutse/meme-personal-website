@@ -130,7 +130,11 @@ p { margin: 0 0 .9rem; }
 /* ==========================================================================
    Home
    ========================================================================== */
-.hero { padding: 4.5rem 0 3rem; }
+.hero { padding: 4.5rem 0 3rem; position: relative; overflow: hidden; }
+.hero > .wrap { position: relative; z-index: 1; }
+/* Chaotic attractor drawn by site.js (Van der Pol–Duffing oscillator). */
+.hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; opacity: .55; }
+@media (max-width: 760px) { .hero-bg { opacity: .3; } }
 .trace { height: 56px; margin: 2.5rem 0 -1.5rem; }
 .trace svg { width: 100%; height: 100%; overflow: visible; display: block; }
 .trace path { fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }

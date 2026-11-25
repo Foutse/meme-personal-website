@@ -6,6 +6,7 @@ layout: base
 {%- assign p = site.data.profile -%}
 
 <section class="hero">
+  <canvas class="hero-bg" aria-hidden="true"></canvas>
   <div class="wrap">
     <header class="identity">
       <img class="id-photo" src="{{ p.photo }}?v={{ site.time | date: '%s' }}" alt="{{ p.name }}" width="480" height="480">
