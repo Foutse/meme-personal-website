@@ -3,13 +3,14 @@
 Not published as a page (excluded in `_config.yml`). Remove items as they are resolved.
 
 ## Accuracy
-- [ ] **Bio** (`_data/profile.yml` → `bio`): now follows the profile paragraph of his Nov 2026 CV, in the first person. Does he approve the wording?
+Texts (bio, project pages, headline) approved by Prof. Momo, Nov 2026.
+- [x] **Bio** (`_data/profile.yml` → `bio`): now follows the profile paragraph of his Nov 2026 CV, in the first person. Does he approve the wording?
 - [x] **Current roles**: Academic Secretary since 2023; coordinator of the FOAD/AUF Master's (renamed from Contrôle qualité to Assurance qualité) and of the Instrumentation Master's, both since 2024 and still current.
 - [x] He is a physicist, not a biomedical engineer: wording fixed on the site (site and both CV PDFs).
 - [x] **Thesis title 2020**: "image plantaire" (sole of the foot). Fixed.
 - [x] **Student names**: full names approved.
-- [ ] **Project pages** (`_data/projects.yml` → `body`): written from the paper abstracts and thesis titles. Check facts and wording, especially the three projects built from theses only (radiation safety, hospital design, digital microscope).
-- [ ] **Home-page headline**: "From physics to the hospital bedside" / « De la physique au chevet du patient » (`_data/i18n.yml` → `tagline`). Does he like it?
+- [x] **Project pages** (`_data/projects.yml` → `body`): written from the paper abstracts and thesis titles. Check facts and wording, especially the three projects built from theses only (radiation safety, hospital design, digital microscope).
+- [x] **Home-page headline**: "From physics to the hospital bedside" / « De la physique au chevet du patient » (`_data/i18n.yml` → `tagline`). Does he like it?
 - [ ] **Master's projects text** (`profile.yml` → `students`): OK to invite students to email him?
 
 ## Content to send
