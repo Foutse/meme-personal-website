@@ -12,7 +12,7 @@
 - { year: 2022, student: Yongo Eurêka Claudy, fr: "Conception d'une borne médicale pédiatrique", en: "Design of a paediatric medical kiosk" }
 - { year: 2022, student: Kapgang Lauraine, fr: "Conception et réalisation d'un prototype d'électrooculographe", en: "Design and construction of an electro-oculograph prototype" }
 - { year: 2021, student: Youaleu Monkam Willy Thierry, fr: "Modélisation et simulation de l'activité mécanique du cœur", en: "Modelling and simulation of the mechanical activity of the heart" }
-- { year: 2020, student: Nzimi Nyabeyeu Fabiola V., fr: "Algorithme d'aide au diagnostic par analyse de l'image planétaire", en: "A diagnostic-support algorithm based on image analysis" }   # TO CONFIRM: "planétaire" or "plantaire"?
+- { year: 2020, student: Nzimi Nyabeyeu Fabiola V., fr: "Algorithme d'aide au diagnostic par analyse de l'image plantaire", en: "A diagnostic-support algorithm based on analysis of the plantar (sole of the foot) image" }
 - { year: 2020, student: Teta Sitamze Ismael, fr: "Développement et implémentation d'une plateforme de gestion de la maintenance assistée par ordinateur", en: "Development of a computerised maintenance management platform" }
 - { year: 2020, student: Sodjui Joséphine Christelle, fr: "Conception et réalisation d'un prototype de distillateur d'alcool", en: "Design and construction of an alcohol distiller prototype" }
 - { year: 2020, student: Fodju Djidjou Ismaël, fr: "Conception et réalisation d'un prototype de dosimètre", en: "Design and construction of a dosimeter prototype" }

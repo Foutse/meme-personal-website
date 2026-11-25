@@ -34,7 +34,7 @@ layout: base
     <ol class="timeline programmes">
       {% for pg in site.data.programmes %}
       <li>
-        <span class="when">{{ pg.when }}</span>
+        <span class="when">{% if pg.when.en %}{{ pg.when[L] }}{% else %}{{ pg.when }}{% endif %}</span>
         <h3>{{ pg.name[L] }}</h3>
         {% if pg.note %}<p class="org">{% if pg.note_url %}<a href="{{ pg.note_url }}">{{ pg.note[L] }}</a>{% else %}{{ pg.note[L] }}{% endif %}</p>{% endif %}
       </li>

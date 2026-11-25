@@ -5,13 +5,13 @@ experience:
     items:
       en:
         - "Academic Secretary, Faculty of Science and Technology, since 2023"
-        - "Coordinator, FOAD/AUF Master's in Quality Assurance, Regulatory Affairs and Biomedical Engineering, 2026/2027"
-        - "Coordinator, FOAD/AUF Master's in Quality Control, Regulatory Affairs and Biomedical Engineering, and Master's in Biomedical Engineering (Instrumentation), 2024–2025"
+        - "Coordinator, FOAD/AUF distance-learning Master's in Quality Assurance, Regulatory Affairs and Biomedical Engineering (formerly Quality Control), since 2024"
+        - "Coordinator, Master's in Biomedical Engineering (Instrumentation), since 2024"
         - "Administrative Officer, Faculty of Science and Technology, 2022–2023"
       fr:
         - "Secrétaire académique de la Faculté des Sciences et Technologies, depuis 2023"
-        - "Coordonnateur du Master FOAD/AUF Assurance qualité, Affaires réglementaires et Ingénierie biomédicale, 2026/2027"
-        - "Coordonnateur du Master FOAD/AUF Contrôle qualité, Affaires réglementaires et Ingénierie biomédicale, et du Master Ingénierie biomédicale option instrumentation, 2024–2025"
+        - "Coordonnateur du Master FOAD/AUF Assurance qualité, Affaires réglementaires et Ingénierie biomédicale (anciennement Contrôle qualité), depuis 2024"
+        - "Coordonnateur du Master Ingénierie biomédicale option instrumentation, depuis 2024"
         - "Responsable administratif de la Faculté des Sciences et Technologies, 2022–2023"
   - when: { en: "2016 – 2021", fr: "2016 – 2021" }
     role: { en: Senior Lecturer, fr: Chargé de Cours }
