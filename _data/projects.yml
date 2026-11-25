@@ -155,7 +155,7 @@
     fr: "Une couveuse de 600 œufs, économe en énergie, pour les éleveurs camerounais, avec un taux d'éclosion de 87 %."
   body:
     en: |
-      Most poultry in Cameroon is still raised traditionally, and many newly hatched chicks do not survive, a loss for farmers and for food supply. This project built an affordable, energy-efficient incubator to help.
+      Most poultry in Cameroon is still raised traditionally, and many newly hatched chicks do not survive, a loss for farmers and for food supply. This project built an affordable, energy-efficient incubator to address the problem.
 
       The 600-egg incubator has an insulated plywood, aluminium and glass-wool enclosure, motorised egg turning, and a microcontroller that controls temperature and humidity with a PID algorithm tuned on a heat-transfer model. Incubating at 37.5 °C and 45.5% humidity, it reached a hatching rate of 87%.
     fr: |
@@ -170,8 +170,8 @@
   tag: { en: Photonics, fr: Photonique }
   title: { en: Semiconductor laser circuits, fr: Circuits de lasers à semi-conducteurs }
   text:
-    en: "Electronic circuits that reproduce the dynamics of edge-emitting semiconductor lasers, the subject of Prof. Momo's Ph.D."
-    fr: "Des circuits électroniques qui reproduisent la dynamique des lasers à semi-conducteurs émettant par la tranche, sujet de son doctorat."
+    en: "Electronic circuits that reproduce the dynamics of edge-emitting semiconductor lasers, the subject of my Ph.D."
+    fr: "Des circuits électroniques qui reproduisent la dynamique des lasers à semi-conducteurs émettant par la tranche, sujet de mon doctorat."
   body:
     en: |
       Semiconductor lasers are used in medicine, from surgery to diagnosis, and their behaviour becomes complex, sometimes chaotic, when their current is modulated. This Ph.D. work studied edge-emitting semiconductor lasers driven by oscillators, using analytical methods, numerical simulation and analog electronic circuits that mimic the laser.

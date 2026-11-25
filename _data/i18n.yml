@@ -7,7 +7,7 @@ en:
   switch_short: FR
   nav: { research: Research, publications: Publications, teaching: Teaching, cv: CV, contact: Contact }
   tagline: Affordable medical devices for hospitals in Africa
-  lead: "Physicist at the Université des Montagnes, Cameroon. My research covers the nonlinear dynamics of lasers and electronic circuits, radiation protection in hospitals and, with engineering colleagues, the design of low-cost medical devices."
+  lead: "Physicist at the Université des Montagnes, Cameroon. My research covers the nonlinear dynamics of lasers and electronic circuits, radiation protection in hospitals, and low-cost medical devices developed in interdisciplinary teams."
   about: About
   stats: { pubs: Peer-reviewed publications, citations: Citations, h: h-index, theses: "Master's theses supervised", procs: Conference proceedings, prototypes: Device prototypes, programmes: Degree programmes coordinated, years: Years of university teaching }
   news: News
@@ -16,7 +16,7 @@ en:
   top_pubs: Selected publications
   all_pubs: All publications →
   research: Research
-  research_intro: "Two strands of work: medical technology that hospitals in low-income countries can afford, and the nonlinear physics behind it."
+  research_intro: "Two strands of work: affordable medical technology for hospitals in low-income countries, and nonlinear dynamics, the core of my training as a physicist."
   projects: Devices and projects
   costs_title: "Made in UdM: up to 5× cheaper"
   prev: Previous
@@ -33,7 +33,7 @@ en:
   related_theses: Related Master's theses
   paper: Paper
   publications: Publications
-  pubs_intro: "Peer-reviewed articles, a book chapter and conference proceedings. Click a title's buttons for the abstract, a citation in BibTeX, or a free PDF when one exists."
+  pubs_intro: "Peer-reviewed articles, a book chapter and conference proceedings. The buttons under each title give the abstract, a BibTeX citation, or a free PDF when one exists."
   cites_title: Google Scholar citation progress
   focus_title: Themes of the papers
   focus_note: "Word size shows how many papers cover the theme. Point at a theme to see related ones; click it to list its papers."
@@ -59,7 +59,7 @@ en:
   talks: Conference presentations
   teaching: Teaching and supervision
   teaching_title: Courses
-  teaching_intro: "Over 20 years of university teaching in physics and biomedical engineering, from first-year undergraduate (L1) to Master's level (M1), about 270 hours of courses a year, and five degree programmes coordinated at the Université des Montagnes."
+  teaching_intro: "More than 20 years of university teaching in physics and biomedical engineering, from first-year undergraduate (L1) to Master's level (M1). I teach about 270 hours a year and have coordinated five degree programmes at the Université des Montagnes."
   programmes_title: Programmes coordinated
   programmes_intro: "Degree programmes I have led or coordinated at the Université des Montagnes."
   supervision: Master's theses supervised
@@ -92,7 +92,7 @@ fr:
   switch_short: EN
   nav: { research: Recherche, publications: Publications, teaching: Enseignement, cv: CV, contact: Contact }
   tagline: Des dispositifs médicaux abordables pour les hôpitaux d'Afrique
-  lead: "Physicien à l'Université des Montagnes (Cameroun). Mes recherches portent sur la dynamique non linéaire des lasers et des circuits électroniques, la radioprotection en milieu hospitalier et, avec des collègues ingénieurs, la conception de dispositifs médicaux à bas coût."
+  lead: "Physicien à l'Université des Montagnes (Cameroun). Mes recherches portent sur la dynamique non linéaire des lasers et des circuits électroniques, la radioprotection en milieu hospitalier et des dispositifs médicaux à bas coût développés en équipes pluridisciplinaires."
   about: Présentation
   stats: { pubs: Publications à comité de lecture, citations: Citations, h: Indice h, theses: Mémoires de master encadrés, procs: Actes de conférence, prototypes: Prototypes de dispositifs, programmes: Formations coordonnées, years: Années d'enseignement universitaire }
   news: Actualités
@@ -101,7 +101,7 @@ fr:
   top_pubs: Publications choisies
   all_pubs: Toutes les publications →
   research: Recherche
-  research_intro: "Deux axes de travail : des technologies médicales abordables pour les hôpitaux des pays à faibles revenus, et la physique non linéaire qui les sous-tend."
+  research_intro: "Deux axes de travail : des technologies médicales abordables pour les hôpitaux des pays à faibles revenus, et la dynamique non linéaire, cœur de ma formation de physicien."
   projects: Dispositifs et projets
   costs_title: "Made in UdM : jusqu'à 5 fois moins cher"
   prev: Précédent
@@ -144,12 +144,12 @@ fr:
   talks: Communications
   teaching: Enseignement et encadrement
   teaching_title: Cours
-  teaching_intro: "Plus de vingt ans d'enseignement universitaire en physique et en ingénierie biomédicale, de la Licence 1 au Master 1, environ 270 heures de cours par an, et cinq formations coordonnées à l'Université des Montagnes."
+  teaching_intro: "Plus de vingt ans d'enseignement universitaire en physique et en ingénierie biomédicale, de la Licence 1 au Master 1. J'assure environ 270 heures de cours par an et j'ai coordonné cinq formations à l'Université des Montagnes."
   programmes_title: Formations coordonnées
   programmes_intro: "Formations que j'ai dirigées ou coordonnées à l'Université des Montagnes."
   supervision: Mémoires de Master encadrés
   students_title: Sujets de Master
-  theses_intro: "24 mémoires de master entre 2017 et 2024, pour la plupart en ingénierie biomédicale et autour d'un dispositif fonctionnel. Deux des personnes encadrées ont cosigné des articles de revue avec moi."
+  theses_intro: "24 mémoires de master entre 2017 et 2024, pour la plupart en ingénierie biomédicale et autour d'un dispositif fonctionnel. Deux de ces étudiants ont cosigné avec moi des articles de revue."
   th: { year: Année, student: Étudiant(e), title: Titre }
   theses_note: Tous à l'Université des Montagnes sauf mention contraire.
   cv_title: Curriculum vitae

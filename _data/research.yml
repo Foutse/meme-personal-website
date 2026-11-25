@@ -24,8 +24,8 @@
 - strand: second
   title: { en: Nonlinear dynamics and photonics, fr: Dynamique non linéaire et photonique }
   intro:
-    en: "The physics behind the devices, and the subject of my Ph.D."
-    fr: "La physique derrière les dispositifs, et le sujet de mon doctorat."
+    en: "The core of my training as a physicist: the subject of my Ph.D. and an ongoing line of research."
+    fr: "Le cœur de ma formation de physicien : le sujet de mon doctorat et un axe de recherche toujours actif."
   themes:
     - title: { en: Semiconductor lasers, fr: Lasers à semi-conducteurs }
       text:
