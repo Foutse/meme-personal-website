@@ -507,6 +507,8 @@ td:nth-child(2) { white-space: nowrap; }
 .id-title { margin: 0 0 .3rem; text-transform: uppercase; letter-spacing: .12em; font-size: .85rem; font-weight: 700; color: var(--copper); }
 .id-role { margin: 0 0 .15rem; font-weight: 600; font-size: 1.02rem; }
 .id-affil { margin: 0; color: var(--muted); font-size: 1.02rem; }
+.id-affil a, footer address a { color: inherit; text-decoration: underline; text-decoration-color: var(--border); text-underline-offset: 3px; }
+.id-affil a:hover, footer address a:hover { color: var(--accent); text-decoration-color: currentColor; }
 .hero { padding-top: 3.25rem; }
 .hero .hero-inner { grid-template-columns: 1.2fr 1fr; gap: 3rem; align-items: start; margin-top: 2.25rem; }
 .tagline { font: 600 clamp(1.55rem, 3vw, 2.15rem)/1.2 var(--serif); color: var(--navy); margin: 0 0 1rem; max-width: 22ch; }

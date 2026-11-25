@@ -62,7 +62,7 @@
     "url": "{{ site.url }}{{ page.url }}",
     "image": "{{ site.url }}{{ p.photo }}?v={{ site.time | date: '%s' }}",
     "email": "mailto:{{ p.email }}",
-    "worksFor": { "@type": "CollegeOrUniversity", "name": "Université des Montagnes", "address": { "@type": "PostalAddress", "addressLocality": "Bangangté", "addressCountry": "CM" } },
+    "worksFor": { "@type": "CollegeOrUniversity", "name": "Université des Montagnes", "url": {{ p.university_url | jsonify }}, "address": { "@type": "PostalAddress", "addressLocality": "Bangangté", "addressCountry": "CM" } },
     "alumniOf": [ { "@type": "CollegeOrUniversity", "name": "University of Dschang" }, { "@type": "CollegeOrUniversity", "name": "University of Yaoundé I" } ],
     "knowsAbout": ["Biomedical instrumentation", "Medical devices", "Radiation protection", "Bioimpedance", "Semiconductor lasers", "Nonlinear dynamics"],
     "sameAs": [{{ p.scholar | jsonify }}, {{ p.linkedin | jsonify }}{% if p.orcid != "" %}, {{ p.orcid | jsonify }}{% endif %}{% if p.researchgate != "" %}, {{ p.researchgate | jsonify }}{% endif %}]
@@ -100,7 +100,8 @@
       <div>
         <p class="footer-name">{{ p.name }}, Ph.D.</p>
         <p>{{ p.title[L] }}</p>
-        <address>{{ p.address[L] | join: "<br>" }}</address>
+        {%- capture udm_link -%}<a href="{{ p.university_url }}" rel="noopener">Université des Montagnes</a>{%- endcapture -%}
+        <address>{{ p.address[L] | join: "<br>" | replace: "Université des Montagnes", udm_link }}</address>
       </div>
       <div>
         <h2 class="footer-h">{{ t.contact }}</h2>

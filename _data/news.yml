@@ -1,6 +1,10 @@
 # Newest first. Add a new item at the top.
 - date: { en: 2025, fr: 2025 }
   text:
+    en: "Talk at the États généraux de la recherche, *Research, innovation and socio-economic impact*: devices built at UdM cost up to five times less than imported equipment ([see the comparison](/research/#costs))."
+    fr: "Communication aux États généraux de la recherche, *Recherche, innovation et impact socio-économique* : les dispositifs fabriqués à l'UdM coûtent jusqu'à cinq fois moins cher que les équipements importés ([voir la comparaison](/fr/recherche/#costs))."
+- date: { en: 2025, fr: 2025 }
+  text:
     en: "Two papers on the control of chaos in permanent magnet synchronous motors, in *Chaos and Fractals* and *ADBA Computer Science*."
     fr: "Deux articles sur le contrôle du chaos dans les moteurs synchrones à aimants permanents, dans *Chaos and Fractals* et *ADBA Computer Science*."
 - date: { en: May 2024, fr: mai 2024 }

@@ -14,7 +14,8 @@ layout: base
         <h1 class="id-name">{{ p.name }}, <span class="phd">Ph.D.</span></h1>
         <p class="id-title">{{ p.title[L] }}</p>
         <p class="id-role">{{ p.role[L] }}</p>
-        <p class="id-affil">{{ p.affiliation[L] }}</p>
+        {%- capture udm_link -%}<a href="{{ p.university_url }}">Université des Montagnes</a>{%- endcapture -%}
+        <p class="id-affil">{{ p.affiliation[L] | replace: "Université des Montagnes", udm_link }}</p>
       </div>
     </header>
     <div class="hero-inner">
