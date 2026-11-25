@@ -1,0 +1,32 @@
+{%- assign L = include.lang -%}
+{%- assign t = site.data.i18n[L] -%}
+{%- assign max = 0 -%}
+{%- for c in site.data.costs -%}{%- if c.imported > max -%}{%- assign max = c.imported -%}{%- endif -%}{%- if c.udm > max -%}{%- assign max = c.udm -%}{%- endif -%}{%- endfor -%}
+<section class="section alt" id="costs">
+  <div class="wrap">
+    <h2>{{ t.costs_title }}</h2>
+    <p class="section-intro">{{ t.costs_intro }}</p>
+    <ul class="cost-key" aria-hidden="true"><li><span class="sw udm"></span>{{ t.costs_udm }}</li><li><span class="sw imp"></span>{{ t.costs_imported }}</li></ul>
+    <ul class="plain costs bars-h">
+      {%- for c in site.data.costs %}
+      {%- if c.ratio -%}{%- assign r = c.ratio -%}{%- else -%}{%- assign r = c.imported | times: 1.0 | divided_by: c.udm | round: 1 -%}{%- endif -%}
+      {%- capture rs -%}{{ r }}{%- endcapture -%}{%- assign rs = rs | remove: '.0' -%}{%- if L == 'fr' -%}{%- assign rs = rs | replace: '.', ',' -%}{%- endif -%}
+      {%- assign pu = c.udm | times: 100.0 | divided_by: max -%}{%- assign pi = c.imported | times: 100.0 | divided_by: max -%}
+      {%- assign pr = nil -%}{%- if c.project -%}{%- assign pr = site.data.projects | where_exp: "p", "p.slug.en == c.project" | first -%}{%- endif %}
+      <li class="cost" style="--i: {{ forloop.index0 }}">
+        <img class="cost-img" src="{{ c.photo }}" alt="{{ c.name[L] }}, {{ t.costs_udm | downcase }}" width="96" height="96" loading="lazy">
+        <div class="cost-head">
+          <h3>{% if pr %}<a href="{{ t.urls.research }}{{ pr.slug[L] }}/">{{ c.name[L] }}</a>{% else %}{{ c.name[L] }}{% endif %}</h3>
+          <p class="cost-ratio"><strong>{{ rs }}×</strong><span>{% if c.per %}{{ t.costs_cheaper_m3 }}{% else %}{{ t.costs_cheaper }}{% endif %}</span></p>
+        </div>
+        <div class="cost-bars">
+          <div class="hbar"><span class="k">{{ t.costs_udm }}</span><span class="track"><span class="fill udm" style="--p: {{ pu }}%"></span></span><span class="v">{% include fcfa.html n=c.udm lang=L %}&nbsp;FCFA</span></div>
+          <div class="hbar"><span class="k">{{ t.costs_imported }}</span><span class="track"><span class="fill imp" style="--p: {{ pi }}%"></span></span><span class="v">{% include fcfa.html n=c.imported lang=L %}&nbsp;FCFA</span></div>
+          {% if c.per %}<p class="cost-note">{{ c.per[L] }}</p>{% endif %}
+        </div>
+      </li>
+      {%- endfor %}
+    </ul>
+    <p class="note">{{ t.costs_source }}</p>
+  </div>
+</section>

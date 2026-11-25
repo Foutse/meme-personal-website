@@ -18,6 +18,13 @@ en:
   research: Research
   research_intro: "Two strands of work: medical technology that hospitals in low-income countries can afford, and the nonlinear physics behind it."
   projects: Devices and projects
+  costs_title: Built at UdM, at a fraction of the price
+  costs_intro: "Devices built at the Université des Montagnes, compared with the imported equipment that hospitals would otherwise buy."
+  costs_udm: Built at UdM
+  costs_imported: Imported
+  costs_cheaper: cheaper
+  costs_cheaper_m3: cheaper per m³
+  costs_source: "Prices in FCFA (1 € ≈ 656 FCFA), as presented at the États généraux de la recherche, 2025."
   read_more: Read more
   back_research: ← All research
   related_papers: Publications
@@ -94,6 +101,13 @@ fr:
   research: Recherche
   research_intro: "Deux axes de travail : des technologies médicales abordables pour les hôpitaux des pays à faibles revenus, et la physique non linéaire qui les sous-tend."
   projects: Dispositifs et projets
+  costs_title: Fabriqués à l'UdM, pour une fraction du prix
+  costs_intro: "Des dispositifs fabriqués à l'Université des Montagnes, comparés aux équipements importés que les hôpitaux achèteraient autrement."
+  costs_udm: Fabriqué à l'UdM
+  costs_imported: Importé
+  costs_cheaper: moins cher
+  costs_cheaper_m3: moins cher au m³
+  costs_source: "Prix en FCFA (1 € ≈ 656 FCFA), tels que présentés aux États généraux de la recherche, 2025."
   read_more: En savoir plus
   back_research: ← Toute la recherche
   related_papers: Publications

@@ -199,7 +199,7 @@
     });
   }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
   each(document.querySelectorAll('.cloud'), function (el) { el.classList.add('anim'); });
-  each(document.querySelectorAll('.reveal, .bars, .cloud'), function (el) { io.observe(el); });
+  each(document.querySelectorAll('.reveal, .bars, .bars-h, .cloud'), function (el) { io.observe(el); });
 
   // Count the key figures up when they appear.
   var counters = new IntersectionObserver(function (entries) {

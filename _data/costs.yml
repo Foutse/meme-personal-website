@@ -1,0 +1,40 @@
+# "Made at UdM vs imported": prices (FCFA) from Prof. Momo's talk at the
+# États généraux de la recherche 2025. Shown on the Research page, in this order.
+# project: slug (en) of a page in projects.yml to link to, if any.
+# per: optional note when the two devices differ in size.
+- name: { en: Neonatal incubator, fr: Incubateur néonatal }
+  photo: /assets/img/projects/incubator-udm.jpg
+  project: neonatal-incubators
+  udm: 600000
+  imported: 3000000
+- name: { en: Mobile dental unit, fr: Unité dentaire mobile }
+  photo: /assets/img/projects/dental-unit.jpg
+  project: mobile-dental-unit
+  udm: 386000
+  imported: 1000000
+- name: { en: Digital microscope, fr: Microscope numérique }
+  photo: /assets/img/projects/digital-microscope.jpg
+  project: digital-microscope
+  udm: 250000
+  imported: 650000
+- name: { en: Spectrophotometer, fr: Spectrophotomètre }
+  photo: /assets/img/projects/spectrophotometer.jpg
+  udm: 350000
+  imported: 800000
+- name: { en: Incubator with phototherapy, fr: Incubateur avec photothérapie }
+  photo: /assets/img/projects/incubator-phototherapy.jpg
+  project: neonatal-incubators
+  udm: 1500000
+  imported: 3000000
+- name: { en: Oxygen concentrator, fr: Concentrateur d'oxygène }
+  photo: /assets/img/projects/oxygen-concentrator.jpg
+  udm: 150000
+  imported: 300000
+- name: { en: Food dehydrator, fr: Déshydrateur alimentaire }
+  photo: /assets/img/projects/dehydrator.jpg
+  udm: 600000
+  imported: 400000
+  per:
+    en: "The UdM dehydrator holds 1.5 m³, the imported one 0.5 m³: half the price per cubic metre."
+    fr: "Le déshydrateur UdM fait 1,5 m³, le modèle importé 0,5 m³ : moitié prix au mètre cube."
+  ratio: 2

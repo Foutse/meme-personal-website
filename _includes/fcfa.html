@@ -1,0 +1,9 @@
+{%- comment -%} Formats include.n (an integer) with thousands separators for include.lang. {%- endcomment -%}
+{%- assign n = include.n | plus: 0 -%}
+{%- if include.lang == 'fr' -%}{%- assign sep = '&#8239;' -%}{%- else -%}{%- assign sep = ',' -%}{%- endif -%}
+{%- assign m = n | divided_by: 1000000 -%}
+{%- assign k = n | divided_by: 1000 | modulo: 1000 -%}
+{%- assign u = n | modulo: 1000 -%}
+{%- capture ks -%}{%- if k < 10 -%}00{%- elsif k < 100 -%}0{%- endif -%}{{ k }}{%- endcapture -%}
+{%- capture us -%}{%- if u < 10 -%}00{%- elsif u < 100 -%}0{%- endif -%}{{ u }}{%- endcapture -%}
+{%- if m > 0 -%}{{ m }}{{ sep }}{{ ks }}{{ sep }}{{ us }}{%- elsif k > 0 -%}{{ k }}{{ sep }}{{ us }}{%- else -%}{{ u }}{%- endif -%}

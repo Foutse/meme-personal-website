@@ -15,7 +15,8 @@ Not published as a page (excluded in `_config.yml`). Remove items as they are re
 ## Content to send
 - [ ] **Abstracts of the two CPS conference proceedings** (2013, 2015): not online. Paste them as `abstract:` on those two entries in `_data/publications.yml`.
 - [ ] **Teaching details**: ~270 hours a year (added). Still missing: typical class sizes, and courses he created (e.g. for the FOAD Master's).
-- [ ] **Device photos**: he says they are in the papers. Publisher figures are copyrighted unless the paper is open access (CC BY), so ask for the original photo files. Landscape, ~1200 px wide → `assets/img/projects/`, then add `image:` in `_data/projects.yml`.
+- [ ] **Device photos**: photos from his talk at the États généraux de la recherche 2025 now on the incubator, dental unit and microscope pages and in the cost comparison (Research page). They are small (250–600 px): ask for the original files, and for photos of the phonocardiograph, bioimpedance system and egg incubator.
+- [ ] **New devices from the talk**: oxygen concentrator, spectrophotometer, food dehydrator, solar vaccine fridge (in development). Shown only in the cost comparison; a short description of each would allow a project page.
 - [ ] **Portrait**: the site now uses the beige-wall photo, but the only copy is small (246 px). Ask for the original file or a higher-resolution version.
 - [x] **ORCID and ResearchGate**: added (Nov 2026).
 - [ ] **Recent news**: 2026 Master's defences coming soon; papers under review. Add when they happen → `_data/news.yml` (and `_data/theses.yml`).

@@ -6,6 +6,7 @@
 
 - slug: { en: neonatal-incubators, fr: incubateurs-neonatals }
   icon: incubator
+  image: /assets/img/projects/incubator-phototherapy.jpg
   featured: true
   strand: main
   tag: { en: Neonatal care, fr: Néonatologie }
@@ -27,6 +28,7 @@
 
 - slug: { en: mobile-dental-unit, fr: unite-dentaire-mobile }
   icon: tooth
+  image: /assets/img/projects/dental-unit.jpg
   featured: true
   strand: main
   tag: { en: Oral health, fr: Santé bucco-dentaire }
@@ -125,6 +127,7 @@
 
 - slug: { en: digital-microscope, fr: microscope-numerique }
   icon: microscope
+  image: /assets/img/projects/digital-microscope.jpg
   strand: main
   tag: { en: Laboratory, fr: Laboratoire }
   title: { en: Digital microscope, fr: Microscope numérique }
