@@ -12,9 +12,12 @@ researchgate: ""   # leave empty to hide
 title:
   en: Associate Professor of Physics
   fr: Maître de Conférences en Physique
+role:
+  en: Academic Secretary, Faculty of Science and Technology
+  fr: Secrétaire académique de la Faculté des Sciences et Technologies
 affiliation:
-  en: Faculty of Science and Technology, Université des Montagnes, Bangangté, Cameroon
-  fr: Faculté des Sciences et Technologies, Université des Montagnes, Bangangté, Cameroun
+  en: Université des Montagnes, Bangangté, Cameroon
+  fr: Université des Montagnes, Bangangté, Cameroun
 address:
   en: [Faculty of Science and Technology, Université des Montagnes, "P.O. Box 208, Bangangté, Cameroon"]
   fr: [Faculté des Sciences et Technologies, Université des Montagnes, "B.P. 208, Bangangté, Cameroun"]

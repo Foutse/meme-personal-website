@@ -1,4 +1,8 @@
 # Degree programmes coordinated (from the CV). Shown on the Teaching page.
+- when: "2026 – 2027"
+  name: { en: "Distance-learning Master's in Quality Assurance, Regulatory Affairs and Biomedical Engineering (FOAD)", fr: "Master FOAD Assurance qualité, affaires réglementaires et ingénierie biomédicale" }
+  note: { en: "Run with the AUF (Agence universitaire de la Francophonie)", fr: "Mené avec l'AUF (Agence universitaire de la Francophonie)" }
+  note_url: https://www.auf.org/
 - when: "2024 – 2025"
   name: { en: "Distance-learning Master's in Quality Control, Regulatory Affairs and Biomedical Engineering", fr: "Master à distance Contrôle qualité, affaires réglementaires et ingénierie biomédicale" }
   note: { en: "Run with the AUF (Agence universitaire de la Francophonie)", fr: "Mené avec l'AUF (Agence universitaire de la Francophonie)" }

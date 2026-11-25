@@ -5,10 +5,12 @@ experience:
     items:
       en:
         - "Academic Secretary, Faculty of Science and Technology, since 2023"
+        - "Coordinator, FOAD/AUF Master's in Quality Assurance, Regulatory Affairs and Biomedical Engineering, 2026/2027"
         - "Coordinator, FOAD/AUF Master's in Quality Control, Regulatory Affairs and Biomedical Engineering, and Master's in Biomedical Engineering (Instrumentation), 2024–2025"
         - "Administrative Officer, Faculty of Science and Technology, 2022–2023"
       fr:
         - "Secrétaire académique de la Faculté des Sciences et Technologies, depuis 2023"
+        - "Coordonnateur du Master FOAD/AUF Assurance qualité, Affaires réglementaires et Ingénierie biomédicale, 2026/2027"
         - "Coordonnateur du Master FOAD/AUF Contrôle qualité, Affaires réglementaires et Ingénierie biomédicale, et du Master Ingénierie biomédicale option instrumentation, 2024–2025"
         - "Responsable administratif de la Faculté des Sciences et Technologies, 2022–2023"
   - when: { en: "2016 – 2021", fr: "2016 – 2021" }
@@ -37,7 +39,7 @@ education:
     thesis: "“Contribution to the study of the dynamical behavior of edge-emitting semiconductor laser: analytical, numerical and analog simulation approach.”"
   - when: "2005"
     degree: { en: "DEA (M.Phil.) in Physics", fr: DEA en Physique }
-    org: { en: "University of Yaoundé I · Atoms and Radiation", fr: "Université de Yaoundé I · Option Atome et rayonnement" }
+    org: { en: "University of Yaoundé I · Atoms and Radiations option", fr: "Université de Yaoundé I · Option Atomes et Radiations" }
   - when: "2002"
     degree: { en: Licence and Maîtrise in Physics, fr: Licence et Maîtrise de Physique }
     org: { en: University of Yaoundé I, fr: Université de Yaoundé I }
