@@ -2,6 +2,7 @@
 - when: { en: "2024 – present", fr: "Depuis 2024" }
   name: { en: "Distance-learning Master's in Quality Assurance, Regulatory Affairs and Biomedical Engineering (FOAD)", fr: "Master FOAD Assurance qualité, affaires réglementaires et ingénierie biomédicale" }
   note: { en: "Run with the AUF (Agence universitaire de la Francophonie). Formerly “Quality Control, Regulatory Affairs and Biomedical Engineering”.", fr: "Mené avec l'AUF (Agence universitaire de la Francophonie). Anciennement « Contrôle qualité, affaires réglementaires et ingénierie biomédicale »." }
+  url: https://cev.udm.cm/
   note_url: https://www.auf.org/
 - when: { en: "2024 – present", fr: "Depuis 2024" }
   name: { en: "Master's in Biomedical Engineering, Instrumentation track", fr: "Master Ingénierie biomédicale, option instrumentation" }

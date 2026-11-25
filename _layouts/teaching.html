@@ -35,7 +35,7 @@ layout: base
       {% for pg in site.data.programmes %}
       <li>
         <span class="when">{% if pg.when.en %}{{ pg.when[L] }}{% else %}{{ pg.when }}{% endif %}</span>
-        <h3>{{ pg.name[L] }}</h3>
+        <h3>{% if pg.url %}<a href="{{ pg.url }}">{{ pg.name[L] }}</a>{% else %}{{ pg.name[L] }}{% endif %}</h3>
         {% if pg.note %}<p class="org">{% if pg.note_url %}<a href="{{ pg.note_url }}">{{ pg.note[L] }}</a>{% else %}{{ pg.note[L] }}{% endif %}</p>{% endif %}
       </li>
       {% endfor %}
