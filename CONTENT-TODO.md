@@ -25,5 +25,5 @@ Texts (bio, project pages, headline) approved by Prof. Momo, Nov 2026.
 - [ ] Anything from LinkedIn missing from the CV (awards, projects, collaborations).
 
 ## For the site owner
-- [x] Google Search Console: domain verified (TXT record at Porkbun). Check that `sitemap.xml` is submitted and shows "Success".
+- [x] Google Search Console: domain verified (TXT record at Porkbun). Sitemap submitted 23 Nov 2026, status Success (30 URLs).
 - Citation counts are no longer shown on the site (Nov 2026). `cites` in `publications.yml` still orders the home page's selected publications.
