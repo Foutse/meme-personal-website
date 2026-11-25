@@ -17,7 +17,7 @@ Not published as a page (excluded in `_config.yml`). Remove items as they are re
 - [ ] **Teaching details**: ~270 hours a year (added). Still missing: typical class sizes, and courses he created (e.g. for the FOAD Master's).
 - [ ] **Device photos**: he says they are in the papers. Publisher figures are copyrighted unless the paper is open access (CC BY), so ask for the original photo files. Landscape, ~1200 px wide → `assets/img/projects/`, then add `image:` in `_data/projects.yml`.
 - [ ] **Portrait**: the site now uses the beige-wall photo, but the only copy is small (246 px). Ask for the original file or a higher-resolution version.
-- [ ] **ORCID and ResearchGate**: he has both. Need the two links → `profile.yml` (`orcid:`, `researchgate:`).
+- [x] **ORCID and ResearchGate**: added (Nov 2026).
 - [ ] **Recent news**: 2026 Master's defences coming soon; papers under review. Add when they happen → `_data/news.yml` (and `_data/theses.yml`).
 - [x] **Grants**: none yet (Nov 2026). Add a Funding section to the CV page when there is one.
 - [ ] Anything from LinkedIn missing from the CV (awards, projects, collaborations).
